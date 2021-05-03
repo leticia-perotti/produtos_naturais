@@ -1,7 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="" />
+    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="teste">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,7 +35,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="web-ide.project.structure" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -39,22 +50,79 @@
       <workItem from="1619543945247" duration="80000" />
       <workItem from="1619544079677" duration="3454000" />
       <workItem from="1620059423968" duration="408000" />
-      <workItem from="1620066454136" duration="615000" />
+      <workItem from="1620066454136" duration="1696000" />
     </task>
+    <task id="LOCAL-00001" summary="teste">
+      <created>1620067952323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620067952323</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="2" />
   </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="teste" />
+    <option name="LAST_COMMIT_MESSAGE" value="teste" />
+  </component>
   <component name="WindowStateProjectService">
+    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620068189204">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068189204" />
+    <state x="555" y="260" key="Github.ShareDialog" timestamp="1620068742464">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="555" y="260" key="Github.ShareDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068742464" />
     <state x="515" y="286" key="NewPhpFileDialog" timestamp="1619545096611">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="515" y="286" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1619545096611" />
-    <state x="181" y="0" key="SettingsEditor" timestamp="1619544252141">
+    <state x="181" y="0" key="SettingsEditor" timestamp="1620068560753">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1619544252141" />
+    <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1620068560753" />
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1620068768677">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1620068768677" />
+    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620068944754">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1620068944754" />
+    <state x="481" y="151" key="git4idea.merge.GitPullDialog" timestamp="1620068784873">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="481" y="151" key="git4idea.merge.GitPullDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068784873" />
+    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620068936572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068936572" />
     <state x="336" y="157" key="run.anything.popup" timestamp="1619544094502">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
