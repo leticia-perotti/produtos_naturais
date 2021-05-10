@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="dia 10.5">
+      <change afterPath="$PROJECT_DIR$/conexao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/imagens_produtos/imagem-produto-5fa9954530168.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/imagens_produtos/imagem-produto-5fa995b6d2905.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/imagens_produtos/imagem-produto-5fb4148798626.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/imagens_produtos/imagem_produto-5fa98239858a6.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1rlHq0UuJG8G75F3ZRFL9vGrPMi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="" />
+      <created>1619543942991</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1619543942991</updated>
+      <workItem from="1619543945247" duration="80000" />
+      <workItem from="1619544079677" duration="3454000" />
+      <workItem from="1620059423968" duration="408000" />
+      <workItem from="1620066454136" duration="2342000" />
+      <workItem from="1620146882159" duration="8503000" />
+      <workItem from="1620662471771" duration="12115000" />
+    </task>
+    <task id="LOCAL-00001" summary="teste">
+      <created>1620067952323</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1620067952323</updated>
+    </task>
+    <task id="LOCAL-00002" summary="teste">
+      <created>1620068979188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620068979188</updated>
+    </task>
+    <task id="LOCAL-00003" summary="dia 10.5">
+      <created>1620662699879</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1620662699879</updated>
+    </task>
+    <task id="LOCAL-00004" summary="dia 10.5">
+      <created>1620662794573</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1620662794573</updated>
+    </task>
+    <task id="LOCAL-00005" summary="dia 10.5">
+      <created>1620670367597</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1620670367597</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="teste" />
+    <MESSAGE value="dia 10.5" />
+    <option name="LAST_COMMIT_MESSAGE" value="dia 10.5" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="472" y="221" key="#Scopes" timestamp="1620662495458">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="472" y="221" key="#Scopes/0.0.1360.728@0.0.1360.728" timestamp="1620662495458" />
+    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620068189204">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068189204" />
+    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620675186316">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620675186316" />
+    <state x="555" y="260" key="Github.ShareDialog" timestamp="1620068742464">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="555" y="260" key="Github.ShareDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068742464" />
+    <state x="559" y="229" key="NewPhpFileDialog" timestamp="1620674730694">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="559" y="229" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1620674730694" />
+    <state x="181" y="0" key="SettingsEditor" timestamp="1620068560753">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1620068560753" />
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1620664123628">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1620664123628" />
+    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620662787014">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1620662787014" />
+    <state x="481" y="151" key="git4idea.merge.GitPullDialog" timestamp="1620068784873">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="481" y="151" key="git4idea.merge.GitPullDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068784873" />
+    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620068936572">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068936572" />
+    <state x="336" y="157" key="run.anything.popup" timestamp="1620664095278">
+      <screen x="0" y="0" width="1360" height="728" />
+    </state>
+    <state x="336" y="157" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1620664095278" />
+  </component>
+</project>
