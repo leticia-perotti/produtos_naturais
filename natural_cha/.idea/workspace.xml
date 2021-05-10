@@ -11,7 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="teste">
+      <change afterPath="$PROJECT_DIR$/boot5.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bootstrap.bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carrossel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/bolo-embalagem.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/chas.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/chocolate.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/confeitar.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/confeitaria.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/embalagens (2).jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/embalagens.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/produtos-naturais.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/fotos/temperos.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/index2.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tentetiva-de-carrossel.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chas.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/chocolate.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/confeitaria.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/embalagens (2).jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/embalagens.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logo.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/temperos.jpg" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,20 +43,32 @@
   <component name="ComposerSettings">
     <execution />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectId" id="1rlHq0UuJG8G75F3ZRFL9vGrPMi" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="settings.editor.selected.configurable" value="vcs.Git" />
   </component>
   <component name="SvnConfiguration">
@@ -50,7 +84,8 @@
       <workItem from="1619543945247" duration="80000" />
       <workItem from="1619544079677" duration="3454000" />
       <workItem from="1620059423968" duration="408000" />
-      <workItem from="1620066454136" duration="1696000" />
+      <workItem from="1620066454136" duration="2342000" />
+      <workItem from="1620146882159" duration="8503000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>
@@ -59,7 +94,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620067952323</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="teste">
+      <created>1620068979188</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1620068979188</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -85,8 +127,10 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="teste" />
     <option name="LAST_COMMIT_MESSAGE" value="teste" />
   </component>
@@ -99,18 +143,18 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="555" y="260" key="Github.ShareDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068742464" />
-    <state x="515" y="286" key="NewPhpFileDialog" timestamp="1619545096611">
+    <state x="559" y="229" key="NewPhpFileDialog" timestamp="1620150183844">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="515" y="286" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1619545096611" />
+    <state x="559" y="229" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1620150183844" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1620068560753">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1620068560753" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1620068768677">
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1620068985214">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1620068768677" />
+    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1620068985214" />
     <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620068944754">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
