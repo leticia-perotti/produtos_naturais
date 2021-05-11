@@ -179,7 +179,7 @@ Natural Chá
                         <div class="site-branding">
 
                             <div class="site-branding__content">
-                                <p class="site-title"><a href="https://demo.athemes.com/leto/" rel="home">Natural Chá</a></p>
+                                <p class="site-title"><a href="../index.php" rel="home">Natural Chá</a></p>
                             </div>
                         </div><!-- .site-branding -->
                         <nav id="site-navigation" class="main-navigation">

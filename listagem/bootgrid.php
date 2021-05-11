@@ -7,7 +7,7 @@ try{
     $quantidade= $_POST['rowCount'];
     $inicio = ($pagina-1) *$quantidade;
 
-    $sql="Select idproduto as id, nome, valor, descricao from produtos where 1";
+    $sql="Select idproduto as id, nome, valor, descricao from produto where 1";
 
 
 
