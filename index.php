@@ -1,5 +1,8 @@
 <?php
 ?>
+<html>
+<link rel="icon" href="fotos/logo_mini.png">
+<title>Natural Chá</title>
 <style>
     .text{
 
@@ -69,4 +72,11 @@ transform: translateY(100%);
 
 
 </div>
+<script>
+    setTimeout(function() {
+        window.location.href = "inicial/index.php";
+    }, 3000);
+</script>
+
 </body>
+</html>
