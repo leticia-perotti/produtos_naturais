@@ -10,60 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 11.5/1">
-      <change afterPath="$PROJECT_DIR$/fotos/cha.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/fotos/encapsulados.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/loading.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/.idea/natural_cha.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/boot5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/carrossel.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/documentacao.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/bolo-embalagem.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/cha-curiosidade.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/chas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/chocolate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/confeitar.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/confeitaria.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/embalagens (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/embalagens.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/nc.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/produtos-naturais.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/fotos/temperos.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/Aller_Bd.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/README" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/bootgrid.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/canvas.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/composer.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/estilo.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/exibir.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/imagens_produtos/imagem-produto-5fa9954530168.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/imagens_produtos/imagem-produto-5fa995b6d2905.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/imagens_produtos/imagem-produto-5fb4148798626.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/imagens_produtos/imagem_produto-5fa98239858a6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/listagem/listagem.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../natural_cha/menu.php" beforeDir="false" />
+    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
+      <change afterPath="$PROJECT_DIR$/fotos/logo_mini.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot5.css" beforeDir="false" afterPath="$PROJECT_DIR$/boot5.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrossel.css" beforeDir="false" afterPath="$PROJECT_DIR$/carrossel.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chas.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/chocolate.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/confeitaria.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/embalagens (2).jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/embalagens.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/fotos/chocolate.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/fotos/chocolate.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fotos/nc.png" beforeDir="false" afterPath="$PROJECT_DIR$/fotos/nc.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fotos/produtos-naturais.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/fotos/produtos-naturais.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +71,7 @@
       <workItem from="1620676996124" duration="1067000" />
       <workItem from="1620748963995" duration="6941000" />
       <workItem from="1621873909398" duration="7330000" />
-      <workItem from="1621958595905" duration="11113000" />
+      <workItem from="1621958595905" duration="13667000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>
@@ -158,7 +108,14 @@
       <option name="project" value="LOCAL" />
       <updated>1620670367597</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Dia 25/5">
+      <created>1621971161628</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1621971161628</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,7 +147,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="teste" />
     <MESSAGE value="dia 10.5" />
-    <option name="LAST_COMMIT_MESSAGE" value="dia 10.5" />
+    <MESSAGE value="Dia 25/5" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dia 25/5" />
   </component>
   <component name="WindowStateProjectService">
     <state x="472" y="221" key="#Scopes" timestamp="1620662495458">

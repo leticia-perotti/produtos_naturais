@@ -3,6 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../fotos/logo_mini.png">
     <title>Natural Chá</title>
 
     <style>
@@ -172,11 +173,25 @@ include "../menu.php";
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">And lastly, this one. <span class="text-muted">Checkmate.</span></h2>
-                <p class="lead">And yes, this is the last block of representative placeholder content. Again, not really intended to be actually read, simply here to give you a better view of what this would look like with some actual content. Your content.</p>
+                <h2 class="featurette-heading">Nossa localização, <span class="text-muted">vem vitar-nos!</span></h2>
+
+                <p class="lead">Rua Prudente de Morais, 415<br>
+                    União da Vitória<br>
+                    Paraná, Brasil</p>
+                <p>
+                    <span class="text-muted">Horário de atendimento:</span><br>
+                     De segunda a sexta das: <br>
+                    9:00 até 12:00<br>
+                    13:30 até 18:30<br>
+                    Sábados:<br>
+                    9:00 até 13:30<br>
+                    Domingos e feriados:<br>
+                    Fechado.
+                </p>
             </div>
             <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.1243164633541!2d-51.08966799326457!3d-26.235623878131165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6619f9f88af4b%3A0x3fe376a08446d25e!2sNatural%20Ch%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1621973878698!5m2!1spt-BR!2sbr" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
 
             </div>
         </div>
