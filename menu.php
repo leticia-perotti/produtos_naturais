@@ -144,48 +144,23 @@ Natural Chá
         unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
     }</style></head>
 
-
-<body class="home page-template page-template-page-templates page-template-template_page-builder page-template-page-templatestemplate_page-builder-php page page-id-231 theme-leto siteorigin-panels siteorigin-panels-before-js siteorigin-panels-home woocommerce-no-js has-hero elementor-default elementor-kit-1331">
-
-<div class="mobile-menu">
-    <div class="container-full">
-        <div class="mobile-menu__search">
-
-            <form role="search" method="get" class="search-form" action="https://demo.athemes.com/leto/">
-                <label>
-                    <span class="screen-reader-text">Search for:</span>
-                    <input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
-                </label>
-                <input type="submit" class="search-submit" value="Search" />
-            </form>
-        </div><!-- /.mobile-menu__search -->
-
-        <nav class="mobile-menu__navigation">
-            <div class="menu-main-container"><ul id="primary-menu" class="menu"><li id="menu-item-94" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="https://demo.athemes.com/leto/blog/">Blog</a></li>
-                    <li id="menu-item-96" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://demo.athemes.com/leto/my-account/">My account</a></li>
-                    <li id="menu-item-97" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://demo.athemes.com/leto/shop/">Shop</a></li>
-                </ul></div>			</nav><!-- /.mobile-menu__navigation -->
-    </div>
-</div><!-- /.mobile-menu -->
-
-
-
-
     <header id="masthead" class="site-header">
         <div class="header-floating-trigger">
             <div class="header-navigation header-floating">
+                <div class="header-navigation header-floating floating">
+
                 <div class="container-full">
                     <div class="site-header__content">
                         <div class="site-branding">
 
                             <div class="site-branding__content">
-                                <p class="site-title"><a href="../index.php" rel="home">Natural Chá</a></p>
+                                <p class="site-title"><a href="../inicial/index.php" rel="home">Natural Chá</a></p>
                             </div>
                         </div><!-- .site-branding -->
                         <nav id="site-navigation" class="main-navigation">
-                            <div class="menu-main-container"><ul id="primary-menu" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="listagem/listagem.php">Listagem</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-96"><a href="https://demo.athemes.com/leto/my-account/">My account</a></li>
-                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="https://demo.athemes.com/leto/shop/">Shop</a></li>
+                            <div class="menu-main-container"><ul id="primary-menu" class="menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="../listagem/listagem.php">Produtos</a></li>
+                                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="#">Pedidos</a></li>
                                 </ul></div>		</nav><!-- #site-navigation -->
 
                         <div class="header-mobile-menu">
@@ -205,10 +180,9 @@ Natural Chá
 
 
                             <li class="nav-link-cart">
-                                <a href="https://demo.athemes.com/leto/cart/" class="header-cart-link">
-                                    <i class="ion-bag"></i>
+                                  <img src="../fotos/carrinho.png" class="ion-bag" width="30"></img>
                                     <span class="screen-reader-text">Cart</span>
-                                    <span class="cart-count">(0)</span>
+                                    <span class="cart-count">(0)</span><!-- tem que contar quantos itens tem no carrinho no bd -->
                                 </a>
                                 <div class="sub-menu cart-mini-wrapper">
                                     <div class="cart-mini-wrapper__inner">
@@ -228,4 +202,5 @@ Natural Chá
                 </div>
             </div>
         </div>
+
     </header>

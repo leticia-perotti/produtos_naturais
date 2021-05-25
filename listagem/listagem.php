@@ -6,6 +6,7 @@ try{
     include "../menu.php";
     include "../conexao.php";
 
+
     try {
         $produto= $conexao-> query("Select *from produto");
 
@@ -45,7 +46,7 @@ try{
             <div class="col-12">
 
                 <?php
-                 while ($linhaProduto=$produto->fetchObject()){
+                 /*while ($linhaProduto=$produto->fetchObject()){
                     echo "
 <hr>
 <div class=\"card\" id= \"box\" style=\"width: 18rem;\">
@@ -60,8 +61,22 @@ try{
   </div>
  </div>
  </hr>";
-                }
+                }*/
                 ?>
+
+                <hr>
+                <div class="card" id= "box" style="width: 18rem">
+                <img src="..." class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title" data-column-id="nome">Chá de Camomila</h5>
+                    <p class="card-text">R$ {$linhaProduto->valor}</p>
+
+                    <div class="d-grid gap-2">
+                    <a href="#" class="btn btn-light" type='button' style="width:100%;height:10%" ><img src='../fotos/carrinho.png' width='30'></a>
+                </div>
+            </div>
+        </div>
+        </hr>
 
                 <script src="../../../natural_cha_tcc/js/jquery.bootgrid.js"></script>
                 <script src="../../../natural_cha_tcc/js/jquery.bootgrid.fa.js"></script>
