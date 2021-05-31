@@ -17,16 +17,52 @@ try{
 
     ?>
 
+    <!doctype html>
     <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" href="../fotos/logo_mini.png">
         <title>Natural Chá | Produtos</title>
 
-
         <link href="../../../js/natural_cha_tcc/jquery.bootgrid.css" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Pattaya&display=swap" rel="stylesheet">
+        <style>
+            .titulo{
+                font-family: 'Comfortaa', cursive;
+                font-family: 'Pattaya', sans-serif;
+                font-size: large;
+            }
+
+            .botao {
+                background: none;
+                position: relative;
+                font-weight: bold;
+                font-size: inherit;
+                width:100%;
+                height:10%;
+                border-width: medium;
+                border-style: solid;
+                border-color: #F5DEB3;
+                border-radius: 35px;
+            }
+            .botao:hover{
+                background:#F5DEB3;
+                border-width: medium;
+                border-style: solid;
+                border-color: white;
+
+            }
+            #img:hover {
+
+                opacity: 0.8;
+            }
+
+
+
+        </style>
 
         <script src="../../../natural_cha_tcc/js/iziToast.js"></script>
         <script src="../../../natural_cha_tcc/js/iziToastExcluir.js"></script>
@@ -45,35 +81,22 @@ try{
         <div class="row">
             <div class="col-12">
 
-                <?php
-                 /*while ($linhaProduto=$produto->fetchObject()){
-                    echo "
-<hr>
-<div class=\"card\" id= \"box\" style=\"width: 18rem;\">
-  <img src=\"...\" class=\"card-img-top\" alt=\"...\">
-  <div class=\"card-body\">
-    <h5 class=\"card-title\" data-column-id=\"nome\">{$linhaProduto->nome}</h5>
-    <p class=\"card-text\">R$ {$linhaProduto->valor}</p>
-       
-    <div class=\"d-grid gap-2\">
-    <a href=\"#\" class=\"btn btn-light\" type='button' style=\"width:100%;height:10%\" ><img src='../fotos/carrinho.png' width='30'></a>
-    </div>
-  </div>
- </div>
- </hr>";
-                }*/
-                ?>
-
                 <hr>
                 <div class="card" id= "box" style="width: 18rem">
-                <img src="..." class="card-img-top" alt="...">
+                    <a href="vizualizar.php">
+                <img src="../fotos/camomila.jpg" id="img">
                 <div class="card-body">
-                    <h5 class="card-title" data-column-id="nome">Chá de Camomila</h5>
-                    <p class="card-text">R$ {$linhaProduto->valor}</p>
-
-                    <div class="d-grid gap-2">
-                    <a href="#" class="btn btn-light" type='button' style="width:100%;height:10%" ><img src='../fotos/carrinho.png' width='30'></a>
-                </div>
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+                    </a>
+                        <div class="d-grid gap-2">
+                            <a href="#"><button class="botao">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </button></a>
+                        </div>
             </div>
         </div>
         </hr>

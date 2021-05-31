@@ -11,8 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
+      <change afterPath="$PROJECT_DIR$/fotos/camomila.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listagem/vizualizar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/loading.php" beforeDir="false" afterPath="$PROJECT_DIR$/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +73,8 @@
       <workItem from="1620676996124" duration="1067000" />
       <workItem from="1620748963995" duration="6941000" />
       <workItem from="1621873909398" duration="7330000" />
-      <workItem from="1621958595905" duration="14766000" />
+      <workItem from="1621958595905" duration="16595000" />
+      <workItem from="1622473432798" duration="8273000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>
@@ -166,10 +170,10 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="555" y="260" key="Github.ShareDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068742464" />
-    <state x="559" y="229" key="NewPhpFileDialog" timestamp="1621960077807">
+    <state x="726" y="350" key="NewPhpFileDialog" timestamp="1622483605075">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
-    <state x="559" y="229" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1621960077807" />
+    <state x="726" y="350" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1622483605075" />
     <state x="181" y="0" key="SettingsEditor" timestamp="1620068560753">
       <screen x="0" y="0" width="1360" height="728" />
     </state>
@@ -198,5 +202,16 @@
       <screen x="0" y="0" width="1360" height="728" />
     </state>
     <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1621876194815" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/listagem/vizualizar.php</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

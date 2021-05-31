@@ -184,7 +184,7 @@ include "../menu.php";
                     9:00 até 12:00<br>
                     13:30 até 18:30<br>
                     Sábados:<br>
-                    9:00 até 13:30<br>
+                    9:00 até 12:30<br>
                     Domingos e feriados:<br>
                     Fechado.
                 </p>
