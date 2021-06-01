@@ -44,22 +44,26 @@ echo $exception->getMessage();
     <br>
 
     <div class="container">
-        <div class="container">
-
-                <h1><div class="card-header titulo">
-                    Camomila
-                </h1></div>
-
-                    <div class="form group row">
-                        <label class="col-sm-2 col-form-label"> Valor</label>
-                        <div class="col-sm-10">
-                            <!--INTERAÇÃO COM O BANCO DE DADOS-->
-                        R$ 3.00</div>
-                    </div>
-                </div>
+        <h1 class="titulo">Camomila</h1>
+        <img src="../fotos/camomila.jpg">
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Valor</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" value="R$ 3.00">
             </div>
-
-
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Descrição</label>
+            <div class="col-sm-10">
+                <input type="text" readonly class="form-control-plaintext" value="Pacote com 50g">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-sm-2 col-form-label">Quantidade </label>
+            <div class="col-sm-10">
+                <input type="text" id="exampleFormControlInput1" class="form-control-plaintext">
+            </div>
+        </div>
     </div>
 
     </body>

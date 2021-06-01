@@ -35,7 +35,6 @@ try{
                 font-family: 'Pattaya', sans-serif;
                 font-size: large;
             }
-
             .botao {
                 background: none;
                 position: relative;
@@ -45,11 +44,11 @@ try{
                 height:10%;
                 border-width: medium;
                 border-style: solid;
-                border-color: #F5DEB3;
+                border-color: blanchedalmond;
                 border-radius: 35px;
             }
             .botao:hover{
-                background:#F5DEB3;
+                background:blanchedalmond;
                 border-width: medium;
                 border-style: solid;
                 border-color: white;
@@ -58,6 +57,19 @@ try{
             #img:hover {
 
                 opacity: 0.8;
+            }
+            #box{
+                height: 50%;
+                width:190px;
+                background-color:#fff;
+                margin-left:10px;
+                margin-right:10px;
+                margin-bottom:5px;
+                margin-top:20px;
+                font-family:"Arial";
+                text-align:center;
+                display:inline-block;
+                box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.3);
             }
 
 
@@ -78,10 +90,9 @@ try{
         <br>
         <br>
     <h1> Produtos</h1>
-        <div class="row">
+        <hr class="row">
             <div class="col-12">
 
-                <hr>
                 <div class="card" id= "box" style="width: 18rem">
                     <a href="vizualizar.php">
                 <img src="../fotos/camomila.jpg" id="img">
@@ -91,7 +102,7 @@ try{
                     <br>Pacote com 100g </span>
                     </a>
                         <div class="d-grid gap-2">
-                            <a href="#"><button class="botao">
+                            <a href="vizualizar.php"><button class="botao" data-target="#finalizar">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                         <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                                     </svg>
@@ -99,7 +110,328 @@ try{
                         </div>
             </div>
         </div>
-        </hr>
+
+
+            <div class="card" id= "box" style="width: 18rem">
+                <a href="vizualizar.php">
+                    <img src="../fotos/camomila.jpg" id="img">
+                    <div class="card-body">
+                        <h5 class="card-title titulo">Chá de Camomila</h5>
+                        <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+                </a>
+                <div class="d-grid gap-2">
+                    <a href="#"><button class="botao">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                        </button></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="card" id= "box" style="width: 18rem">
+            <a href="vizualizar.php">
+                <img src="../fotos/camomila.jpg" id="img">
+                <div class="card-body">
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+            </a>
+            <div class="d-grid gap-2">
+                <a href="#"><button class="botao">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                        </svg>
+                    </button></a>
+            </div>
+        </div>
+    </div>
+
+    <div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div>
+
+    <div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div>
+    <div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div><div class="card" id= "box" style="width: 18rem">
+        <a href="vizualizar.php">
+            <img src="../fotos/camomila.jpg" id="img">
+            <div class="card-body">
+                <h5 class="card-title titulo">Chá de Camomila</h5>
+                <span class="card-text">R$ 3,00
+                    <br>Pacote com 100g </span>
+        </a>
+        <div class="d-grid gap-2">
+            <a href="#"><button class="botao">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                    </svg>
+                </button></a>
+        </div>
+    </div>
+    </div>
+
+
 
                 <script src="../../../natural_cha_tcc/js/jquery.bootgrid.js"></script>
                 <script src="../../../natural_cha_tcc/js/jquery.bootgrid.fa.js"></script>
