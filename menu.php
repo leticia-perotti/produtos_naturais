@@ -174,7 +174,7 @@ Natural Chá
 
                         <ul class="nav-link-right">
                             <li class="nav-link-account">
-                                <a href="https://demo.athemes.com/leto/my-account/" title="Login"><span class="prefix">Login</span> <span class="suffix ion-person"></span></a>
+                                <a href="../login/login.php" title="Login"><span class="prefix">Login</span> <span class="suffix ion-person"></span></a>
                             </li>
 
 
