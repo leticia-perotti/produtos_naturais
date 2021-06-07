@@ -160,7 +160,7 @@ Natural Chá
                         <nav id="site-navigation" class="main-navigation">
                             <div class="menu-main-container"><ul id="primary-menu" class="menu">
                                     <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-94"><a href="../listagem/listagem.php">Produtos</a></li>
-                                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="#">Pedidos</a></li>
+                                   <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-97"><a href="../pedidos/pedidos.php">Pedidos</a></li>
                                 </ul></div>		</nav><!-- #site-navigation -->
 
                         <div class="header-mobile-menu">
