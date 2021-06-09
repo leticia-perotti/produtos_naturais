@@ -163,7 +163,7 @@
 
         --loginLabelBackgroundColor: #C0C0C0;
 
-        --loginSubmitBackgroundColor: burlywood;
+        --loginSubmitBackgroundColor: #deb887;
         --loginSubmitColor: #eee;
         --loginSubmitHoverBackgroundColor: burlywood;
     }
@@ -228,6 +228,7 @@
         padding: 10px;
       }
     .botao {
+        margin-top: 5px;
         background: none;
         position: relative;
         font-weight: bold;
@@ -236,11 +237,11 @@
         height:10%;
         border-width: medium;
         border-style: solid;
-        border-color: blanchedalmond;
+        border-color: burlywood;
         border-radius: 35px;
     }
     .botao:hover{
-        background:blanchedalmond;
+        background:burlywood;
         border-width: medium;
         border-style: solid;
         border-color: white;
@@ -264,15 +265,15 @@
       <div class="form__field">
         <label for="login__username"><svg class="icon">
             <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">Usuário</span></label>
-        <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Usuário" required>
+          </svg><span class="hidden">Email</span></label>
+        <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Email" required>
       </div>
 
       <div class="form__field">
         <label for="login__password"><svg class="icon">
             <use xlink:href="#icon-lock"></use>
-          </svg><span class="hidden">Senha</span></label>
-        <input id="login__password" type="password" name="password" class="form__input" placeholder="Senha" required>
+          </svg><span class="hidden">CPF</span></label>
+        <input id="login__password" type="password" name="password" class="form__input" placeholder="CPF" required>
       </div>
 
       <div class="form__field">

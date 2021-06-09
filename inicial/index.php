@@ -1,3 +1,8 @@
+<?
+include "git/natural_cha/menu.php";
+?>
+
+
 <!doctype html>
 <html lang="en">
 <head>
@@ -5,6 +10,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="../fotos/logo_mini.png">
     <title>Natural Chá</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Pattaya&display=swap" rel="stylesheet">
 
     <style>
 
@@ -67,6 +75,54 @@
             font-size: large;
             font-weight: bold;
         }
+        .titulo{
+            font-family: 'Comfortaa', cursive;
+            font-family: 'Pattaya', sans-serif;
+            font-size: large;
+        }
+        .clicar {
+            background: none;
+            position: relative;
+            font-weight: bold;
+            font-size: inherit;
+            width:100%;
+            height:20%;
+            border-width: medium;
+            border-style: solid;
+            border-color: blanchedalmond;
+            border-radius: 35px;
+        }
+        .clicar:hover{
+            background:blanchedalmond;
+            border-width: medium;
+            border-style: solid;
+            border-color: white;
+
+        }
+        #imagem{
+            width: 150px;
+        }
+        #imagem:hover {
+
+            opacity: 0.8;
+        }
+        #pdt{
+            height: 250px;
+            width:150px;
+            margin-left:10px;
+            margin-right:10px;
+            margin-bottom:5px;
+            margin-top:20px;
+            font-family:"Arial";
+            text-align:center;
+            display:inline-block;
+            box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.3);
+        }
+        .link{
+            display: inline-block;
+            font-size: smaller;
+
+        }
     </style>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
@@ -74,23 +130,12 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
-    <link href="boot5.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="boot5.css" rel="stylesheet">
 
-    <!-- Favicons -->
-    <link rel="apple-touch-icon" href="fotos/temperos.jpg" sizes="180x180">
-    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-    <link rel="manifest" href="/docs/5.0/assets/img/favicons/manifest.json">
-    <link rel="mask-icon" href="/docs/5.0/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
-    <link rel="icon" href="/docs/5.0/assets/img/favicons/favicon.ico">
-    <meta name="theme-color" content="#7952b3">
-    <!-- Custom styles for this template -->
+
 </head>
 <body>
 
-<?php
-include "../menu.php";
-?>
 <BR>
 <BR>
                 <img src="../fotos/nc.png" class="d-block w-100" alt="...">
@@ -146,30 +191,31 @@ include "../menu.php";
         <hr class="featurette-divider">
 
         <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Diversas variedades <span class="text-muted">It’ll blow your mind.</span></h2>
-                <p class="lead">Some great placeholder content for the first featurette here. Imagine some exciting prose here.</p>
+            <h2> Produtos sugeridos<a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
+            <div class="card" id= "pdt" style="width: 18rem">
+                <a href="vizualizar.php">
+                    <img src="../fotos/camomila.jpg" id="imagem">
+                    <div class="card-body">
+                        <h5 class="card-title titulo">Chá de Camomila</h5>
+                </a>
+                <div class="d-grid gap-2">
+                    <a href="#"><button class="clicar">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                            </svg>
+                        </button></a>
+                </div>
             </div>
-            <div class="col-md-5">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
 
-            </div>
         </div>
 
         <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7 order-md-2">
-                <h2 class="featurette-heading">Oh yeah, it’s that good. <span class="text-muted">See for yourself.</span></h2>
-                <p class="lead">Another featurette? Of course. More placeholder content here to give you an idea of how this layout would work with some actual real-world content in place.</p>
-            </div>
-            <div class="col-md-5 order-md-1">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500" height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#eee"/><text x="50%" y="50%" fill="#aaa" dy=".3em">500x500</text></svg>
+    <div class="row featurette">
+        <h2> Feed do insta</h2>
+    </div>
 
-            </div>
-        </div>
-
-        <hr class="featurette-divider">
+    <hr class="featurette-divider">
 
         <div class="row featurette">
             <div class="col-md-7">

@@ -8,8 +8,9 @@ include "../menu.php";
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Natural Chá | Pedidos</title>
     <link rel="icon" href="../fotos/logo_mini.png">
-    <title>Natural Chá</title>
     <style>
         #imagem{
             width: 75px;
