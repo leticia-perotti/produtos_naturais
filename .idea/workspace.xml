@@ -11,15 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
-      <change afterPath="$PROJECT_DIR$/carrinho/carrinho.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/cadastroCliente.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/documentacao.php" beforeDir="false" afterPath="$PROJECT_DIR$/documentacao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/vizualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/vizualizar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/menu.php" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/pedidos/pedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/pedidos/pedidos.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -85,6 +81,9 @@
       <workItem from="1623077999731" duration="5985000" />
       <workItem from="1623172474189" duration="3590000" />
       <workItem from="1623256491807" duration="6294000" />
+      <workItem from="1623687536544" duration="3752000" />
+      <workItem from="1623787493593" duration="1596000" />
+      <workItem from="1623860620108" duration="5627000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>

@@ -1,11 +1,22 @@
 <?php
-
+date_default_timezone_set('UTC');
 
 try{
-    include "../documentacao.php";
-    include "../conexao.php";
-    include "../menu.php";
-    ?>
+
+$path = $_SERVER['DOCUMENT_ROOT'] . '\git\natural_cha_tcc\\';
+
+$file = $path . 'documentacao.php';
+
+include($file);
+
+$path2 = $_SERVER['DOCUMENT_ROOT'] . '\git\natural_cha_tcc\componentes\\';
+
+$file2 = $path2 . 'menu.php';
+
+include($file2);
+
+
+?>
     <!doctype html>
     <html lang="en">
     <head>
@@ -72,19 +83,13 @@ try{
         <script src="../../../natural_cha_tcc/js/iziToastExcluir.js"></script>
 
     </head>
-
-
-    <body>
+      <body>
     <div class="container">
-       <br>
-        <br>
-        <br>
+        <br><br><br>
+
     <h1> Produtos</h1>
         <hr class="row">
-            <div class="col-12">
-
-
-                <div class="card" id="box">
+                        <div class="card" id="box">
                     <img src="../fotos/camomila.jpg" id="img">
                     <div class="card-body">
                         <h5 class="card-title titulo">Chá de Camomila</h5>
@@ -99,8 +104,6 @@ try{
                     </div>
                 </div>
 
-
-
     </div>
     </div>
 
@@ -111,13 +114,14 @@ try{
 
 
 
-                </ul>
+    <hr class="row">
             </div>
         </div>
     </div>
+
     </div>
 
-    <hr class="featurette-divider">
+
 
     <?php
     include "vizualizar.php";

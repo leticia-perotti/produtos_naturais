@@ -1,6 +1,16 @@
 <?php
-include "../documentacao.php";
-include "../menu.php";
+
+$path = $_SERVER['DOCUMENT_ROOT'] . '\git\natural_cha_tcc\\';
+
+$file = $path . 'documentacao.php';
+
+include($file);
+
+$path2 = $_SERVER['DOCUMENT_ROOT'] . '\git\natural_cha_tcc\componentes\\';
+
+$file2 = $path2 . 'menu.php';
+
+include($file2);
 
 ?>
 <!doctype html>

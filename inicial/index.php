@@ -1,14 +1,19 @@
-<?
-include "git/natural_cha/menu.php";
+<?php
+include "../documentacao.php";
+include "../conexao.php";
+
+$path = $_SERVER['DOCUMENT_ROOT'] . '\git\natural_cha_tcc\componentes\\';
+
+$file = $path . 'menu.php';
+
+include($file);
 ?>
-
-
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../fotos/logo_mini.png">
+    <link rel="icon" href="/git/natural_cha_tcc/fotos/logo_mini.png">
     <title>Natural Chá</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -125,19 +130,16 @@ include "git/natural_cha/menu.php";
         }
     </style>
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
+      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
     <!-- Bootstrap core CSS -->
     <link href="boot5.css" rel="stylesheet">
 
-
 </head>
 <body>
-
-<BR>
-<BR>
+<br>
                 <img src="../fotos/nc.png" class="d-block w-100" alt="...">
 
 <div class="container">
