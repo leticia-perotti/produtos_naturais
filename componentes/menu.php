@@ -21,7 +21,9 @@
     }
     #link{
         color: #434546;
+        text-align: center;
     }
+
 </style>
 
 <nav class="nav" id="menu_bonito">
@@ -30,5 +32,6 @@
         Natural Chá</a>
     <a class="nav-link" id="link" href="\git\natural_cha_tcc\listagem\listagem.php">Produtos</a>
     <a class="nav-link" id="link" href="\git\natural_cha_tcc\pedidos\pedidos.php">Pedidos</a>
+    <a class="nav-link" id="link" href="\git\natural_cha_tcc\login\login.php">Login</a>
 
 </nav>

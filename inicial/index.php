@@ -21,7 +21,7 @@ include($file);
 
     <style>
 
-        .botao {
+        .botao_bonito {
             background: none;
             border: 0;
             position: relative;
@@ -30,7 +30,7 @@ include($file);
             transition: all 500ms ease-in-out;
         }
 
-        .botao:after {
+        .botao_bonito: after {
             content: '';
             transition: inherit;
             width: 35px;
@@ -44,12 +44,11 @@ include($file);
             z-index: -1;
         }
 
-        .botao:hover:after {
+        .botao_bonito:hover:after {
             width: calc(100% + 20px);
             border-radius: 20px;
             opacity: 0.6;
         }
-
         .bd-placeholder-img {
             font-size: 1.125rem;
             text-anchor: middle;
@@ -126,7 +125,7 @@ include($file);
         .link{
             display: inline-block;
             font-size: smaller;
-
+             text-decoration: none;
         }
     </style>
 
@@ -154,31 +153,31 @@ include($file);
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Produtos Naturais</h1>
-        <p><button class="botao">Ir para &raquo;</button></p>
+        <p><button class="botao_bonito">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chás</h1>
-        <p><button class="botao">Ir para &raquo;</button></p>
+        <p><button class="botao_bonito">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Confeitaria</h1>
-        <p><button class="botao">Ir para &raquo;</button></p>
+        <p><button class="botao_bonito">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Embalagens</h1>
-        <p><button class="botao">Ir para &raquo;</button></p>
+        <p><button class="botao_bonito">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chocolates</h1>
-        <p><button class="botao">Ir para &raquo;</button></p>
+        <p><button class="botao_bonito">Ir para &raquo;</button></p>
     </div>
     <!-- Fim das bolinhas com as categorias -->
 
@@ -188,18 +187,16 @@ include($file);
 
 
 
-        <!-- START THE FEATURETTES -->
+    <!-- Produtos sugeridos -->
 
         <hr class="featurette-divider">
 
         <div class="row featurette">
-            <h2> Produtos sugeridos<a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
+            <h2> Produtos sugeridos  <a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
             <div class="card" id= "pdt" style="width: 18rem">
-                <a href="vizualizar.php">
                     <img src="../fotos/camomila.jpg" id="imagem">
                     <div class="card-body">
                         <h5 class="card-title titulo">Chá de Camomila</h5>
-                </a>
                 <div class="d-grid gap-2">
                     <a href="#"><button class="clicar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
@@ -210,6 +207,7 @@ include($file);
             </div>
 
         </div>
+    <!-- Produtos sugeridos -->
 
         <hr class="featurette-divider">
 

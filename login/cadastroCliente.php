@@ -1,5 +1,5 @@
 <?php
-include "documentacao.php";
+include "../documentacao.php";
 ?>
 <!doctype html>
 <html lang="en">
