@@ -1,5 +1,1 @@
-<?php
-include "../menu.php";
-include "../documentacao.php";
-?>
-
+<h1>Carrinho</h1>

@@ -13,7 +13,7 @@ include($file);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/git/natural_cha_tcc/fotos/logo_mini.png">
+    <link rel="icon" href="\git\natural_cha_tcc\fotos\logo_mini.png">
     <title>Natural Chá</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">

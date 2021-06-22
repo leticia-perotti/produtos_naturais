@@ -1,7 +1,7 @@
 <?php
 ?>
 <html>
-<link rel="icon" href="fotos/logo_mini.png">
+<link rel="icon" href="\git\natural_cha_tcc\fotos\logo_mini.png">
 <title>Natural Chá</title>
 <style>
     .text{

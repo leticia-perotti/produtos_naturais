@@ -20,8 +20,9 @@ include($file2);
     <!doctype html>
     <html lang="en">
     <head>
-        <link href="/git/natural_cha_tcc/fotos/logo_mini.png" rel="icon">
         <title>Natural Chá</title>
+        <link rel="icon" href="/git/natural_cha_tcc/fotos/logo_mini.png">
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
