@@ -13,15 +13,14 @@ include($file);
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="\git\natural_cha_tcc\fotos\logo_mini.png">
+    <!--<link rel="icon" href="../fotos/logo_mini.png">-->
     <title>Natural Chá</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Pattaya&display=swap" rel="stylesheet">
 
     <style>
-
-        .botao_bonito {
+        .botao_animado_index {
             background: none;
             border: 0;
             position: relative;
@@ -30,39 +29,27 @@ include($file);
             transition: all 500ms ease-in-out;
         }
 
-        .botao_bonito: after {
+        .botao_animado_index:after {
             content: '';
             transition: inherit;
             width: 35px;
             height: 35px;
             border-radius: 50%;
-            background: burlywood;
+            background-color: burlywood;
             position: absolute;
-            top: 15%;
-            left: -10px;
+            top: -5%;
+            left: -15px;
             opacity: 0.3;
-            z-index: -1;
+            z-index: 1;
         }
 
-        .botao_bonito:hover:after {
+        .botao_animado_index:hover:after {
             width: calc(100% + 20px);
             border-radius: 20px;
-            opacity: 0.6;
-        }
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
         }
-        .box{height:250px;
+        .box{
+            height:250px;
             width:190px;
             background-color:#fff;
             margin-left:10px;
@@ -84,13 +71,16 @@ include($file);
             font-family: 'Pattaya', sans-serif;
             font-size: large;
         }
+
         .clicar {
             background: none;
             position: relative;
             font-weight: bold;
             font-size: inherit;
+            margin-bottom: 2%;
+            margin-top:2%;
             width:100%;
-            height:20%;
+            height:100%;
             border-width: medium;
             border-style: solid;
             border-color: blanchedalmond;
@@ -98,35 +88,34 @@ include($file);
         }
         .clicar:hover{
             background:blanchedalmond;
-            border-width: medium;
-            border-style: solid;
-            border-color: white;
-
-        }
-        #imagem{
+          }
+        #img_pdt{
             width: 150px;
+            height: 150px;
         }
-        #imagem:hover {
+        #img_pdt:hover {
 
             opacity: 0.8;
         }
         #pdt{
-            height: 250px;
-            width:150px;
-            margin-left:10px;
-            margin-right:10px;
-            margin-bottom:5px;
+            height: 265px;
+            width:175px;
+            margin-left: 15px;
+            margin-right:15px;
+            margin-bottom:20px;
             margin-top:20px;
             font-family:"Arial";
             text-align:center;
             display:inline-block;
+            align-content: center;
             box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.3);
         }
         .link{
             display: inline-block;
             font-size: smaller;
-             text-decoration: none;
+            text-decoration: none;
         }
+
     </style>
 
       <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
@@ -153,31 +142,31 @@ include($file);
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Produtos Naturais</h1>
-        <p><button class="botao_bonito">Ir para &raquo;</button></p>
+        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chás</h1>
-        <p><button class="botao_bonito">Ir para &raquo;</button></p>
+        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Confeitaria</h1>
-        <p><button class="botao_bonito">Ir para &raquo;</button></p>
+        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Embalagens</h1>
-        <p><button class="botao_bonito">Ir para &raquo;</button></p>
+        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chocolates</h1>
-        <p><button class="botao_bonito">Ir para &raquo;</button></p>
+        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
     </div>
     <!-- Fim das bolinhas com as categorias -->
 
@@ -193,21 +182,88 @@ include($file);
 
         <div class="row featurette">
             <h2> Produtos sugeridos  <a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
-            <div class="card" id= "pdt" style="width: 18rem">
-                    <img src="../fotos/camomila.jpg" id="imagem">
-                    <div class="card-body">
-                        <h5 class="card-title titulo">Chá de Camomila</h5>
-                <div class="d-grid gap-2">
-                    <a href="#"><button class="clicar">
+            <div class="card" id= "pdt">
+                <img src="../fotos/camomila.jpg" id="img_pdt">
+                <div class="card-body">
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <div class="d-grid gap-2">
+                        <a href="#">
+                            <button class="clicar">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
                                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                             </svg>
-                        </button></a>
+                            </button>
+                        </a>
+                    </div>
                 </div>
             </div>
 
+            <div class="card" id= "pdt">
+                <img src="../fotos/camomila.jpg" id="img_pdt">
+                <div class="card-body">
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <div class="d-grid gap-2">
+                        <a href="#">
+                            <button class="clicar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id= "pdt">
+                <img src="../fotos/camomila.jpg" id="img_pdt">
+                <div class="card-body">
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <div class="d-grid gap-2">
+                        <a href="#">
+                            <button class="clicar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" id= "pdt">
+                <img src="../fotos/camomila.jpg" id="img_pdt">
+                <div class="card-body">
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <div class="d-grid gap-2">
+                        <a href="#">
+                            <button class="clicar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="card" id= "pdt">
+                <img src="../fotos/camomila.jpg" id="img_pdt">
+                <div class="card-body">
+                    <h5 class="card-title titulo">Chá de Camomila</h5>
+                    <div class="d-grid gap-2">
+                        <a href="#">
+                            <button class="clicar">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                </svg>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
-    <!-- Produtos sugeridos -->
+
+
+    <!-- Fim produtos sugeridos -->
 
         <hr class="featurette-divider">
 
