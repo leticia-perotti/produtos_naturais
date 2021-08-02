@@ -2,7 +2,7 @@
 include "../documentacao.php";
 include "../conexao.php";
 
-$path = $_SERVER['DOCUMENT_ROOT'] . '\git\natural_cha_tcc\componentes\\';
+$path = $_SERVER['DOCUMENT_ROOT'] . '/componentes/';
 
 $file = $path . 'menu.php';
 

@@ -1,31 +1,4 @@
-<?php
 
-try{
-    include "../conexao.php";
-    include "../documentacoes.php";
-    include "../menu_nav.php";
-    include "../seguranca.php";
-
-
-    if(!isset($_GET["id"])){
-        die ("Acesse atravez da listagem");
-    }
-
-    $exibir= $conexao->prepare("SELECT * FROM produtos where id_produto=:id");
-    $exibir-> bindValue(':id', $_GET['id']);
-    $exibir-> execute();
-
-    if($exibir->rowCount()==0){
-        exit ("Objeto não encontrado");
-    }
-
-    $linha= $exibir->fetchObject();
-
-}catch (PDOException $exception){
-    echo $exception->getMessage();
-    echo "Deu erro!";
-}
-?>
     <html lang="en">
     <head>
         <meta charset="UTF-8">

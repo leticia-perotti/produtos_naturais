@@ -11,9 +11,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
-      <change afterPath="$PROJECT_DIR$/componentes/estilo_moldal_adic_prod.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/inserirCliente.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/boot5.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bootstrap.bundle.min.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/carrossel.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/componentes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/conexao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/exibir.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/exibir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listagem/vizualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/vizualizar.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/cadastroCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/cadastroCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedidos/pedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/pedidos/pedidos.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +49,7 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1rlHq0UuJG8G75F3ZRFL9vGrPMi" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -47,11 +62,19 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laragon/bin/php/php-7.2.19-Win32-VC15-x64/php.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="vue.rearranger.settings.migration" value="true" />
   </component>
+  <component name="RunManager">
+    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -86,6 +109,7 @@
       <workItem from="1624373803320" duration="5554000" />
       <workItem from="1624452211364" duration="7474000" />
       <workItem from="1627145841880" duration="2093000" />
+      <workItem from="1627922620317" duration="10185000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>
@@ -133,7 +157,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
     <option name="COLUMN_ORDER">
@@ -164,54 +188,8 @@
     <MESSAGE value="Dia 25/5" />
     <option name="LAST_COMMIT_MESSAGE" value="Dia 25/5" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="472" y="221" key="#Scopes" timestamp="1620662495458">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="472" y="221" key="#Scopes/0.0.1360.728@0.0.1360.728" timestamp="1620662495458" />
-    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620068189204">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068189204" />
-    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620754857746">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620754857746" />
-    <state x="555" y="260" key="Github.ShareDialog" timestamp="1620068742464">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="555" y="260" key="Github.ShareDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068742464" />
-    <state x="726" y="350" key="NewPhpFileDialog" timestamp="1627145940773">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="726" y="350" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1627145940773" />
-    <state x="181" y="0" key="SettingsEditor" timestamp="1620068560753">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1620068560753" />
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1620756637243">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1620756637243" />
-    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1620662787014">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1620662787014" />
-    <state x="481" y="151" key="git4idea.merge.GitPullDialog" timestamp="1620068784873">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="481" y="151" key="git4idea.merge.GitPullDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068784873" />
-    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620068936572">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068936572" />
-    <state x="336" y="157" key="run.anything.popup" timestamp="1620677121750">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="336" y="157" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1620677121750" />
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1622569828018">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1622569828018" />
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
