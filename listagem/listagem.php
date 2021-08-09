@@ -173,7 +173,7 @@ echo asset('/fotos/logo_mini.png');
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="adicionar.php">
+                <form action="adicionar.php" method="post">
                     <div class="modal-body">
 
                         <img src="../fotos/camomila.jpg" title="Camomila" id="imagem_modal">
@@ -192,15 +192,16 @@ echo asset('/fotos/logo_mini.png');
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label class="col-sm-2 col-form-label">Quantidade </label>
-                            <div class="col-sm-10">
-                                <input type="text" id="exampleFormControlInput1" class="form-control-plaintext">
+                            <label class="col-sm-2 col-form-label" for="qnt">Quantidade </label>
+                            <div class="col-sm-10"><br>
+                                <input type="number" id="qnt" name="qnt" class="form-control-plaintext" border="medium solid black">
                             </div>
                         </div>
                     </div>
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-light" id="botao" >Adicionar</button>
+                        <input type="hidden2" name="id" id="id_modal">
 
                     </div>
                 </form>
@@ -221,6 +222,8 @@ echo asset('/fotos/logo_mini.png');
                 modal.find('#valor_modal').text(data.valor)
                 modal.find('.modal-title').text(data.nome)
                 modal.find('#descricao_modal').text(data.descricao)
+                modal.find('#qnt').attr('min', '15').attr('step', '0.09');
+                modal.find('#id_modal').val(data.id)
             })
 
 
@@ -231,6 +234,8 @@ echo asset('/fotos/logo_mini.png');
             modal.find('#valor_modal').text('')
             modal.find('.modal-title').text('')
             modal.find('#descricao_modal').text('')
+            modal.find('#qnt').attr('min', '1').attr('step', 'any');
+            modal.find('#id_modal').text('')
 
         })
     </script>

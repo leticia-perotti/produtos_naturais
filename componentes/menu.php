@@ -27,9 +27,7 @@
         flex: ;
     }
     .direita{
-
         float: right;
-
     }
 
 </style>

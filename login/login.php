@@ -260,23 +260,19 @@
 
      <center><img src="../fotos/logo_mini.png" class="imagem"></center>
 
-      <form action="https://httpbin.org/post" method="POST" class="form login">
+      <form action="verificaLogin.php" method="POST">
 
-      <div class="form__field">
-        <label for="login__username"><svg class="icon">
-            <use xlink:href="#icon-user"></use>
-          </svg><span class="hidden">Email</span></label>
-        <input autocomplete="username" id="login__username" type="text" name="username" class="form__input" placeholder="Email" required>
-      </div>
+          <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" class="form-control" id="email" name="email" placeholder="email@123.com" required>
+          </div>
 
-      <div class="form__field">
-        <label for="login__password"><svg class="icon">
-            <use xlink:href="#icon-lock"></use>
-          </svg><span class="hidden">CPF</span></label>
-        <input id="login__password" type="password" name="password" class="form__input" placeholder="CPF" required>
-      </div>
+          <div class="form-group">
+              <label for="cpf">CPF</label>
+              <input type="number" class="form-control" name="cpf" id="cpf" required>
+          </div>
 
-      <div class="form__field">
+       <div class="form__field">
         <input type="submit" value="Login">
       </div>
 

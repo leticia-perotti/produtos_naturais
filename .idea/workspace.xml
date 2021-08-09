@@ -11,23 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/inserirCliente.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bdnatural (1).mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/login/verificaLogin.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/boot5.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/carrossel.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/componentes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/conexao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/exibir.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/exibir.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/listagem/adicionar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/vizualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/vizualizar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/login/cadastroCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/cadastroCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pedidos/pedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/pedidos/pedidos.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/inserirCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/inserirCliente.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +60,7 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../laragon/bin/php/php-7.2.19-Win32-VC15-x64/php.exe" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RunManager">
@@ -109,7 +103,8 @@
       <workItem from="1624373803320" duration="5554000" />
       <workItem from="1624452211364" duration="7474000" />
       <workItem from="1627145841880" duration="2093000" />
-      <workItem from="1627922620317" duration="10185000" />
+      <workItem from="1627922620317" duration="10308000" />
+      <workItem from="1628526997844" duration="8615000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>
