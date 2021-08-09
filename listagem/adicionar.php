@@ -20,3 +20,4 @@ $adicionar->execute();
 if ($adicionar->rowCount() == 1) {
     echo "deu";
 }
+

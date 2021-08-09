@@ -10,18 +10,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
-      <change afterPath="$PROJECT_DIR$/bdnatural (1).mwb" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/login/verificaLogin.php" afterDir="false" />
+    <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 9/8-1">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/componentes/estilo_moldal_adic_prod.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/listagem/adicionar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/cadastroCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/cadastroCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/inserirCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/inserirCliente.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -104,7 +96,7 @@
       <workItem from="1624452211364" duration="7474000" />
       <workItem from="1627145841880" duration="2093000" />
       <workItem from="1627922620317" duration="10308000" />
-      <workItem from="1628526997844" duration="8615000" />
+      <workItem from="1628526997844" duration="9261000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>
@@ -148,7 +140,14 @@
       <option name="project" value="LOCAL" />
       <updated>1621971161628</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Dia 9/8-1">
+      <created>1628537593384</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1628537593384</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +180,8 @@
     <MESSAGE value="teste" />
     <MESSAGE value="dia 10.5" />
     <MESSAGE value="Dia 25/5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Dia 25/5" />
+    <MESSAGE value="Dia 9/8-1" />
+    <option name="LAST_COMMIT_MESSAGE" value="Dia 9/8-1" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
