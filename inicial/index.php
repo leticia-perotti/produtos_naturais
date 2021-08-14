@@ -1,12 +1,10 @@
 <?php
-include "../documentacao.php";
-include "../conexao.php";
 
-$path = $_SERVER['DOCUMENT_ROOT'] . '/componentes/';
+include_once ("../conexao.php");
 
-$file = $path . 'menu.php';
+include(__ROOT__ . '/documentacao.php');
+include(__ROOT__ . '/componentes/menu.php');
 
-include($file);
 ?>
 <!doctype html>
 <html lang="en">

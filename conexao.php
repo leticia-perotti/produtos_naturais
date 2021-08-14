@@ -7,6 +7,25 @@ $conexao->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
 date_default_timezone_set ("America/Sao_Paulo");
 
+function retornaErro ($mensagem){
+    $retorno['status'] = false;
+    $retorno['mensagem'] = $mensagem;
+
+    echo json_encode($retorno);
+    exit;
+
+}
+
+function retornaOK ($mensagem){
+    $retorno['status'] = true;
+    $retorno['mensagem'] = $mensagem;
+
+    echo json_encode($retorno);
+    exit;
+
+
+}
+
 
 function asset($url){
     return __URL__ . $url;

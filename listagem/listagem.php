@@ -6,7 +6,15 @@ try{
 include(__ROOT__ . '/documentacao.php');
 include(__ROOT__ . '/componentes/menu.php');
 
-$query = $conexao-> query('Select * from produto');
+if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
+    $pesquisa = "%" . $_GET["pesquisa"] . "%";
+
+    $query = $conexao->prepare('Select * from produto where nome LIKE :pesquisa OR descricao LIKE  :pesquisa;');
+    $query->bindParam(":pesquisa", $pesquisa);
+    $query->execute();
+}else {
+    $query = $conexao->query('Select * from produto');
+}
 
 echo asset('/fotos/logo_mini.png');
 
@@ -82,8 +90,8 @@ echo asset('/fotos/logo_mini.png');
 
     <h1> Produtos</h1>
 
-        <form class="form-inline" id="search">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <form class="form-inline" id="search" action="" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" name="pesquisa" aria-label="Search">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
                     <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -201,7 +209,7 @@ echo asset('/fotos/logo_mini.png');
 
                     <div class="form-group">
                         <button type="submit" class="btn btn-light" id="botao" >Adicionar</button>
-                        <input type="hidden2" name="id" id="id_modal">
+                        <input type="hidden" name="id" id="id_modal">
 
                     </div>
                 </form>
@@ -222,7 +230,7 @@ echo asset('/fotos/logo_mini.png');
                 modal.find('#valor_modal').text(data.valor)
                 modal.find('.modal-title').text(data.nome)
                 modal.find('#descricao_modal').text(data.descricao)
-                modal.find('#qnt').attr('min', '15').attr('step', '0.09');
+                modal.find('#qnt').attr('min', '1').attr('step', '0.1');
                 modal.find('#id_modal').val(data.id)
             })
 

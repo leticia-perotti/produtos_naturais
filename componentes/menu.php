@@ -32,11 +32,15 @@
 
 </style>
 
+<?php
+    $produtos= (__ROOT__ . '/listagem.php');
+?>
+
 <nav class="nav" id="menu_bonito">
     <a class="nav-link active" href="/inicial/index.php" id ="titulo_menu">
         <img src="/fotos/logo_mini.png" id="imagem_menu">
         Natural Chá</a>
-    <a class="nav-link" id="link" href="/listagem/listagem.php">Produtos</a>
+    <a class="nav-link" id="link" href="<? $produtos ?>">Produtos</a>
     <a class="nav-link" id="link" href="/pedidos/pedidos.php">Pedidos</a>
     <a class="nav-link" id="link" href="/login/login.php">Login</a>
     <a class="nav-link direita" id="link" href="/carrinho/carrinho.php">

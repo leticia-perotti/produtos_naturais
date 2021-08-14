@@ -1,6 +1,6 @@
 <?php
 
-
+try{
 include_once("../conexao.php");
 include(__ROOT__ . '/documentacao.php');
 
@@ -13,7 +13,11 @@ $conferir->bindParam(":email", $email);
 $conferir->bindParam(":cpf", $cpf);
 $conferir->execute();
 
-
 if ($conferir->rowCount() == 1) {
-    echo "deu";
+    retornaOK("Valor inserido com sucesso");
+} else {
+    retornaErro("Nenhum dado alterado");
+}
+}catch (PDOException $exception) {
+    retornaErro($exception->getMessage());
 }

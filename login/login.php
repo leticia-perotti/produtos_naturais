@@ -260,7 +260,7 @@
 
      <center><img src="../fotos/logo_mini.png" class="imagem"></center>
 
-      <form action="verificaLogin.php" method="POST">
+      <form action="verificaLogin.php" method="post">
 
           <div class="form-group">
               <label for="email">Email</label>
