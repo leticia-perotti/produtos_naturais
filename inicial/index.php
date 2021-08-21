@@ -5,6 +5,8 @@ include_once ("../conexao.php");
 include(__ROOT__ . '/documentacao.php');
 include(__ROOT__ . '/componentes/menu.php');
 
+
+
 ?>
 <!doctype html>
 <html lang="en">
@@ -140,7 +142,7 @@ include(__ROOT__ . '/componentes/menu.php');
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Produtos Naturais</h1>
-        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
+        <p><button class="botao_animado_index" onclick="clicarNaturais()">Ir para &raquo;</button></p>
     </div>
 
     <div class="box">
@@ -256,4 +258,10 @@ include(__ROOT__ . '/componentes/menu.php');
 </body>
 
 </body>
+<script>
+    function clicarNaturais() {
+        window.location.href = "leticia/natural_cha_tcc/ilistagem/listagem.php";
+    };
+</script>
+
 </html>

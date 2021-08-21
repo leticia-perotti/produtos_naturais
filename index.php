@@ -1,4 +1,22 @@
 <?php
+
+//seta
+//setcookie('carrinho', 'codigodocarrinhonobd', time()+60*60*24*30);
+
+//verifica
+//if (isset($_COOKIE['carrinho']) && $_COOKIE['carrinho']!=''){
+ //   $carrinho = $_COOKIE['carrinho'];
+//}else{
+ //   $carrinho = false;
+//}
+
+//echo '-'.$carrinho.'-';
+
+//limpa
+//setcookie("carrinho", "", time()-3600);
+
+
+
 ?>
 <html>
 <link rel="icon" href="\git\natural_cha_tcc\fotos\logo_mini.png">
@@ -77,6 +95,7 @@ transform: translateY(100%);
         window.location.href = "inicial/index.php";
     }, 3000);
 </script>
+
 
 </body>
 </html>

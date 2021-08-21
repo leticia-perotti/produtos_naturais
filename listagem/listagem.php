@@ -123,14 +123,6 @@ echo asset('/fotos/logo_mini.png');
 
     </div>
     </div>
-
-
-
-                <script src="/js/jquery.bootgrid.js"></script>
-                <script src="/js/jquery.bootgrid.fa.js"></script>
-
-
-
     <hr class="row">
             </div>
         </div>
@@ -181,7 +173,7 @@ echo asset('/fotos/logo_mini.png');
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <form action="adicionar.php" method="post">
+                <form action="adicionar.php" method="post" class="jsonForm">
                     <div class="modal-body">
 
                         <img src="../fotos/camomila.jpg" title="Camomila" id="imagem_modal">
@@ -202,7 +194,7 @@ echo asset('/fotos/logo_mini.png');
                         <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="qnt">Quantidade </label>
                             <div class="col-sm-10"><br>
-                                <input type="number" id="qnt" name="qnt" class="form-control-plaintext" border="medium solid black">
+                                <input type="number" id="qnt" name="qnt" class="form-control-plaintext" border="medium solid black" required>
                             </div>
                         </div>
                     </div>
@@ -246,6 +238,31 @@ echo asset('/fotos/logo_mini.png');
             modal.find('#id_modal').text('')
 
         })
+
+        $(document).ready(function() {
+            $('.jsonForm').ajaxForm({
+                dataType: 'json',
+                success: function (data) {
+                    if (data.status==true) {
+                        iziToast.success({
+                            message: data.mensagem
+                        });
+                        $('.jsonForm').trigger('reset');
+                    }else {
+                        iziToast.error({
+                            message: data.mensagem
+                        });
+                    }
+
+                },
+                error: function (data) {
+                    iziToast.error({
+                        message: 'Servidor retornou erro'
+                    });
+                }
+            });
+
+        });
     </script>
 
     <?php
