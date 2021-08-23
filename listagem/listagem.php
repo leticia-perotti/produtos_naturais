@@ -202,6 +202,7 @@ echo asset('/fotos/logo_mini.png');
                     <div class="form-group">
                         <button type="submit" class="btn btn-light" id="botao" >Adicionar</button>
                         <input type="hidden" name="id" id="id_modal">
+                        <input type="hidden" name="valor" id="passa_valor">
 
                     </div>
                 </form>
@@ -224,6 +225,7 @@ echo asset('/fotos/logo_mini.png');
                 modal.find('#descricao_modal').text(data.descricao)
                 modal.find('#qnt').attr('min', '1').attr('step', '0.1');
                 modal.find('#id_modal').val(data.id)
+                modal.find('#passa_valor').val(data.valor)
             })
 
 

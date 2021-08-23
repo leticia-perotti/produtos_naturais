@@ -1,0 +1,139 @@
+Index: .idea/workspace.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"BranchesTreeState\">\r\n    <expand>\r\n      <path>\r\n        <item name=\"ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n        <item name=\"LOCAL_ROOT\" type=\"e8cecc67:BranchNodeDescriptor\" />\r\n      </path>\r\n    </expand>\r\n    <select />\r\n  </component>\r\n  <component name=\"ChangeListManager\">\r\n    <list default=\"true\" id=\"1b32f4c7-4cfe-43b2-a996-372a78d0805a\" name=\"Default Changelist\" comment=\"Dia 25/5\">\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/.name\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/.idea/php.xml\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/configuracao.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/listagem/adicionar.php\" afterDir=\"false\" />\r\n      <change afterPath=\"$PROJECT_DIR$/login/inserirCliente.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/.idea/workspace.xml\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/.idea/workspace.xml\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/boot5.css\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/bootstrap.bundle.min.js\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/carrossel.css\" beforeDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/componentes/menu.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/componentes/menu.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/conexao.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/conexao.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/inicial/index.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/inicial/index.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/listagem/exibir.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/listagem/exibir.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/listagem/listagem.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/listagem/listagem.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/listagem/vizualizar.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/listagem/vizualizar.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/login/cadastroCliente.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/login/cadastroCliente.php\" afterDir=\"false\" />\r\n      <change beforePath=\"$PROJECT_DIR$/pedidos/pedidos.php\" beforeDir=\"false\" afterPath=\"$PROJECT_DIR$/pedidos/pedidos.php\" afterDir=\"false\" />\r\n    </list>\r\n    <option name=\"SHOW_DIALOG\" value=\"false\" />\r\n    <option name=\"HIGHLIGHT_CONFLICTS\" value=\"true\" />\r\n    <option name=\"HIGHLIGHT_NON_ACTIVE_CHANGELIST\" value=\"false\" />\r\n    <option name=\"LAST_RESOLUTION\" value=\"IGNORE\" />\r\n  </component>\r\n  <component name=\"ComposerSettings\" doNotAsk=\"true\" synchronizationState=\"SYNCHRONIZE\">\r\n    <pharConfigPath>$PROJECT_DIR$/listagem/composer.json</pharConfigPath>\r\n    <execution />\r\n  </component>\r\n  <component name=\"FileTemplateManagerImpl\">\r\n    <option name=\"RECENT_TEMPLATES\">\r\n      <list>\r\n        <option value=\"JavaScript File\" />\r\n        <option value=\"CSS File\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Git.Settings\">\r\n    <option name=\"RECENT_GIT_ROOT_PATH\" value=\"$PROJECT_DIR$\" />\r\n  </component>\r\n  <component name=\"PhpWorkspaceProjectConfiguration\" interpreter_name=\"PHP\" />\r\n  <component name=\"ProjectId\" id=\"1rlHq0UuJG8G75F3ZRFL9vGrPMi\" />\r\n  <component name=\"ProjectLevelVcsManager\" settingsEditedManually=\"true\">\r\n    <ConfirmationsSetting value=\"2\" id=\"Add\" />\r\n  </component>\r\n  <component name=\"ProjectViewState\">\r\n    <option name=\"hideEmptyMiddlePackages\" value=\"true\" />\r\n    <option name=\"showLibraryContents\" value=\"true\" />\r\n  </component>\r\n  <component name=\"PropertiesComponent\">\r\n    <property name=\"ASKED_ADD_EXTERNAL_FILES\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.OpenProjectViewOnStart\" value=\"true\" />\r\n    <property name=\"RunOnceActivity.ShowReadmeOnStart\" value=\"true\" />\r\n    <property name=\"SHARE_PROJECT_CONFIGURATION_FILES\" value=\"true\" />\r\n    <property name=\"WebServerToolWindowFactoryState\" value=\"false\" />\r\n    <property name=\"last_opened_file_path\" value=\"$PROJECT_DIR$/../laragon/bin/php/php-7.2.19-Win32-VC15-x64/php.exe\" />\r\n    <property name=\"list.type.of.created.stylesheet\" value=\"CSS\" />\r\n    <property name=\"settings.editor.selected.configurable\" value=\"reference.webide.settings.project.settings.php\" />\r\n    <property name=\"vue.rearranger.settings.migration\" value=\"true\" />\r\n  </component>\r\n  <component name=\"RunManager\">\r\n    <configuration name=\"Unnamed\" type=\"PhpBuiltInWebServerConfigurationType\" factoryName=\"PHP Built-in Web Server\" nameIsGenerated=\"true\" document_root=\"$PROJECT_DIR$\">\r\n      <method v=\"2\" />\r\n    </configuration>\r\n  </component>\r\n  <component name=\"SpellCheckerSettings\" RuntimeDictionaries=\"0\" Folders=\"0\" CustomDictionaries=\"0\" DefaultDictionary=\"application-level\" UseSingleDictionary=\"true\" transferred=\"true\" />\r\n  <component name=\"SvnConfiguration\">\r\n    <configuration />\r\n  </component>\r\n  <component name=\"TaskManager\">\r\n    <task active=\"true\" id=\"Default\" summary=\"Default task\">\r\n      <changelist id=\"1b32f4c7-4cfe-43b2-a996-372a78d0805a\" name=\"Default Changelist\" comment=\"\" />\r\n      <created>1619543942991</created>\r\n      <option name=\"number\" value=\"Default\" />\r\n      <option name=\"presentableId\" value=\"Default\" />\r\n      <updated>1619543942991</updated>\r\n      <workItem from=\"1619543945247\" duration=\"80000\" />\r\n      <workItem from=\"1619544079677\" duration=\"3454000\" />\r\n      <workItem from=\"1620059423968\" duration=\"408000\" />\r\n      <workItem from=\"1620066454136\" duration=\"2342000\" />\r\n      <workItem from=\"1620146882159\" duration=\"8503000\" />\r\n      <workItem from=\"1620662471771\" duration=\"12115000\" />\r\n      <workItem from=\"1620676996124\" duration=\"1067000\" />\r\n      <workItem from=\"1620748963995\" duration=\"6941000\" />\r\n      <workItem from=\"1621873909398\" duration=\"7330000\" />\r\n      <workItem from=\"1621958595905\" duration=\"16595000\" />\r\n      <workItem from=\"1622473432798\" duration=\"8273000\" />\r\n      <workItem from=\"1622563757120\" duration=\"6844000\" />\r\n      <workItem from=\"1622641404744\" duration=\"11288000\" />\r\n      <workItem from=\"1623077999731\" duration=\"5985000\" />\r\n      <workItem from=\"1623172474189\" duration=\"3590000\" />\r\n      <workItem from=\"1623256491807\" duration=\"6294000\" />\r\n      <workItem from=\"1623687536544\" duration=\"3752000\" />\r\n      <workItem from=\"1623787493593\" duration=\"1596000\" />\r\n      <workItem from=\"1623860620108\" duration=\"5627000\" />\r\n      <workItem from=\"1624287389318\" duration=\"2099000\" />\r\n      <workItem from=\"1624361140196\" duration=\"1141000\" />\r\n      <workItem from=\"1624373803320\" duration=\"5554000\" />\r\n      <workItem from=\"1624452211364\" duration=\"7474000\" />\r\n      <workItem from=\"1627145841880\" duration=\"2093000\" />\r\n      <workItem from=\"1627922620317\" duration=\"10185000\" />\r\n    </task>\r\n    <task id=\"LOCAL-00001\" summary=\"teste\">\r\n      <created>1620067952323</created>\r\n      <option name=\"number\" value=\"00001\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00001\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620067952323</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00002\" summary=\"teste\">\r\n      <created>1620068979188</created>\r\n      <option name=\"number\" value=\"00002\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00002\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620068979188</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00003\" summary=\"dia 10.5\">\r\n      <created>1620662699879</created>\r\n      <option name=\"number\" value=\"00003\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00003\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620662699879</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00004\" summary=\"dia 10.5\">\r\n      <created>1620662794573</created>\r\n      <option name=\"number\" value=\"00004\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00004\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620662794573</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00005\" summary=\"dia 10.5\">\r\n      <created>1620670367597</created>\r\n      <option name=\"number\" value=\"00005\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00005\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1620670367597</updated>\r\n    </task>\r\n    <task id=\"LOCAL-00006\" summary=\"Dia 25/5\">\r\n      <created>1621971161628</created>\r\n      <option name=\"number\" value=\"00006\" />\r\n      <option name=\"presentableId\" value=\"LOCAL-00006\" />\r\n      <option name=\"project\" value=\"LOCAL\" />\r\n      <updated>1621971161628</updated>\r\n    </task>\r\n    <option name=\"localTasksCounter\" value=\"7\" />\r\n    <servers />\r\n  </component>\r\n  <component name=\"TypeScriptGeneratedFilesManager\">\r\n    <option name=\"version\" value=\"3\" />\r\n  </component>\r\n  <component name=\"Vcs.Log.History.Properties\">\r\n    <option name=\"COLUMN_ORDER\">\r\n      <list>\r\n        <option value=\"0\" />\r\n        <option value=\"2\" />\r\n        <option value=\"3\" />\r\n        <option value=\"1\" />\r\n      </list>\r\n    </option>\r\n  </component>\r\n  <component name=\"Vcs.Log.Tabs.Properties\">\r\n    <option name=\"TAB_STATES\">\r\n      <map>\r\n        <entry key=\"MAIN\">\r\n          <value>\r\n            <State />\r\n          </value>\r\n        </entry>\r\n      </map>\r\n    </option>\r\n    <option name=\"oldMeFiltersMigrated\" value=\"true\" />\r\n  </component>\r\n  <component name=\"VcsManagerConfiguration\">\r\n    <option name=\"ADD_EXTERNAL_FILES_SILENTLY\" value=\"true\" />\r\n    <MESSAGE value=\"teste\" />\r\n    <MESSAGE value=\"dia 10.5\" />\r\n    <MESSAGE value=\"Dia 25/5\" />\r\n    <option name=\"LAST_COMMIT_MESSAGE\" value=\"Dia 25/5\" />\r\n  </component>\r\n  <component name=\"XSLT-Support.FileAssociations.UIState\">\r\n    <expand />\r\n    <select />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/workspace.xml	(revision cc66fc9c212b41c36397ad09799f8b04c4dc4211)
++++ .idea/workspace.xml	(date 1628358777168)
+@@ -11,23 +11,7 @@
+   </component>
+   <component name="ChangeListManager">
+     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
+-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
+-      <change afterPath="$PROJECT_DIR$/login/inserirCliente.php" afterDir="false" />
+       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/boot5.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/bootstrap.bundle.min.js" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/carrossel.css" beforeDir="false" />
+-      <change beforePath="$PROJECT_DIR$/componentes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/conexao.php" beforeDir="false" afterPath="$PROJECT_DIR$/conexao.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/listagem/exibir.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/exibir.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/listagem/vizualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/vizualizar.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/login/cadastroCliente.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/cadastroCliente.php" afterDir="false" />
+-      <change beforePath="$PROJECT_DIR$/pedidos/pedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/pedidos/pedidos.php" afterDir="false" />
+     </list>
+     <option name="SHOW_DIALOG" value="false" />
+     <option name="HIGHLIGHT_CONFLICTS" value="true" />
+@@ -62,19 +46,11 @@
+     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
+     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+     <property name="WebServerToolWindowFactoryState" value="false" />
+-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../laragon/bin/php/php-7.2.19-Win32-VC15-x64/php.exe" />
++    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+     <property name="list.type.of.created.stylesheet" value="CSS" />
+-    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
+-    <property name="vue.rearranger.settings.migration" value="true" />
++    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+   </component>
+-  <component name="RunManager">
+-    <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
+-      <method v="2" />
+-    </configuration>
+-  </component>
+-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+   <component name="SvnConfiguration">
+     <configuration />
+   </component>
+@@ -109,7 +85,6 @@
+       <workItem from="1624373803320" duration="5554000" />
+       <workItem from="1624452211364" duration="7474000" />
+       <workItem from="1627145841880" duration="2093000" />
+-      <workItem from="1627922620317" duration="10185000" />
+     </task>
+     <task id="LOCAL-00001" summary="teste">
+       <created>1620067952323</created>
+@@ -157,7 +132,7 @@
+     <servers />
+   </component>
+   <component name="TypeScriptGeneratedFilesManager">
+-    <option name="version" value="3" />
++    <option name="version" value="2" />
+   </component>
+   <component name="Vcs.Log.History.Properties">
+     <option name="COLUMN_ORDER">
+@@ -188,8 +163,62 @@
+     <MESSAGE value="Dia 25/5" />
+     <option name="LAST_COMMIT_MESSAGE" value="Dia 25/5" />
+   </component>
+-  <component name="XSLT-Support.FileAssociations.UIState">
+-    <expand />
+-    <select />
++  <component name="WindowStateProjectService">
++    <state x="387" y="6" key="#PHP" timestamp="1628357979734">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="387" y="6" key="#PHP/0.0.1360.728@0.0.1360.728" timestamp="1628357979734" />
++    <state x="472" y="221" key="#Scopes" timestamp="1620662495458">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="472" y="221" key="#Scopes/0.0.1360.728@0.0.1360.728" timestamp="1620662495458" />
++    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1620068189204">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="134" y="18" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068189204" />
++    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1620754857746">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="410" y="110" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620754857746" />
++    <state x="555" y="260" key="Github.ShareDialog" timestamp="1620068742464">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="555" y="260" key="Github.ShareDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068742464" />
++    <state x="128" y="54" key="MergeDialog" timestamp="1628357893345">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="128" y="54" key="MergeDialog/0.0.1360.728@0.0.1360.728" timestamp="1628357893345" />
++    <state x="726" y="350" key="NewPhpFileDialog" timestamp="1627145940773">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="726" y="350" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1627145940773" />
++    <state x="181" y="0" key="SettingsEditor" timestamp="1620068560753">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="181" y="0" key="SettingsEditor/0.0.1360.728@0.0.1360.728" timestamp="1620068560753" />
++    <state x="272" y="96" key="Vcs.Push.Dialog.v2" timestamp="1620756637243">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="272" y="96" key="Vcs.Push.Dialog.v2/0.0.1360.728@0.0.1360.728" timestamp="1620756637243" />
++    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1628357811157">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="489" y="277" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1360.728@0.0.1360.728" timestamp="1628357811157" />
++    <state x="481" y="151" key="git4idea.merge.GitPullDialog" timestamp="1620068784873">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="481" y="151" key="git4idea.merge.GitPullDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068784873" />
++    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog" timestamp="1620068936572">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="481" y="269" key="git4idea.remote.GitConfigureRemotesDialog/0.0.1360.728@0.0.1360.728" timestamp="1620068936572" />
++    <state x="336" y="157" key="run.anything.popup" timestamp="1620677121750">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="336" y="157" key="run.anything.popup/0.0.1360.728@0.0.1360.728" timestamp="1620677121750" />
++    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup" timestamp="1622569828018">
++      <screen x="0" y="0" width="1360" height="728" />
++    </state>
++    <state x="343" y="49" width="672" height="678" key="search.everywhere.popup/0.0.1360.728@0.0.1360.728" timestamp="1622569828018" />
+   </component>
+ </project>
+\ No newline at end of file

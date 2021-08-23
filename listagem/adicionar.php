@@ -6,6 +6,9 @@ include_once("../conexao.php");
 
 $idProduto = $_POST['id'];
 $quantidade = $_POST['qnt'];
+$valor = $_POST['valor'];
+
+$valor = number_format($valor, 2, '.', '');
 
 if (isset($_COOKIE['carrinho']) && $_COOKIE['carrinho']!=''){
     $codigoDoCarrinho = $_COOKIE['carrinho'];
@@ -19,13 +22,16 @@ if (isset($_COOKIE['carrinho']) && $_COOKIE['carrinho']!=''){
 
     setcookie('carrinho', $codigoDoCarrinho, time()+60*60*24*30);
 }
-$adicionar = $conexao->prepare('Insert into atendimento_produto (quantidade, atendimento_idatendimento, produto_idproduto) 
+$adicionar = $conexao->prepare('Insert into atendimento_produto (quantidade, atendimento_idatendimento, produto_idproduto, valorproduto) 
                                   values 
-                                  (:qnt, :carinho,:produto)');
+                                  (:qnt, :carinho,:produto, :valor)');
 $adicionar->bindParam(":qnt", $quantidade);
 $adicionar->bindParam(":produto", $idProduto);
 $adicionar->bindParam(":carinho", $codigoDoCarrinho);
+$adicionar->bindValue(":valor", $valor);
 $adicionar->execute();
+
+//$somaIguais = $conexao ->prepare('Select * from atendimento_produto where p')
 
 if($adicionar->rowCount()==1){
     retornaOK("Valor inserido com sucesso");
