@@ -14,6 +14,15 @@ $conferir->bindParam(":cpf", $cpf);
 $conferir->execute();
 
 if ($conferir->rowCount() == 1) {
+
+    $cliente = $conferir-> lastInsertId();
+
+    $adicionaCliente = $conexao-> prepare('Update atendimento set cliente_idcliente =: cliente
+                                                    where idatendimento =:id ');
+    $adicionaCliente-> bindParam(':id', $_COOKIE['carrinho']);
+    $adicionaCliente->bindParam(':cliente', $cliente);
+    $adicionaCliente->execute();
+
     retornaOK("Valor inserido com sucesso");
 } else {
     retornaErro("Nenhum dado alterado");

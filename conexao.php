@@ -13,7 +13,6 @@ function retornaErro ($mensagem){
 
     echo json_encode($retorno);
     exit;
-
 }
 
 function retornaOK ($mensagem){
@@ -22,14 +21,12 @@ function retornaOK ($mensagem){
 
     echo json_encode($retorno);
     exit;
-
-
 }
-
 
 function asset($url){
     return __URL__ . $url;
 }
+
 function formatar_valor($numero)
 {
     return number_format($numero, 2, ',', '.');

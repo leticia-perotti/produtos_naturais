@@ -97,19 +97,18 @@ include(__ROOT__ . '/documentacao.php');
 </body>
 
 <script>
-    $(document).ready(function () {
-        $('.jsonForm').ajaxForm ({
+    $(document).ready(function() {
+        $('.jsonForm').ajaxForm({
             dataType: 'json',
             success: function (data) {
                 if (data.status==true) {
                     iziToast.success({
                         message: data.mensagem,
-                        setTimeout(function() {
-                            window.location.href = "inicial/index.php";
-                        }, 1500);
-                    });
-
-
+                        onClosing: function () {
+                            history.back();
+                        }
+                      });
+                    $('.jsonForm').trigger('reset');
                 }else {
                     iziToast.error({
                         message: data.mensagem
@@ -117,11 +116,12 @@ include(__ROOT__ . '/documentacao.php');
                 }
 
             },
-            error: function(data){
+            error: function (data) {
                 iziToast.error({
                     message: 'Servidor retornou erro'
                 });
             }
         });
+
     });
 </script>
