@@ -9,10 +9,11 @@ try {
     $query->bindParam(":atendimento", $_COOKIE['carrinho']);
     $query->execute();
 
-    $linha = $query->fetch();
-   // $linha-> valor = formatar_valor($linha->valor);
 
-    echo json_encode($linha);
+    while ($linha = $query->fetchObject()){
+        echo json_encode($linha);
+    }
+
     exit;
 
     if ($query->rowCount() == 0) {

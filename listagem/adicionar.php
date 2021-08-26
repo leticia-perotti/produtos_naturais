@@ -42,7 +42,7 @@ $somaIguais->execute();
 $qnt =0;
 
 if($somaIguais->rowCount()>1) {
-    while ($linha = $somaIguais->fetchObject()) {
+    while ($linha = $somaIguais->fetch()){
         $qnt = $qnt + $linha->quantidade;
         echo $qnt.' - ';
     }
@@ -54,9 +54,9 @@ if($somaIguais->rowCount()>1) {
     $adicionaSoma->bindParam(":atendimento", $codigoDoCarrinho);
     $adicionaSoma->bindParam(":id", $ultimo);
     $adicionaSoma->execute();
-}
-/*
-    $deletaResto=$conexao->prepare("Delete * from atendimento_produto where
+
+
+    $deletaResto=$conexao->prepare("Delete from atendimento_produto where
                                                  atendimento_idatendimento=:atendimento && produto_idproduto=:produto 
                                                  && idatendimento_produto!=:id");
     $deletaResto->bindParam(":produto", $idProduto);
@@ -70,4 +70,4 @@ if($adicionar->rowCount()==1){
     retornaOK("Valor inserido com sucesso");
 }else{
     retornaErro("Erro ao inserir");
-}*/
+}

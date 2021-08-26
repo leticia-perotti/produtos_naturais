@@ -61,35 +61,15 @@
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <form action="alterarCarrinho.php" method="post" class="jsonForm">
-                <div class="modal-body">
-                    <div class="form-group row" id="lado">
-                        <label class="col-sm-2 col-form-label">Valor: </label>
-                        <br>
-                        <div class="col-sm-10">
-                            R$ <span id="valor_carrinho"><?php echo $linha->valor; ?></span>
-                        </div>
-                    </div>
-                    <div class="form-group row" id="lado">
-                        <label class="col-sm-2 col-form-label">Produto: </label>
-                        <br>
-                        <div class="col-sm-10">
-                            <span id="produto_carrinho"><?php echo $linha->produto; ?></span>
-                        </div>
-                    </div>
-                    <div class="form-group row">
-                        <label class="col-sm-2 col-form-label" for="qnt">Quantidade </label>
-                        <div class="col-sm-10"><br>
-                            <input type="number" id="qnt" name="qnt" class="form-control-plaintext" value="<?$linha->quantidade ?>" required>
-                        </div>
-                    </div>
+            <br>
+            <br>
+            <div class="form-group row" id="lado">
+                <label class="col-sm-2 col-form-label">Produto: </label>
+                <br>
+                <div class="col-sm-10">
+                    <span id="produto_carrinho"><?php echo $linha->produto; ?></span>
                 </div>
-
-                <div class="form-group">
-                    <button type="submit" class="btn btn-light" id="botao" >Adicionar</button>
-                    <input type="hidden" name="id" id="id_modal">
-                </div>
-            </form>
+            </div>
         </div>
     </div>
 </div>

@@ -133,10 +133,10 @@ echo asset('/fotos/logo_mini.png');
 
     <!-- Modal de adicionar produto -->
     <style>
-        .modal-header {
+        .cabecalho {
             background-color: blanchedalmond;
         }
-        .modal-title{
+        .titulo_do_modal{
             font-family: 'Comfortaa', cursive;
             font-family: 'Pattaya', sans-serif;
             font-size: x-large;
@@ -167,8 +167,8 @@ echo asset('/fotos/logo_mini.png');
     <div class="modal fade" id="vizualizar_produto" tabindex="-1" role="dialog" aria-labelledby="vizualizar_produtoLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered" role="document">
             <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="vizualizar_produtoLabel"></h5>
+                <div class="modal-header cabecalho">
+                    <h5 class="modal-title titulo_do_modal" id="vizualizar_produtoLabel"></h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
