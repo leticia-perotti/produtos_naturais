@@ -25,10 +25,8 @@ include(__ROOT__ . '/documentacao.php');
     </script>
 <style>
 
-
     .grid{
         alignment: center;
-
     }
     .text--center {
         text-align: center;
@@ -70,7 +68,7 @@ include(__ROOT__ . '/documentacao.php');
 
      <center><img src="../fotos/logo_mini.png" class="imagem"></center>
 
-      <form action="verificaLogin.php" method="post">
+      <form action="verificaLogin.php" method="post" class="jsonForm">
 
           <div class="form-group">
               <label for="email">Email</label>
@@ -84,7 +82,7 @@ include(__ROOT__ . '/documentacao.php');
 
        <div class="form__field">
         <input type="submit" value="Login">
-      </div>
+        </div>
 
     </form>
       <br>
@@ -114,6 +112,12 @@ include(__ROOT__ . '/documentacao.php');
                 if (data.status==true) {
                     iziToast.success({
                         message: data.mensagem
+                        //onClosing: function () {
+                        //    history.back();
+                       // }
+                        //onClosing: function () {
+                          //  window.location.href = "inicial/index.php";
+                        //}
                     });
                     $('.jsonForm').trigger('reset');
                 }else {

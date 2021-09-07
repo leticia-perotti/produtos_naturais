@@ -1,7 +1,27 @@
 <?php
 
+include_once ("../conexao.php");
+
+try{
+
 include(__ROOT__ . '/documentacao.php');
 include(__ROOT__ . '/componentes/menu.php');
+
+    if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
+        $pesquisa = "%" . $_GET["pesquisa"] . "%";
+
+        $query = $conexao->prepare('Select produto.nome, atendimento_produto.quantidade, atendimento_produto.valorproduto, atendimento.data_carrinho
+                                             from produto inner join atendimento_produto inner join atendimento
+                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento
+                                             where atendimento.status= 3 && (nome LIKE :pesquisa OR descricao LIKE  :pesquisa;)');
+        $query->bindParam(":pesquisa", $pesquisa);
+        $query->execute();
+    }else {
+        $query = $conexao->query('Select produto.nome, atendimento_produto.quantidade, atendimento_produto.valorproduto, atendimento.data_carrinho
+                                             from produto inner join atendimento_produto inner join atendimento
+                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento
+                                             where atendimento.status= 3 ');
+    }
 
 
 ?>
@@ -104,3 +124,9 @@ include(__ROOT__ . '/componentes/menu.php');
             <div id="qnt"> 4 embalagens P32 </div>
         </div>
     </div>
+    <?php
+}catch (PDOException $exception){
+    echo $exception->getMessage();
+    echo "Deu erro";
+
+}

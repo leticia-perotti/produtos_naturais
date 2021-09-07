@@ -10,7 +10,7 @@
 
 //pc de casa
 define('__ROOT__',  $_SERVER['DOCUMENT_ROOT']."/git/natural_cha_tcc/");
-const __URL__ = 'http://localhost/git/';
+const __URL__ = 'http://localhost/git/natural_cha_tcc';
 
 //const DBNAME = 'bdnatural';
 const DBNAME = 'bd_natural';

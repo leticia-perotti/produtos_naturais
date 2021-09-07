@@ -11,11 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2021_13_08_[Default_Changelist]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_23_08_2021_13_08__Default_Changelist_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/exibeCarrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/exibeCarrinho.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/componentes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/adicionar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/configuracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/login.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/login.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/login/verificaLogin.php" beforeDir="false" afterPath="$PROJECT_DIR$/login/verificaLogin.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pedidos/pedidos.php" beforeDir="false" afterPath="$PROJECT_DIR$/pedidos/pedidos.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -102,6 +105,10 @@
       <workItem from="1629823197619" duration="9431000" />
       <workItem from="1629908748086" duration="7603000" />
       <workItem from="1629997375238" duration="5701000" />
+      <workItem from="1630092133759" duration="469000" />
+      <workItem from="1630777470075" duration="594000" />
+      <workItem from="1631035647387" duration="2279000" />
+      <workItem from="1631038470379" duration="3318000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>

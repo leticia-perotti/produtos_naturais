@@ -23,9 +23,9 @@ if ($conferir->rowCount() == 1) {
     $adicionaCliente->bindParam(':cliente', $cliente);
     $adicionaCliente->execute();
 
-    retornaOK("Valor inserido com sucesso");
+    retornaOK("Autenticado com sucesso");
 } else {
-    retornaErro("Nenhum dado alterado");
+    retornaErro("Erro ao autenticar");
 }
 }catch (PDOException $exception) {
     retornaErro($exception->getMessage());
