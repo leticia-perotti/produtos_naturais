@@ -16,19 +16,19 @@ if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
     $query = $conexao->query('Select * from produto');
 }
 
-echo asset('/fotos/logo_mini.png');
+$foto =asset('/fotos/logo_mini.png');
 
 ?>
     <!doctype html>
     <html lang="en">
     <head>
         <title>Natural Chá</title>
-        <link rel="icon" href="/git/natural_cha_tcc/fotos/logo_mini.png">
+        <link rel="icon" href="<?php $foto?>">
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link href="../../../js/natural_cha_tcc/jquery.bootgrid.css" rel="stylesheet">
+        <link href="<?php echo asset('../../../js/natural_cha_tcc/jquery.bootgrid.css'); ?>" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Pattaya&display=swap" rel="stylesheet">
@@ -213,35 +213,9 @@ echo asset('/fotos/logo_mini.png');
     <!-- fim do modal de servico -->
 
     <script type="application/javascript">
-        $('#vizualizar_produto').on('show.bs.modal', function (event) {
-            var button = $(event.relatedTarget) // Button that triggered the modal
-            var id = button.data('id') // Extract info from data-* attributes
-            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-            var modal = $(this)
-            $.getJSON("vizualizar.php?id=" + id, function (data){
-                modal.find('#valor_modal').text(data.valor)
-                modal.find('.modal-title').text(data.nome)
-                modal.find('#descricao_modal').text(data.descricao)
-                modal.find('#qnt').attr('min', '1').attr('step', '0.1');
-                modal.find('#id_modal').val(data.id)
-                modal.find('#passa_valor').val(data.valor)
-            })
-
-
-        })
-
-        $('#vizualizar_produto').on('hide.bs.modal', function (event) {
-            var modal = $(this)
-            modal.find('#valor_modal').text('')
-            modal.find('.modal-title').text('')
-            modal.find('#descricao_modal').text('')
-            modal.find('#qnt').attr('min', '1').attr('step', 'any');
-            modal.find('#id_modal').text('')
-
-        })
-
         $(document).ready(function() {
+            atualizaCarrinho();
+
             $('.jsonForm').ajaxForm({
                 dataType: 'json',
                 success: function (data) {
@@ -250,6 +224,8 @@ echo asset('/fotos/logo_mini.png');
                             message: data.mensagem
                         });
                         $('.jsonForm').trigger('reset');
+                        $('#vizualizar_produto').modal("hide");
+                        atualizaCarrinho();
                     }else {
                         iziToast.error({
                             message: data.mensagem
@@ -264,14 +240,60 @@ echo asset('/fotos/logo_mini.png');
                 }
             });
 
+            $('#vizualizar_produto').on('show.bs.modal', function (event) {
+                var button = $(event.relatedTarget) // Button that triggered the modal
+                var id = button.data('id') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+                var modal = $(this)
+                $.getJSON("vizualizar.php?id=" + id, function (data){
+                    modal.find('#valor_modal').text(data.valor_formatado)
+                    modal.find('.modal-title').text(data.nome)
+                    modal.find('#descricao_modal').text(data.descricao)
+                    modal.find('#qnt').attr('min', '1').attr('step', '0.1');
+                    modal.find('#id_modal').val(data.id)
+                    modal.find('#passa_valor').val(data.valor)
+                })
+
+
+            })
+
+            $('#vizualizar_produto').on('hide.bs.modal', function (event) {
+                var modal = $(this)
+                modal.find('#valor_modal').text('')
+                modal.find('.modal-title').text('')
+                modal.find('#descricao_modal').text('')
+                modal.find('#qnt').attr('min', '1').attr('step', 'any');
+                modal.find('#id_modal').text('')
+
+            })
+
         });
+
+        function atualizaCarrinho(){
+            $.getJSON("../componentes/exibeCarrinho.php", function (data){
+                var html = '';
+                console.log(data.length);
+                $.each(data, function(item, val){
+                   html += '<div class="alert alert-secondary" role="alert">';
+                   html += '<b font-size="large"> ' + val.produto + '</b> <br>';
+                   html += 'Quantidade: ' + val.quantidade + '</align>';
+                   html += '<div float = "right"> R$' + val.valor +'</div>';
+                   html += '</div>';
+                });
+                var $link = $("#link span.badge");
+                $link.text(data.length);
+                if(data.length>0){
+                    $link.removeClass("d-none");
+                }else{
+                    $link.addClass("d-none");
+                }
+
+                $("#carrinho .modal-body").html(html);
+            })
+        }
     </script>
-
-    <?php
-//    include 'vizualizar.php';
-    ?>
-
-    </body>
+</body>
 
 
 

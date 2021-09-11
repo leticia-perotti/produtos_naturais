@@ -29,6 +29,12 @@
     .direita{
         float: right;
     }
+    #link span.badge {
+        position: relative;
+        left: -7px;
+        top: 12px;
+        font-size: 0.6em;
+    }
 
 </style>
 
@@ -39,12 +45,14 @@ $index = asset('/inicial/index.php');
 $listagem = asset('/listagem/listagem.php');
 $pedidos = asset('/pedidos/pedidos.php');
 $login = asset('/login/login.php');
+$foto =asset('/fotos/logo_mini.png');
+$carrinho = asset('/carrinho/carrinho.php')
 
 ?>
 
 <nav class="nav" id="menu_bonito">
     <a class="nav-link active" href="<?php echo $index?>" id ="titulo_menu">
-        <img src="/fotos/logo_mini.png" id="imagem_menu">
+        <img src="<?php echo $foto?>" id="imagem_menu">
         Natural Chá</a>
     <a class="nav-link" id="link" href="<?php echo $listagem?>">Produtos</a>
     <a class="nav-link" id="link" href="<?php echo $pedidos?>">Pedidos</a>
@@ -53,6 +61,7 @@ $login = asset('/login/login.php');
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
         </svg>
+        <span class="badge badge-pill badge-success d-none">0</span>
     </a>
 </nav>
 
@@ -69,15 +78,10 @@ $login = asset('/login/login.php');
                     <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <br>
-            <br>
-            <div class="form-group row" id="lado">
-                <label class="col-sm-2 col-form-label">Produto: </label>
-                <br>
-                <div class="col-sm-10">
-                    <span id="produto_carrinho"><?php echo $linha->produto; ?></span>
-                </div>
+            <div class="modal-body">
+
             </div>
+            <a href="<?php echo $carrinho?>" class="btn btn-success">Ir para o carrinho</a>
         </div>
     </div>
 </div>
@@ -86,31 +90,9 @@ $login = asset('/login/login.php');
 
 <script>
 
-    $('#carrinho').on('show.bs.modal', function (event) {
-        var mOver = $(event.relatedTarget) // Button that triggered the modal
-        var id = mOver.data('id') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        $.getJSON("../componentes/exibeCarrinho.php?id=" + id, function (data){
-            modal.find('#valor_carrinho').val(data.valor)
-            modal.find('#produto_carrinho').text(data.produto)
-            modal.find('#quantidade').val(data.quantidade);
-         })
-    })
-
-    $('#carrinho').on('hide.bs.modal', function (event) {
-        var modal = $(this)
-        modal.find('#valor_carrinho').val('')
-        modal.find('#produto_carrinho').text('')
-        modal.find('#quantidade').attr('min', '1').attr('step', '0.1').val(data.quantidade);
-
-    })
 
     function abrirCarrinho(obj)
     {
-        $("#carrinho").modal({
-                show: true
-            });
+        $("#carrinho").modal("show");
     }
 </script>

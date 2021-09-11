@@ -44,7 +44,6 @@ $qnt =0;
 if($somaIguais->rowCount()>1) {
     while ($linha = $somaIguais->fetch()){
         $qnt = $qnt + $linha->quantidade;
-        echo $qnt.' - ';
     }
     $adicionaSoma = $conexao->prepare("Update atendimento_produto set quantidade=:qnt where
                                                     (atendimento_idatendimento=:atendimento && produto_idproduto=:produto) 

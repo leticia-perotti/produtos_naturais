@@ -9,7 +9,8 @@ try{
     $vizualizar-> execute();
 
     $linha = $vizualizar->fetch();
-    $linha->valor = formatar_valor($linha->valor);
+    $linha->valor = $linha->valor;
+    $linha->valor_formatado = formatar_valor($linha->valor);
 
     echo json_encode($linha);
     exit;
@@ -21,7 +22,6 @@ try{
     $linha= $vizualizar->fetchObject();
 
 }catch (PDOException $exception){
-    echo $exception->getMessage();
-    echo "Deu erro!";
+    retornaErro("Erro ao inserir: " . $exception->getMessage());
 }
 ?>

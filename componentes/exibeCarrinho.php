@@ -10,17 +10,10 @@ try {
     $query->execute();
 
 
-    while ($linha = $query->fetchObject()){
-        echo json_encode($linha);
-    }
+
+    echo json_encode($query->fetchAll());
 
     exit;
-
-    if ($query->rowCount() == 0) {
-        exit ("Erro ao carregar o carrinho");
-    }
-
-    $linha = $query->fetchObject();
 
 } catch (PDOException $exception) {
     echo $exception->getMessage();
