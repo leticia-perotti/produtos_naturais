@@ -11,15 +11,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
+      <change afterPath="$PROJECT_DIR$/bd/bd_natural.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bd/bdnatural (1).mwb" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carrinho/adicionaCarrinho.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carrinho/excluirProduto.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/carrinho/finalizaCarrinho.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bdnatural (1).mwb" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/carrinho/carrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/carrinho/carrinho.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/alterarCarrinho.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/componentes/exibeCarrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/exibeCarrinho.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/componentes/menu.php" beforeDir="false" afterPath="$PROJECT_DIR$/componentes/menu.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/configuracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/adicionar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/adicionar.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/listagem/vizualizar.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/vizualizar.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,9 +30,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/listagem/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -42,6 +42,14 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="PHP" />
   <component name="ProjectId" id="1rlHq0UuJG8G75F3ZRFL9vGrPMi" />
@@ -63,24 +71,12 @@
     <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
-  </component>
   <component name="RunManager">
     <configuration name="Unnamed" type="PhpBuiltInWebServerConfigurationType" factoryName="PHP Built-in Web Server" nameIsGenerated="true" document_root="$PROJECT_DIR$">
       <method v="2" />
     </configuration>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -188,13 +184,12 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
@@ -202,12 +197,6 @@
     <MESSAGE value="dia 10.5" />
     <MESSAGE value="Dia 25/5" />
     <option name="LAST_COMMIT_MESSAGE" value="Dia 25/5" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="515" y="286" key="NewPhpFileDialog" timestamp="1629826230030">
-      <screen x="0" y="0" width="1360" height="728" />
-    </state>
-    <state x="515" y="286" key="NewPhpFileDialog/0.0.1360.728@0.0.1360.728" timestamp="1629826230030" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

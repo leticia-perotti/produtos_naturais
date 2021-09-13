@@ -270,28 +270,7 @@ $foto =asset('/fotos/logo_mini.png');
 
         });
 
-        function atualizaCarrinho(){
-            $.getJSON("../componentes/exibeCarrinho.php", function (data){
-                var html = '';
-                console.log(data.length);
-                $.each(data, function(item, val){
-                   html += '<div class="alert alert-secondary" role="alert">';
-                   html += '<b font-size="large"> ' + val.produto + '</b> <br>';
-                   html += 'Quantidade: ' + val.quantidade + '</align>';
-                   html += '<div float = "right"> R$' + val.valor +'</div>';
-                   html += '</div>';
-                });
-                var $link = $("#link span.badge");
-                $link.text(data.length);
-                if(data.length>0){
-                    $link.removeClass("d-none");
-                }else{
-                    $link.addClass("d-none");
-                }
 
-                $("#carrinho .modal-body").html(html);
-            })
-        }
     </script>
 </body>
 
