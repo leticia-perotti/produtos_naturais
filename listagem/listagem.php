@@ -148,15 +148,12 @@ $foto =asset('/fotos/logo_mini.png');
         #imagem_modal:hover{
             opacity: 80%;
         }
-        #lado{
+        #lado_descricao{
             float: right;
-
         }
-        #botao{
-            background-color: blanchedalmond;
-            color: black;
-            border-style: none;
+        .botaoAdicionar{
             float: right;
+            margin: 2%;
         }
         label{
             color: #5d5d5d;
@@ -177,30 +174,37 @@ $foto =asset('/fotos/logo_mini.png');
                     <div class="modal-body">
 
                         <img src="../fotos/camomila.jpg" title="Camomila" id="imagem_modal">
-                        <div class="form-group row" id="lado">
+                        <div class="form-group row" id="lado_descricao">
                             <label class="col-sm-2 col-form-label">Valor: </label>
                             <br>
                             <div class="col-sm-10">
                                 R$ <span id="valor_modal"><?php echo $linha->valor; ?></span>
                             </div>
                         </div>
-                        <div class="form-group row" id="lado">
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Descrição: </label>
                             <br>
                             <div class="col-sm-10">
                                 <span id="descricao_modal"><?php echo $linha->descricao; ?></span>
                             </div>
+                            <br>
                         </div>
-                        <div class="form-group row">
+
+                        <div class="form-group">
+                            <label for="quantidade">Quantidade:</label>
+                            <input type="number" id="qnt" name="qnt" class="form-control" placeholder="1" required>
+                            <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
+                        </div>
+                        <!--<div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="qnt">Quantidade </label>
                             <div class="col-sm-10"><br>
                                 <input type="number" id="qnt" name="qnt" class="form-control-plaintext" border="medium solid black" required>
                             </div>
-                        </div>
+                        </div>-->
                     </div>
 
                     <div class="form-group">
-                        <button type="submit" class="btn btn-light" id="botao" >Adicionar</button>
+                        <button type="submit" class="btn btn-success botaoAdicionar">Adicionar</button>
                         <input type="hidden" name="id" id="id_modal">
                         <input type="hidden" name="valor" id="passa_valor">
 
