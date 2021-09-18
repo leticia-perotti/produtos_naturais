@@ -5,7 +5,7 @@ include_once ("../conexao.php");
 include(__ROOT__ . '/documentacao.php');
 include(__ROOT__ . '/componentes/menu.php');
 
-
+$produtos = asset('/listagem/listagem.php');
 
 ?>
 <!doctype html>
@@ -27,6 +27,8 @@ include(__ROOT__ . '/componentes/menu.php');
             font-weight: bold;
             font-size: inherit;
             transition: all 500ms ease-in-out;
+            text-decoration: none;
+            color: black
         }
 
         .botao_animado_index:after {
@@ -41,11 +43,15 @@ include(__ROOT__ . '/componentes/menu.php');
             left: -15px;
             opacity: 0.3;
             z-index: 1;
+            text-decoration: none;
+            color: black
         }
 
         .botao_animado_index:hover:after {
             width: calc(100% + 20px);
             border-radius: 20px;
+            text-decoration: none;
+            color: black
 
         }
         .box{
@@ -142,31 +148,31 @@ include(__ROOT__ . '/componentes/menu.php');
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Produtos Naturais</h1>
-        <p><button class="botao_animado_index" onclick="clicarNaturais()">Ir para &raquo;</button></p>
+        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">Ir para &raquo;</a></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chás</h1>
-        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
+        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=chas"?>">Ir para &raquo;</a></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Confeitaria</h1>
-        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
+        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=confeitaria"?>">Ir para &raquo;</a></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Embalagens</h1>
-        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
+        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=embalagens"?>">Ir para &raquo;</a></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chocolates</h1>
-        <p><button class="botao_animado_index">Ir para &raquo;</button></p>
+        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></p>
     </div>
     <!-- Fim das bolinhas com as categorias -->
 
@@ -257,10 +263,9 @@ include(__ROOT__ . '/componentes/menu.php');
 
 </body>
 
-</body>
 <script>
     function clicarNaturais() {
-        window.location.href = "leticia/natural_cha_tcc/ilistagem/listagem.php";
+        window.location.href =  "asset('listagem/listagem.php')";
     };
 </script>
 

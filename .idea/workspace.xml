@@ -12,9 +12,12 @@
   <component name="ChangeListManager">
     <list default="true" id="1b32f4c7-4cfe-43b2-a996-372a78d0805a" name="Default Changelist" comment="Dia 25/5">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/configuracao.php" beforeDir="false" afterPath="$PROJECT_DIR$/configuracao.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carrinho/adicionaCarrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/carrinho/adicionaCarrinho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/carrinho/carrinho.php" beforeDir="false" afterPath="$PROJECT_DIR$/carrinho/carrinho.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/inicial/index.php" beforeDir="false" afterPath="$PROJECT_DIR$/inicial/index.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/listagem/listagem.php" beforeDir="false" afterPath="$PROJECT_DIR$/listagem/listagem.php" afterDir="false" />
     </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -127,6 +130,9 @@
       <workItem from="1631035647387" duration="2279000" />
       <workItem from="1631038470379" duration="3318000" />
       <workItem from="1631752383600" duration="1499000" />
+      <workItem from="1631828729097" duration="594000" />
+      <workItem from="1631913546410" duration="7593000" />
+      <workItem from="1631926853144" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="teste">
       <created>1620067952323</created>

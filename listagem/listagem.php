@@ -12,6 +12,15 @@ if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
     $query = $conexao->prepare('Select * from produto where nome LIKE :pesquisa OR descricao LIKE  :pesquisa;');
     $query->bindParam(":pesquisa", $pesquisa);
     $query->execute();
+}else if(isset($_GET["categoria"]) !=''){
+
+        $categoria = "%" . $_GET["categoria"] . "%";
+        $query = $conexao->prepare('Select produto.nome as nome, produto.valor as valor, produto.descricao as descricao from produto inner join categoria_produto_has_produto inner join categoria_produto
+                                              where categoria_produto.nome LIKE :categoria && categoria_produto.id = categoria_produto_has_produto.categoria_produto_id
+                                              && categoria_produto_has_produto.produto_idproduto = produto.id');
+        $query->bindParam(":categoria", $categoria);
+        $query->execute();
+
 }else {
     $query = $conexao->query('Select * from produto');
 }
@@ -27,8 +36,6 @@ $foto =asset('/fotos/logo_mini.png');
 
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
-        <link href="<?php echo asset('../../../js/natural_cha_tcc/jquery.bootgrid.css'); ?>" rel="stylesheet">
 
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400&family=Pattaya&display=swap" rel="stylesheet">
@@ -75,13 +82,7 @@ $foto =asset('/fotos/logo_mini.png');
             #search{
                 float: right;
             }
-
-
-
         </style>
-
-        <script src="../../../natural_cha_tcc/js/iziToast.js"></script>
-        <script src="../../../natural_cha_tcc/js/iziToastExcluir.js"></script>
 
     </head>
       <body>

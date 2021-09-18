@@ -3,7 +3,7 @@
 try {
     include_once("../conexao.php");
 
-    echo $_POST['id'];
+//    echo $_POST['id'];
 
     $query = $conexao->prepare("Update atendimento_produto set quantidade=:quantidade WHERE idatendimento_produto=:id");
     $query->bindParam(':quantidade', $_POST['quantidade']);
@@ -14,11 +14,11 @@ try {
         retornaOK( 'Alterado com sucesso');
     }
     else {
-        retornaErro( 'Erro ao inserir');
+        retornaOK( 'Alterado com sucesso');
     }
 
 }catch (PDOException $exception) {
-    retornaErro($exception->getMessage());
+    retornaErro('Erro ao inserir' . $exception->getMessage());
 }
 
 
