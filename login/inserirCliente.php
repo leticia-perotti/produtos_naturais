@@ -2,7 +2,7 @@
 
 try {
     include_once("../conexao.php");
-    include(__ROOT__ . '/documentacao.php');
+    //include(__ROOT__ . '/documentacao.php');
 
     $nome = $_POST["nomeCliente"];
     $telefone = $_POST['telefoneCliente'];
@@ -29,6 +29,7 @@ try {
     } else {
         retornaErro("Nenhum dado alterado");
     }
+
 }catch (PDOException $exception) {
     retornaErro($exception->getMessage());
 }

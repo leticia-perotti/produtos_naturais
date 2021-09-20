@@ -2,13 +2,13 @@
 include_once ("../conexao.php");
 
 include(__ROOT__ . '/documentacao.php');
+$foto =asset('/fotos/logo_mini.png');
 ?>
 <!doctype html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="\git\natural_cha_tcc\fotos\logo_mini.png">
     <title>Natural Chá</title>
 
     <style>
@@ -44,7 +44,7 @@ include(__ROOT__ . '/documentacao.php');
 
 <nav class="navbar navbar-light bg-light">
     <a class="navbar-brand" href="#">
-        <img src="\git\natural_cha_tcc\fotos\logo_mini.png" class="d-inline-block align-top">
+        <img src="<?php echo $foto?>" class="d-inline-block align-top">
         Natural Chá
     </a>
 </nav>
@@ -53,7 +53,7 @@ include(__ROOT__ . '/documentacao.php');
     <h1> Cadastro de Cliente </h1>
     <hr>
 
-    <form action="inserirCliente.php" method="post" class="jsonForm">
+    <form action="inserirCliente.php" method="post" class="jsonForm"
     <div class="form-group">
         <label for="nomeCliente">Nome completo</label>
         <input type="text" class="form-control" name="nomeCliente" id="nomeCliente" placeholder="Nome Completo" required>
@@ -96,7 +96,7 @@ include(__ROOT__ . '/documentacao.php');
 </div>
 </body>
 
-<script>
+<script type="application/javascript">
     $(document).ready(function() {
         $('.jsonForm').ajaxForm({
             dataType: 'json',
@@ -104,11 +104,11 @@ include(__ROOT__ . '/documentacao.php');
                 if (data.status==true) {
                     iziToast.success({
                         message: data.mensagem,
-                        onClosing: function () {
-                            history.back();
+                        //onClosing: function () {
+                         //   history.back();
                         }
                       });
-                    $('.jsonForm').trigger('reset');
+                    //$('.jsonForm').trigger('reset');
                 }else {
                     iziToast.error({
                         message: data.mensagem
