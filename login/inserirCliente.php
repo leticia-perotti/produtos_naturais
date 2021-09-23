@@ -12,6 +12,20 @@ try {
     $uf = $_POST['ufCliente'];
     $data = $_POST['dataCliente'];
 
+    if (validaCPF($cpf)==false){
+//    if (!validaCPF($_POST['cpf'])){
+        retornaErro("CPF invalido");
+    }
+
+    $valida = $conexao->prepare("Select * from cliente where cpf =:cpf || email =:email");
+    $valida->bindParam(":cpf", $cpf);
+    $valida->bindParam(":email", $email);
+    $valida->execute();
+
+    if ($valida->rowCount()!= 0){
+        retornaErro("CPF ou email já existentes");
+    }
+
     $inserir = $conexao->prepare('Insert into cliente (nome, telefone, email, cpf, cidade, uf, datanascimento) 
                                   values 
                                   (:nome, :telefone, :email,:cpf, :cidade, :uf, :nasc)');

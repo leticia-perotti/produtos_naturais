@@ -36,6 +36,12 @@ $foto =asset('/fotos/logo_mini.png');
             $('.cpf').mask('000.000.000-00', {clearIfNotMatch:true});
             $("form").validate();
         });
+
+        $(document).ready(function () {
+            $('.telefone').mask('(00) 0000-00009', {clearIfNotMatch:true});
+            $("form").validate();
+        });
+
     </script>
 
 
@@ -53,15 +59,15 @@ $foto =asset('/fotos/logo_mini.png');
     <h1> Cadastro de Cliente </h1>
     <hr>
 
-    <form action="inserirCliente.php" method="post" class="jsonForm"
+    <form action="inserirCliente.php" method="post" class="jsonForm">
     <div class="form-group">
         <label for="nomeCliente">Nome completo</label>
         <input type="text" class="form-control" name="nomeCliente" id="nomeCliente" placeholder="Nome Completo" required>
     </div>
 
     <div class="form-group">
-        <label for="telefoneCliente">Telefone</label>
-        <input type="text" class="form-control" name="telefoneCliente" id="telefoneCliente">
+        <label for="telefoneCliente">Telefone Celular</label>
+        <input type="text" class="form-control telefone" name="telefoneCliente" id="telefoneCliente">
     </div>
 
     <div class="form-group">
@@ -96,7 +102,7 @@ $foto =asset('/fotos/logo_mini.png');
 </div>
 </body>
 
-<script type="application/javascript">
+<!--<script>
     $(document).ready(function() {
         $('.jsonForm').ajaxForm({
             dataType: 'json',
@@ -123,5 +129,36 @@ $foto =asset('/fotos/logo_mini.png');
             }
         });
 
+    });
+</script>-->
+
+<script>
+    $(document).ready(function () {
+        $('.jsonForm').ajaxForm ({
+            dataType: 'json',
+            success: function (data) {
+                if (data.status==true) {
+                    iziToast.success({
+                        message: data.mensagem,
+                        onClosing: function () {
+                            history.back();
+                        }
+
+                    });
+
+
+                }else {
+                    iziToast.error({
+                        message: data.mensagem
+                    });
+                }
+
+            },
+            error: function(data){
+                iziToast.error({
+                    message: 'Servidor retornou erro'
+                });
+            }
+        });
     });
 </script>
