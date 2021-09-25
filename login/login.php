@@ -111,16 +111,14 @@ include(__ROOT__ . '/documentacao.php');
             success: function (data) {
                 if (data.status==true) {
                     iziToast.success({
-                        message: data.mensagem
-                        //onClosing: function () {
-                        //    history.back();
-                       // }
+                        message: data.mensagem,
+                        onClosing: function () {
+
+                            window.location.href = assetic("inicial/index.php");
+                        }
 
                     });
-                    onClosing: function () {
-                        window.location.href = "inicial/index.php";
-                    };
-                    $('.jsonForm').trigger('reset');
+
                 }else {
                     iziToast.error({
                         message: data.mensagem
