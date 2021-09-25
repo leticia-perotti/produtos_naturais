@@ -81,7 +81,7 @@ include(__ROOT__ . '/documentacao.php');
           </div>
 
        <div class="form__field">
-        <input type="submit" value="Login">
+        <input type="submit" class="btn btn-success" value="Login">
         </div>
 
     </form>
@@ -115,10 +115,11 @@ include(__ROOT__ . '/documentacao.php');
                         //onClosing: function () {
                         //    history.back();
                        // }
-                        //onClosing: function () {
-                          //  window.location.href = "inicial/index.php";
-                        //}
+
                     });
+                    onClosing: function () {
+                        window.location.href = "inicial/index.php";
+                    };
                     $('.jsonForm').trigger('reset');
                 }else {
                     iziToast.error({
