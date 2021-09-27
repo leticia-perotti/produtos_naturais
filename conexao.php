@@ -1,4 +1,7 @@
 <?php
+
+session_start();
+
 require_once ("configuracao.php");
 $conexao = new PDO('mysql:host=localhost; dbname=' . DBNAME, DBUSER, DBPASSWD);
 
@@ -24,6 +27,9 @@ function retornaOK ($mensagem){
 }
 
 function asset($url){
+    if (substr($url, 0, 1)!='/'){
+        $url = '/' . $url;
+    }
     return __URL__ . $url;
 }
 

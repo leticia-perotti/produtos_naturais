@@ -13,9 +13,11 @@ $valor = number_format($valor, 2, '.', '');
 if (isset($_COOKIE['carrinho']) && $_COOKIE['carrinho']!=''){
     $codigoDoCarrinho = $_COOKIE['carrinho'];
 }else{
-    $criaCarrinho = $conexao->prepare('Insert into atendimento (data_carrinho) 
+    $status = 1;
+    $criaCarrinho = $conexao->prepare('Insert into atendimento (data_carrinho, status) 
                                   values 
-                                  (NOW()) ');
+                                  (NOW()), :status ');
+    $criaCarrinho->bindParam(":status", $status);
     $criaCarrinho->execute();
 
     $codigoDoCarrinho = $conexao->lastInsertId();

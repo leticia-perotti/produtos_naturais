@@ -56,7 +56,9 @@ $carrinho = asset('/carrinho/carrinho.php')
         Natural Chá</a>
     <a class="nav-link" id="link" href="<?php echo $listagem?>">Produtos</a>
     <a class="nav-link" id="link" href="<?php echo $pedidos?>">Pedidos</a>
-    <a class="nav-link" id="link" href="<?php echo $login?>">Login</a>.
+    <?php if ((isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']!=true) || !isset($_SESSION['cliente_autorizado'])) : ?>
+        <a class="nav-link" id="link" href="<?php echo $login?>">Login</a>
+    <?php endif; ?>
 
     <!--<button type="button" class="btn btn-secondary direita" data-toggle="tooltip" data-placement="bottom" title="Carrinho">
         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">

@@ -15,7 +15,7 @@ if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
 }else if(isset($_GET["categoria"]) !=''){
 
         $categoria = "%" . $_GET["categoria"] . "%";
-        $query = $conexao->prepare('Select produto.nome as nome, produto.valor as valor, produto.descricao as descricao from produto inner join categoria_produto_has_produto inner join categoria_produto
+        $query = $conexao->prepare('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao from produto inner join categoria_produto_has_produto inner join categoria_produto
                                               where categoria_produto.nome LIKE :categoria && categoria_produto.id = categoria_produto_has_produto.categoria_produto_id
                                               && categoria_produto_has_produto.produto_idproduto = produto.id');
         $query->bindParam(":categoria", $categoria);
@@ -193,7 +193,7 @@ $foto =asset('/fotos/logo_mini.png');
 
                         <div class="form-group">
                             <label for="quantidade">Quantidade:</label>
-                            <input type="number" id="qnt" name="qnt" class="form-control" placeholder="1" required>
+                            <input type="number" id="qnt" name="qnt" class="form-control" value="1" required>
                             <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
                         </div>
                         <!--<div class="form-group row">

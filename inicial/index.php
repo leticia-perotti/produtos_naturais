@@ -13,7 +13,7 @@ $produtos = asset('/listagem/listagem.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<link rel="icon" href="../fotos/logo_mini.png">-->
+    <link rel="icon" href="<?php echo $produtos?>">
     <title>Natural Chá</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -124,12 +124,7 @@ $produtos = asset('/listagem/listagem.php');
 
     </style>
 
-      <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
-
-    <!-- Bootstrap core CSS -->
-    <link href="boot5.css" rel="stylesheet">
 
 </head>
 <body>
@@ -175,12 +170,6 @@ $produtos = asset('/listagem/listagem.php');
         <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></p>
     </div>
     <!-- Fim das bolinhas com as categorias -->
-
-
-
-
-
-
 
     <!-- Produtos sugeridos -->
 

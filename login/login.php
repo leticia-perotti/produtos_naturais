@@ -1,5 +1,12 @@
 <?php
+
+
 include_once ("../conexao.php");
+if (isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']){
+    header("Location: /");
+    exit;
+}
+
 include(__ROOT__ . '/documentacao.php');
 
 ?>
@@ -114,7 +121,7 @@ include(__ROOT__ . '/documentacao.php');
                         message: data.mensagem,
                         onClosing: function () {
 
-                            window.location.href = assetic("inicial/index.php");
+                            window.location = '<?php echo asset("inicial/index.php"); ?>';
                         }
 
                     });
