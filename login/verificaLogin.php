@@ -1,7 +1,6 @@
 <?php
 
 try{
-session_start();
     include_once("../conexao.php");
 
 $email = $_POST['email'];

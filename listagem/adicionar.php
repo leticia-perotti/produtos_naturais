@@ -16,7 +16,7 @@ if (isset($_COOKIE['carrinho']) && $_COOKIE['carrinho']!=''){
     $status = 1;
     $criaCarrinho = $conexao->prepare('Insert into atendimento (data_carrinho, status) 
                                   values 
-                                  (NOW()), :status ');
+                                  (NOW(), :status)');
     $criaCarrinho->bindParam(":status", $status);
     $criaCarrinho->execute();
 

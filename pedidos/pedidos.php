@@ -10,17 +10,17 @@ include(__ROOT__ . '/componentes/menu.php');
     if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
         $pesquisa = "%" . $_GET["pesquisa"] . "%";
 
-        $query = $conexao->prepare('Select produto.nome, atendimento_produto.quantidade, atendimento_produto.valorproduto, atendimento.data_carrinho
+        $query = $conexao->prepare('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%M %d %Y") as data, atendimento.status as status
                                              from produto inner join atendimento_produto inner join atendimento
                                              on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento
-                                             where atendimento.status= 3 && (nome LIKE :pesquisa OR descricao LIKE  :pesquisa;)');
+                                             where atendimento.status!=1 && (nome LIKE :pesquisa OR descricao LIKE  :pesquisa)');
         $query->bindParam(":pesquisa", $pesquisa);
         $query->execute();
     }else {
-        $query = $conexao->query('Select produto.nome, atendimento_produto.quantidade, atendimento_produto.valorproduto, atendimento.data_carrinho
+        $query = $conexao->query('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data, atendimento.status as status
                                              from produto inner join atendimento_produto inner join atendimento
                                              on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento
-                                             where atendimento.status= 3 ');
+                                             where atendimento.status!=1');
     }
 
 
@@ -32,7 +32,6 @@ include(__ROOT__ . '/componentes/menu.php');
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Natural Chá | Pedidos</title>
-    <link rel="icon" href="../fotos/logo_mini.png">
     <style>
         #imagem{
             width: 75px;
@@ -81,49 +80,46 @@ include(__ROOT__ . '/componentes/menu.php');
     <h1>Pedidos</h1>
     <hr>
 
-    <h3>25/06/2021</h3>
+    <?php
+    while ($linha= $query->fetch()):
+        ?>
+        <h3><?php echo $linha->data; ?></h3>
+    <?php
+        if($linha->status == 2):
 
-    <div class="alert alert-warning d-flex align-items-center" role="alert">
-        <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
-        <div>
-            Pedido pendente
+        ?>
+        <div class="alert alert-warning d-flex align-items-center" role="alert">
+            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
+            <div>
+                Pedido pendente
+            </div>
         </div>
-    </div>
-    <div class="alert alert-light" role="alert">
-        <div id="produto">
-            <img src="../fotos/camomila.jpg" id="imagem">
-            <div id="texto"> Chá de camomila </div>
-            <div id="qnt"> 4 pacotes de 30 gramas </div>
-        </div>
-        <div id="produto">
-            <img src="../fotos/bolo-embalagem.jpg" id="imagem">
-            <div id="texto"> P 32 alta</div>
-            <div id="qnt"> 4 embalagens P32 </div>
-        </div>
-    </div>
-
-    <hr>
-
-    <h3>08/09/2020</h3>
-    <div class="alert alert-success d-flex align-items-center" role="alert">
+            <?php endIf;
+            if($linha->status == 3):
+        ?>
+        <div class="alert alert-success d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
         <div>
             Pedido retirado
         </div>
     </div>
-
+    <?php
+    endIf
+    ?>
     <div class="alert alert-light" role="alert">
         <div id="produto">
             <img src="../fotos/camomila.jpg" id="imagem">
-            <div id="texto"> Chá de camomila </div>
-            <div id="qnt"> 4 pacotes de 30 gramas </div>
-        </div>
-        <div id="produto">
-            <img src="../fotos/bolo-embalagem.jpg" id="imagem">
-            <div id="texto"> P 32 alta</div>
-            <div id="qnt"> 4 embalagens P32 </div>
+            <div id="texto"> <?php echo $linha->nome; ?> </div>
+            <div id="qnt"> Quantidade: <?php echo $linha->quantidade; ?> </div><br>
+            <div id="qnt"> Valor da unidade <?php echo $linha->valor; ?> </div>
         </div>
     </div>
+
+    <?php
+    endwhile;
+    ?>
+
+
     <?php
 }catch (PDOException $exception){
     echo $exception->getMessage();
