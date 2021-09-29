@@ -1,8 +1,7 @@
 <?php
-
+session_unset();
 setcookie('carrinho', null, -1, '/');
 include_once ("../conexao.php");
-
 ?>
 
 <html>

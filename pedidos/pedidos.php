@@ -10,17 +10,18 @@ include(__ROOT__ . '/componentes/menu.php');
     if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
         $pesquisa = "%" . $_GET["pesquisa"] . "%";
 
-        $query = $conexao->prepare('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%M %d %Y") as data, atendimento.status as status
+        $query = $conexao->prepare('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%M %d %Y") as data, atendimento.status as status, atendimento_idatendimento as id
                                              from produto inner join atendimento_produto inner join atendimento
-                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento
-                                             where atendimento.status!=1 && (nome LIKE :pesquisa OR descricao LIKE  :pesquisa)');
+                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento=atendimento.idatendimento
+                                             where atendimento.status!=1 && (nome LIKE :pesquisa OR descricao LIKE  :pesquisa) order by data');
         $query->bindParam(":pesquisa", $pesquisa);
         $query->execute();
+
     }else {
-        $query = $conexao->query('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data, atendimento.status as status
+        $query = $conexao->query('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data, atendimento.status as status, atendimento_idatendimento as id
                                              from produto inner join atendimento_produto inner join atendimento
-                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento
-                                             where atendimento.status!=1');
+                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento=atendimento.idatendimento
+                                             where atendimento.status!=1 order by data');
     }
 
 
@@ -81,13 +82,17 @@ include(__ROOT__ . '/componentes/menu.php');
     <hr>
 
     <?php
+
     while ($linha= $query->fetch()):
+        $controle = false;
         ?>
-        <h3><?php echo $linha->data; ?></h3>
+
     <?php
-        if($linha->status == 2):
+        if($linha->status == 2 && $controle==false):
+            $controle=true;
 
         ?>
+            <h3><?php echo $linha->data; ?></h3>
         <div class="alert alert-warning d-flex align-items-center" role="alert">
             <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
             <div>
@@ -95,8 +100,9 @@ include(__ROOT__ . '/componentes/menu.php');
             </div>
         </div>
             <?php endIf;
-            if($linha->status == 3):
+            if($linha->status == 3 && $controle==false):
         ?>
+                <h3><?php echo $linha->data; ?></h3>
         <div class="alert alert-success d-flex align-items-center" role="alert">
         <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
         <div>
