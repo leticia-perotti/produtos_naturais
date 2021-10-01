@@ -135,7 +135,7 @@ $foto =asset('/fotos/logo_mini.png');
     <!-- Modal de adicionar produto -->
     <style>
         .cabecalho {
-            background-color: blanchedalmond;
+            background-color: #ffebd0;
         }
         .titulo_do_modal{
             font-family: 'Comfortaa', cursive;
@@ -143,14 +143,11 @@ $foto =asset('/fotos/logo_mini.png');
             font-size: x-large;
         }
         #imagem_modal{
-            width: 45%;
-            float :left;
+            width: 50%;
+            justify-content: center;
         }
         #imagem_modal:hover{
             opacity: 80%;
-        }
-        #lado_descricao{
-            float: right;
         }
         .botaoAdicionar{
             float: right;
@@ -167,12 +164,12 @@ $foto =asset('/fotos/logo_mini.png');
             <div class="modal-content">
                 <div class="modal-header cabecalho">
                     <h5 class="modal-title titulo_do_modal" id="vizualizar_produtoLabel"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <button type="button" class="close bnt btn-danger" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <form action="adicionar.php" method="post" class="jsonForm">
-                    <div class="modal-body">
+                    <div class="modal-body container">
 
                         <img src="../fotos/camomila.jpg" title="Camomila" id="imagem_modal">
                         <div class="form-group row" id="lado_descricao">
@@ -181,8 +178,6 @@ $foto =asset('/fotos/logo_mini.png');
                             <div class="col-sm-10">
                                 R$ <span id="valor_modal"><?php echo $linha->valor; ?></span>
                             </div>
-                        </div>
-                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label">Descrição: </label>
                             <br>
                             <div class="col-sm-10">

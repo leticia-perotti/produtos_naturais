@@ -18,6 +18,8 @@ include(__ROOT__ . '/documentacao.php');
     <link rel="icon" href="../fotos/logo_mini.png">
     <title>Natural Chá</title>
 
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js" integrity="sha256-yE5LLp5HSQ/z+hJeCqkz9hdjNkk1jaiGG0tDCraumnA=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js" integrity="sha256-sPB0F50YUDK0otDnsfNHawYmA5M0pjjUf4TvRJkGFrI=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/additional-methods.min.js" integrity="sha256-vb+6VObiUIaoRuSusdLRWtXs/ewuz62LgVXg2f1ZXGo=" crossorigin="anonymous"></script>
@@ -30,16 +32,63 @@ include(__ROOT__ . '/documentacao.php');
         });
     </script>
 <style>
+    html,
+    body {
+        height: 100%;
+    }
 
-    .grid{
-        alignment: center;
+    body {
+        display: -ms-flexbox;
+        display: -webkit-box;
+        display: flex;
+        -ms-flex-align: center;
+        -ms-flex-pack: center;
+        -webkit-box-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        justify-content: center;
+        padding-top: 40px;
+        padding-bottom: 40px;
+        background-color: #f5f5f5;
     }
-    .text--center {
-        text-align: center;
+
+    .form-signin {
+        width: 100%;
+        max-width: 330px;
+        padding: 15px;
+        margin: 0 auto;
     }
+    .form-signin .checkbox {
+        font-weight: 400;
+    }
+    .form-signin .form-control {
+        position: relative;
+        box-sizing: border-box;
+        height: auto;
+        padding: 10px;
+        font-size: 16px;
+    }
+    .form-signin .form-control:focus {
+        z-index: 2;
+    }
+    .form-signin input[type="email"] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .form-signin input[type="password"] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    a.hover{
+        text-decoration: none;
+    }
+
+
     .imagem{
         border-radius: 50%;
-        width: 20%;
+        width: 65%;
         padding: 10px;
       }
     .botao {
@@ -69,45 +118,40 @@ include(__ROOT__ . '/documentacao.php');
     }
 
 </style>
-<body class="align">
-   <div class="container">
 
-     <center><img src="../fotos/logo_mini.png" class="imagem"></center>
+<body class="text-center">
 
-      <form action="verificaLogin.php" method="post" class="jsonForm">
+<div class="form-signin">
+    <form action="verificaLogin.php" method="post" class="jsonForm">
 
-          <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" class="form-control" id="email" name="email" placeholder="email@123.com" required>
-          </div>
+        <center><img src="../fotos/logo_mini.png" class="imagem"></center>
+        <h1 class="h3 mb-3 font-weight-normal">Login</h1>
 
-          <div class="form-group">
-              <label for="cpf">CPF</label>
-              <input type="text" class="form-control cpf" name="cpf" id="cpf" required>
-          </div>
 
-       <div class="form__field">
-        <input type="submit" class="btn btn-success" value="Login">
-        </div>
+        <label for="email" class="sr-only">Email</label>
+        <input type="email" class="form-control" id="email" name="email" placeholder="email@123.com" required>
+
+
+
+        <label for="cpf" class="sr-only">CPF</label>
+        <input type="text" class="form-control cpf" name="cpf" id="cpf" placeholder="CPF" required>
+
+
+        <button class="btn btn-lg btn-success btn-block" type="submit">Login</button>
 
     </form>
-      <br>
 
-      <button type="button" class="bnt botao"><div class="texto">Esqueceu a senha?
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-          </svg>
-          </div>
-      </button>
 
-      <a href="cadastroCliente.php"><button type="button" class="bnt botao"><div class="texto">Cliente novo?
-          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
-              <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
-          </svg>
-          </div>
-      </button>
-      </a>
-  </div>
+    <br>
+
+    <a href="cadastroCliente.php"><button type="button" class="bnt botao btn-lg btn-primary btn-block"><div class="texto">Cliente novo?
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8z"/>
+                </svg>
+            </div>
+        </button>
+    </a>
+</div>
 
 </body>
 <script>

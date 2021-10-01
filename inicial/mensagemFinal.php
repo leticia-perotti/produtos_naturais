@@ -1,5 +1,10 @@
 <?php
-session_unset();
+if(isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']==true){
+    $_SESSION['cliente_autorizado'] = false;
+}
+
+//unset( $_SESSION['cliente_autorizado'] );
+//session_destroy();
 setcookie('carrinho', null, -1, '/');
 include_once ("../conexao.php");
 ?>

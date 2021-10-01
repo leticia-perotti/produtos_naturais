@@ -6,6 +6,7 @@ include(__ROOT__ . '/documentacao.php');
 include(__ROOT__ . '/componentes/menu.php');
 
 $produtos = asset('/listagem/listagem.php');
+$foto = asset('/fotos/nc.png');
 
 ?>
 <!doctype html>
@@ -13,7 +14,6 @@ $produtos = asset('/listagem/listagem.php');
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="<?php echo $produtos?>">
     <title>Natural Chá</title>
 
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -56,7 +56,7 @@ $produtos = asset('/listagem/listagem.php');
         }
         .box{
             height:250px;
-            width:190px;
+            width:200px;
             background-color:#fff;
             margin-left:10px;
             margin-right:10px;
@@ -129,14 +129,10 @@ $produtos = asset('/listagem/listagem.php');
 </head>
 <body>
 <br>
-                <img src="../fotos/nc.png" class="d-block w-100" alt="...">
+
+<img src="<?php echo $foto?>" class="d-block w-100" alt="...">
 
 <div class="container">
-
-
-    <!-- Marketing messaging and featurettes
-    ================================================== -->
-    <!-- Wrap the rest of the page in another container to center all the content. -->
 
     <!--  Bolinhas com as categorias -->
 
