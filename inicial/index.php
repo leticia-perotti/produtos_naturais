@@ -212,7 +212,7 @@ $foto = asset('/fotos/nc.png');
 
         <div class="row featurette">
             <div class="col-md-7">
-                <h2 class="featurette-heading">Nossa localização, <span class="text-muted">vem vitar-nos!</span></h2>
+                <h2 class="featurette-heading">Nossa localização, <span class="text-muted">venha visitar-nos!</span></h2>
 
                 <p class="lead">Rua Prudente de Morais, 415<br>
                     União da Vitória<br>

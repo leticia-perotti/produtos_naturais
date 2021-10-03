@@ -37,7 +37,7 @@ try {
 
         <form method="post" action="envioFinalCarrinho.php" class="jsonForm">
             <div class="form-group">
-                <label for="nome">Nome de quem retirá</label>
+                <label for="nome">Nome de quem irá retirar</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
             </div>
             <div class="form-group">
