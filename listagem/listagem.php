@@ -9,7 +9,7 @@ include(__ROOT__ . '/componentes/menu.php');
 if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
     $pesquisa = "%" . $_GET["pesquisa"] . "%";
 
-    $query = $conexao->prepare('Select * from produto where nome LIKE :pesquisa OR descricao LIKE  :pesquisa;');
+    $query = $conexao->prepare('Select * from produto where nome LIKE :pesquisa OR descricao LIKE  :pesquisa && && ativo=1;');
     $query->bindParam(":pesquisa", $pesquisa);
     $query->execute();
 }else if(isset($_GET["categoria"]) !=''){
@@ -17,12 +17,12 @@ if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
         $categoria = "%" . $_GET["categoria"] . "%";
         $query = $conexao->prepare('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao from produto inner join categoria_produto_has_produto inner join categoria_produto
                                               where categoria_produto.nome LIKE :categoria && categoria_produto.id = categoria_produto_has_produto.categoria_produto_id
-                                              && categoria_produto_has_produto.produto_idproduto = produto.id');
+                                              && categoria_produto_has_produto.produto_idproduto = produto.id && ativo=1');
         $query->bindParam(":categoria", $categoria);
         $query->execute();
 
 }else {
-    $query = $conexao->query('Select * from produto');
+    $query = $conexao->query('Select * from produto where ativo=1');
 }
 
 $foto =asset('/fotos/logo_mini.png');
@@ -142,6 +142,12 @@ $foto =asset('/fotos/logo_mini.png');
             font-family: 'Pattaya', sans-serif;
             font-size: x-large;
         }
+
+        #imagem_modal{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
         #imagem_modal{
             width: 50%;
             justify-content: center;
@@ -155,6 +161,22 @@ $foto =asset('/fotos/logo_mini.png');
         }
         label{
             color: #5d5d5d;
+        }
+        #botaozinho{
+            justify-content: flex-end;
+            display:inline-block;
+        }
+        input[type="number"] {
+            -webkit-appearance: textfield;
+            -moz-appearance: textfield;
+            appearance: textfield;
+        }
+        input[type=number]::-webkit-inner-spin-button,
+        input[type=number]::-webkit-outer-spin-button {
+            -webkit-appearance: none;
+        }
+        input[type="number"]{
+            outline:none;
         }
 
     </style>
@@ -188,7 +210,7 @@ $foto =asset('/fotos/logo_mini.png');
 
                         <div class="form-group">
                             <label for="quantidade">Quantidade:</label>
-                            <input type="number" id="qnt" name="qnt" class="form-control" value="1" required>
+                            <input type="number" id="qnt botaozinho" name="qnt" class="form-control" step="2" value="1" min="1" required><button id="botaozinho" class="a btn btn-danger ">-</button><button id="botaozinho" onclick="mais()" class="b btn btn-success">+</button>
                             <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
                         </div>
                         <!--<div class="form-group row">
@@ -212,9 +234,25 @@ $foto =asset('/fotos/logo_mini.png');
     </div>
     <!-- fim do modal de servico -->
 
-    <script type="application/javascript">
+    <script>
+
         $(document).ready(function() {
-            atualizaCarrinho();
+
+            function mais(){
+                var atual = document.getElementById("qnt").value;
+                var novo = atual - (-1); //Evitando Concatenacoes
+                document.getElementById("qnt").value = novo;
+            }
+
+            function menos(){
+                var atual = document.getElementById("qnt").value;
+                if(atual > 0) { //evita números negativos
+                    var novo = atual - 1;
+                    document.getElementById("qnt").value = novo;
+                }
+            }
+
+           atualizaCarrinho();
 
             $('.jsonForm').ajaxForm({
                 dataType: 'json',

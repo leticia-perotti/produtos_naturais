@@ -105,9 +105,9 @@ $foto = asset('/fotos/nc.png');
         }
         #pdt{
             height: 265px;
-            width:175px;
-            margin-left: 15px;
-            margin-right:15px;
+            width:15%;
+            margin-left: 2.5%;
+            margin-right:2.5%;
             margin-bottom:20px;
             margin-top:20px;
             font-family:"Arial";
@@ -175,7 +175,7 @@ $foto = asset('/fotos/nc.png');
             <h2> Produtos sugeridos  <a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
 
             <?php
-            $query = $conexao-> query('Select * from produto');
+            $query = $conexao-> query('Select * from produto where ativo=1 order by id DESC limit 5');
             while ($linha= $query->fetch()):
                 ?>
                 <div class="card" id="pdt">
