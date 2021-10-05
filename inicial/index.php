@@ -66,6 +66,7 @@ $foto = asset('/fotos/nc.png');
             text-align:center;
             display:inline-block;
 
+
         }
         .classes{
             font-family:"Arial";
@@ -245,7 +246,16 @@ $foto = asset('/fotos/nc.png');
 
 
 <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+<footer class="text-muted">
+    <div class="container">
+        <p class="float-right">
+            <a href="#">Voltar ao topo</a>
+        </p>
+        <p>Natural Chá 2021</p>
 
+    </div>
+</footer>
+<hr class="row">
 </body>
 
 <script>

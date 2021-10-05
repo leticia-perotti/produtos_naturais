@@ -68,7 +68,7 @@ $foto =asset('/fotos/logo_mini.png');
                 opacity: 0.8;
             }
             #box{
-                height: 300px;
+                height: 320px;
                 width:190px;
                 margin-left:10px;
                 margin-right:10px;
@@ -78,6 +78,8 @@ $foto =asset('/fotos/logo_mini.png');
                 text-align:center;
                 display:inline-block;
                 box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.3);
+                position: relative;
+                text-align: center;
             }
             #search{
                 float: right;
@@ -87,7 +89,7 @@ $foto =asset('/fotos/logo_mini.png');
     </head>
       <body>
     <div class="container">
-        <br><br><br>
+        <br><br><br><br>
 
     <h1> Produtos</h1>
 
@@ -125,6 +127,17 @@ $foto =asset('/fotos/logo_mini.png');
     </div>
     </div>
     <hr class="row">
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Voltar ao topo</a>
+            </p>
+            <p>Natural Chá 2021</p>
+
+        </div>
+    </footer>
+    <hr class="row">
+
             </div>
         </div>
     </div>
@@ -161,10 +174,6 @@ $foto =asset('/fotos/logo_mini.png');
         }
         label{
             color: #5d5d5d;
-        }
-        #botaozinho{
-            justify-content: flex-end;
-            display:inline-block;
         }
         input[type="number"] {
             -webkit-appearance: textfield;
@@ -208,12 +217,23 @@ $foto =asset('/fotos/logo_mini.png');
                             <br>
                         </div>
 
-                        <div class="form-group">
+                        <div class="input-group">
+                            <label for="quantidade">Quantidade:</label><br>
+                            <input type="number" class="form-control" aria-describedby="basic-addon2" id="qnt" name="qnt" step="2" value="1" min="1" required>
+                            <div class="input-group-append">
+                                <button class="btn btn-outline-secondary" type="button">+</button>
+                                <button class="btn btn-outline-secondary" type="button">-</button>
+                            </div>
+                        </div>
+                        <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
+
+
+                        <!--<div class="form-group">
                             <label for="quantidade">Quantidade:</label>
-                            <input type="number" id="qnt botaozinho" name="qnt" class="form-control" step="2" value="1" min="1" required><button id="botaozinho" class="a btn btn-danger ">-</button><button id="botaozinho" onclick="mais()" class="b btn btn-success">+</button>
+                            <input type="number" id="qnt" name="qnt" class="form-control" step="2" value="1" min="1" required><button id="botaozinho" class="a btn btn-danger ">-</button><button id="botaozinho" onclick="mais()" class="b btn btn-success">+</button>
                             <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
                         </div>
-                        <!--<div class="form-group row">
+                        <div class="form-group row">
                             <label class="col-sm-2 col-form-label" for="qnt">Quantidade </label>
                             <div class="col-sm-10"><br>
                                 <input type="number" id="qnt" name="qnt" class="form-control-plaintext" border="medium solid black" required>

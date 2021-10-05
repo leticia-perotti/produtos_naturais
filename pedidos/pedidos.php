@@ -77,7 +77,7 @@ include(__ROOT__ . '/componentes/menu.php');
 <div class="container">
     <br>
     <br>
-    <br>
+    <br><br>
     <h1>Pedidos</h1>
     <hr>
 

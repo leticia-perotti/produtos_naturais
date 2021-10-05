@@ -158,7 +158,7 @@ $carrinho = asset('/carrinho/carrinho.php')
                 html += '<div class="alert alert-secondary" role="alert">';
                 html += '<b font-size="large"> ' + val.produto + '</b> <br>';
                 html += 'Quantidade: ' + val.quantidade + '</align>';
-                html += '<div float = "right"> R$' + val.valor +'</div>';
+                html += '<div margin-left="auto"> R$' + val.valor +'</div>';
                 html += '</div>';
             });
             var $link = $("#link span.badge");

@@ -31,7 +31,7 @@ try {
 </head>
     <body>
     <div class="container">
-        <br><br><br>
+        <br><br><br><br>
 
         <h1> Finalizar compra</h1>
 
