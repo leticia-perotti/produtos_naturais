@@ -93,8 +93,6 @@ $foto =asset('/fotos/logo_mini.png');
     <div class="container">
         <br><br><br><br>
 
-    <h1> Produtos</h1>
-
         <form class="form-inline" id="search" action="" method="get">
             <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" name="pesquisa" aria-label="Search">
             <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
@@ -103,6 +101,10 @@ $foto =asset('/fotos/logo_mini.png');
                 </svg>
             </button>
         </form>
+
+    <h1> Produtos</h1>
+
+
 
         <?php
         if($query->rowCount()==0){
