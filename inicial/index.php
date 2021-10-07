@@ -21,39 +21,30 @@ $foto = asset('/fotos/nc.png');
 
     <style>
         .botao_animado_index {
-            background: none;
-            border: 0;
             position: relative;
             font-weight: bold;
             font-size: inherit;
-            transition: all 500ms ease-in-out;
-            text-decoration: none;
-            color: black
-        }
-
-        .botao_animado_index:after {
-            content: '';
-            transition: inherit;
-            width: 35px;
-            height: 35px;
-            border-radius: 50%;
-            background-color: burlywood;
-            position: absolute;
-            top: -5%;
-            left: -15px;
+            margin-bottom: 2%;
+            margin-top:2%;
+            margin-bottom: 2%;
+            width:150px;
+            height:35px;
+            background: burlywood;
             opacity: 0.3;
-            z-index: 1;
+            border-radius: 35px;
+            border: none;
+
+        }
+        .link_certo{
+            text-decoration: none;
+            color: black;
+        }
+        .link_certo:hover{
             text-decoration: none;
             color: black
         }
 
-        .botao_animado_index:hover:after {
-            width: calc(100% + 20px);
-            border-radius: 20px;
-            text-decoration: none;
-            color: black
 
-        }
         .box{
             height:250px;
             width:200px;
@@ -140,31 +131,31 @@ $foto = asset('/fotos/nc.png');
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Produtos Naturais</h1>
-        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">Ir para &raquo;</a></p>
+        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">Ir para &raquo;</a></button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chás</h1>
-        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=chas"?>">Ir para &raquo;</a></p>
+        <p><button class="text-muted botao_animado_index"><A class="link_certo" href="<?php echo $produtos. "?categoria=chas"?>">Ir para &raquo;</A></button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Confeitaria</h1>
-        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=confeitaria"?>">Ir para &raquo;</a></p>
+        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=confeitaria"?>">Ir para &raquo;</a></button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Embalagens</h1>
-        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=embalagens"?>">Ir para &raquo;</a></p>
+        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=embalagens"?>">Ir para &raquo;</a></button></p>
     </div>
 
     <div class="box">
         <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
         <h1 class="classes">Chocolates</h1>
-        <p><a class="text-muted botao_animado_index" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></p>
+        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></button></p>
     </div>
     <!-- Fim das bolinhas com as categorias -->
 
@@ -241,6 +232,110 @@ $foto = asset('/fotos/nc.png');
         <!-- /END THE FEATURETTES -->
 
     </div><!-- /.container -->
+<!-- Modal de adicionar produto -->
+<style>
+    .cabecalho {
+        background-color: #ffebd0;
+    }
+    .titulo_do_modal{
+        font-family: 'Comfortaa', cursive;
+        font-family: 'Pattaya', sans-serif;
+        font-size: x-large;
+    }
+
+    #imagem_modal{
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    #imagem_modal{
+        width: 50%;
+        justify-content: center;
+    }
+    #imagem_modal:hover{
+        opacity: 80%;
+    }
+    .botaoAdicionar{
+        float: right;
+        margin: 2%;
+    }
+    input[type=number]::-webkit-inner-spin-button {
+        all: unset;
+        min-width: 21px;
+        min-height: 45px;
+        margin: 17px;
+        padding: 0px;
+        background-image:
+                linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, #000 35px,#000 36px,transparent 36px, transparent 40px),
+                linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+        transform: rotate(90deg) scale(0.8, 0.9);
+        cursor:pointer;
+    }
+
+
+</style>
+
+<div class="modal fade" id="vizualizar_produto" tabindex="-1" role="dialog" aria-labelledby="vizualizar_produtoLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+            <div class="modal-header cabecalho">
+                <h5 class="modal-title titulo_do_modal" id="vizualizar_produtoLabel"></h5>
+                <button type="button" class="close bnt btn-danger" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form action="adicionar.php" method="post" class="jsonForm">
+                <div class="modal-body container">
+
+                    <img src="../fotos/camomila.jpg" title="Camomila" id="imagem_modal">
+                    <div class="form-group row" id="lado_descricao">
+                        <label class="col-sm-2 col-form-label">Valor: </label>
+                        <br>
+                        <div class="col-sm-10">
+                            R$ <span id="valor_modal"><?php echo $linha->valor; ?></span>
+                        </div>
+                        <br>
+                        <label class="col-sm-2 col-form-label">Descrição: </label>
+                        <div class="col-sm-10">
+                            <span id="descricao_modal"><?php echo $linha->descricao; ?></span>
+                        </div>
+                        <br>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="quantidade">Quantidade:</label><br>
+                        <input type="number" class="form-control" aria-describedby="basic-addon2" id="total" name="qnt" step="1" value="1" min="1" required>
+
+                    </div>
+                    <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
+
+
+                    <!--<div class="form-group">
+                        <label for="quantidade">Quantidade:</label>
+                        <input type="number" id="qnt" name="qnt" class="form-control" step="2" value="1" min="1" required><button id="botaozinho" class="a btn btn-danger ">-</button><button id="botaozinho" onclick="mais()" class="b btn btn-success">+</button>
+                        <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-sm-2 col-form-label" for="qnt">Quantidade </label>
+                        <div class="col-sm-10"><br>
+                            <input type="number" id="qnt" name="qnt" class="form-control-plaintext" border="medium solid black" required>
+                        </div>
+                    </div>-->
+                </div>
+
+                <div class="form-group">
+                    <button type="submit" class="btn btn-success botaoAdicionar">Adicionar</button>
+                    <input type="hidden" name="id" id="id_modal">
+                    <input type="hidden" name="valor" id="passa_valor">
+
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</div>
+<!-- fim do modal de servico -->
+
 
 </main>
 
@@ -258,10 +353,87 @@ $foto = asset('/fotos/nc.png');
 <hr class="row">
 </body>
 
-<script>
-    function clicarNaturais() {
-        window.location.href =  "asset('listagem/listagem.php')";
-    };
+
+    <script>
+
+    $(document).ready(function() {
+
+        function mais(){
+            var atual = document.getElementById("total").value;
+            var novo = atual - (-1); //Evitando Concatenacoes
+            document.getElementById("total").value = novo;
+        }
+
+        function menos(){
+            var atual = document.getElementById("total").value;
+            if(atual > 0) { //evita números negativos
+                var novo = atual - 1;
+                document.getElementById("total").value = novo;
+            }
+        }
+
+        atualizaCarrinho();
+
+        $('.jsonForm').ajaxForm({
+            dataType: 'json',
+            success: function (data) {
+                if (data.status==true) {
+                    iziToast.success({
+                        message: data.mensagem
+                    });
+                    $('.jsonForm').trigger('reset');
+                    $('#vizualizar_produto').modal("hide");
+                    atualizaCarrinho();
+                }else {
+                    iziToast.error({
+                        message: data.mensagem
+                    });
+                }
+
+            },
+            error: function (data) {
+                iziToast.error({
+                    message: 'Servidor retornou erro'
+                });
+            }
+        });
+
+        $('#vizualizar_produto').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var id = button.data('id') // Extract info from data-* attributes
+            // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+            // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            $.getJSON("visualizar.php?id=" + id, function (data){
+                modal.find('#valor_modal').text(data.valor_formatado)
+                modal.find('.modal-title').text(data.nome)
+                modal.find('#descricao_modal').text(data.descricao)
+                modal.find('#qnt').attr('min', '1').attr('step', '0.1');
+                modal.find('#id_modal').val(data.id)
+                modal.find('#passa_valor').val(data.valor)
+            })
+
+
+        })
+
+        $('#vizualizar_produto').on('hide.bs.modal', function (event) {
+            var modal = $(this)
+            modal.find('#valor_modal').text('')
+            modal.find('.modal-title').text('')
+            modal.find('#descricao_modal').text('')
+            modal.find('#qnt').attr('min', '1').attr('step', 'any');
+            modal.find('#id_modal').text('')
+
+        })
+
+    });
+
+
 </script>
+</body>
+
+
+
+
 
 </html>

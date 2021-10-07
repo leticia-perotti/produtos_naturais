@@ -9,7 +9,8 @@ include(__ROOT__ . '/componentes/menu.php');
 
     $query = $conexao->query('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data, atendimento.status as status, atendimento_idatendimento as id
                                              from produto inner join atendimento_produto inner join atendimento
-                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento=atendimento.idatendimento order by data');
+                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento=atendimento.idatendimento 
+                                             where ( status = 2 || status = 3) order by data');
 
 
 

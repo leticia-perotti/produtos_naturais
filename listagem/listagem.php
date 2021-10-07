@@ -182,21 +182,19 @@ $foto =asset('/fotos/logo_mini.png');
             float: right;
             margin: 2%;
         }
-        label{
-            color: #5d5d5d;
+        input[type=number]::-webkit-inner-spin-button {
+            all: unset;
+            min-width: 21px;
+            min-height: 45px;
+            margin: 17px;
+            padding: 0px;
+            background-image:
+                    linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, #000 35px,#000 36px,transparent 36px, transparent 40px),
+                    linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+            transform: rotate(90deg) scale(0.8, 0.9);
+            cursor:pointer;
         }
-        input[type="number"] {
-            -webkit-appearance: textfield;
-            -moz-appearance: textfield;
-            appearance: textfield;
-        }
-        input[type=number]::-webkit-inner-spin-button,
-        input[type=number]::-webkit-outer-spin-button {
-            -webkit-appearance: none;
-        }
-        input[type="number"]{
-            outline:none;
-        }
+
 
     </style>
 
@@ -219,8 +217,8 @@ $foto =asset('/fotos/logo_mini.png');
                             <div class="col-sm-10">
                                 R$ <span id="valor_modal"><?php echo $linha->valor; ?></span>
                             </div>
-                            <label class="col-sm-2 col-form-label">Descrição: </label>
                             <br>
+                            <label class="col-sm-2 col-form-label">Descrição: </label>
                             <div class="col-sm-10">
                                 <span id="descricao_modal"><?php echo $linha->descricao; ?></span>
                             </div>
@@ -229,11 +227,8 @@ $foto =asset('/fotos/logo_mini.png');
 
                         <div class="input-group">
                             <label for="quantidade">Quantidade:</label><br>
-                            <input type="number" class="form-control" aria-describedby="basic-addon2" id="qnt" name="qnt" step="2" value="1" min="1" required>
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button">+</button>
-                                <button class="btn btn-outline-secondary" type="button">-</button>
-                            </div>
+                            <input type="number" class="form-control" aria-describedby="basic-addon2" id="total" name="qnt" step="1" value="1" min="1" required>
+
                         </div>
                         <small id="minimo" class="form-text text-muted">Para produtos à granel o mínimo é 100g</small>
 
@@ -269,16 +264,16 @@ $foto =asset('/fotos/logo_mini.png');
         $(document).ready(function() {
 
             function mais(){
-                var atual = document.getElementById("qnt").value;
+                var atual = document.getElementById("total").value;
                 var novo = atual - (-1); //Evitando Concatenacoes
-                document.getElementById("qnt").value = novo;
+                document.getElementById("total").value = novo;
             }
 
             function menos(){
-                var atual = document.getElementById("qnt").value;
+                var atual = document.getElementById("total").value;
                 if(atual > 0) { //evita números negativos
                     var novo = atual - 1;
-                    document.getElementById("qnt").value = novo;
+                    document.getElementById("total").value = novo;
                 }
             }
 
