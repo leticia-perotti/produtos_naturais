@@ -7,14 +7,16 @@ try{
     $hora_prevista = $_POST['hora_prevista'];
     $observacao = $_POST['observacao'];
     $forma_pagamento = $_POST['forma_pagamento'];
+    $dia = $_POST['dia_previsto'];
 
     if( $forma_pagamento == 'outro'){
         $forma_pagamento = $_POST['outros_forma_pagamento'];
     }
 
-    $inserir = $conexao->prepare("Insert into controla_retirada (hora_prevista, quem_retira, meio_pagamento, atendimento_id, observacao)
-                                        values (:hora, :quem, :pagamento, :atendimento, :observacao)");
+    $inserir = $conexao->prepare("Insert into controla_retirada (hora_prevista, dia_retirada, quem_retira, meio_pagamento, atendimento_id, observacao)
+                                        values (:hora, :dia, :quem, :pagamento, :atendimento, :observacao)");
     $inserir->bindParam(":hora", $hora_prevista);
+    $inserir->bindParam(":dia", $dia);
     $inserir->bindParam(":quem", $nome);
     $inserir->bindParam("pagamento", $forma_pagamento);
     $inserir->bindParam(":atendimento", $_COOKIE['carrinho']);

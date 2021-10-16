@@ -42,7 +42,11 @@ try {
             </div>
             <div class="form-group">
                 <label for="hora_prevista">Hora prevista para a retirada</label>
-                <input type="time" class="form-control" value="hora_prevista" name="hora_prevista" id="hora_prevista" required>
+                <input type="time" class="form-control" min="09:00" max="18:30" value="hora_prevista" name="hora_prevista" id="hora_prevista" required>
+            </div>
+            <div class="form-group">
+                <label for="dia_previsto">Dia previsto para a retirada</label>
+                <input type="date" class="form-control" value="dia_previsto" name="dia_previsto" id="dia_previsto" required>
             </div>
             <div class="form-group">
                 <label for="forma_pagamento">Forma de pagamento</label>

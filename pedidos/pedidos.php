@@ -145,6 +145,16 @@ include(__ROOT__ . '/componentes/menu.php');
     </div>
 
 </div>
+</div>
+    <footer class="text-muted">
+        <div class="container">
+            <p class="float-right">
+                <a href="#">Voltar ao topo</a>
+            </p>
+            <p>Natural Chá 2021</p>
+
+        </div>
+    </footer>
 </body>
 
     <?php
