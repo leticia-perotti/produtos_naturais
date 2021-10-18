@@ -18,6 +18,7 @@ try {
     include(__ROOT__ . '/componentes/menu.php');
 
     $foto =asset('/fotos/logo_mini.png');
+    $dataMinima = time('Y-m-d');
 ?>
     <!doctype html>
     <html lang="en">
@@ -27,6 +28,15 @@ try {
 
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
+
+    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
+    <script type="text/javascript">
+        jQuery(window).load(function($){
+            atualizaRelogio();
+        });
+    </script>
 
 </head>
     <body>
@@ -40,13 +50,15 @@ try {
                 <label for="nome">Nome de quem irá retirar</label>
                 <input type="text" class="form-control" id="nome" name="nome" placeholder="Nome" required>
             </div>
+
             <div class="form-group">
                 <label for="hora_prevista">Hora prevista para a retirada</label>
-                <input type="time" class="form-control" min="09:00" max="18:30" value="hora_prevista" name="hora_prevista" id="hora_prevista" required>
+                <input type="time" class="form-control" min="09:00" max="18:30" value="<?php echo date('H:i:s', time() + 900);?>" name="hora_prevista" id="hora_prevista" required>
+                <small id="minimo" class="form-text text-muted">O valor é referente ao horário atual somados 15 minutos, o tempo de separar o pedido</small>
             </div>
             <div class="form-group">
                 <label for="dia_previsto">Dia previsto para a retirada</label>
-                <input type="date" class="form-control" value="dia_previsto" name="dia_previsto" id="dia_previsto" required>
+                <input type="date" class="form-control" value="<?php echo date('Y-m-d');?>" min="<?php echo date('Y-m-d');?>" name="dia_previsto"  id="dia_previsto" required>
             </div>
             <div class="form-group">
                 <label for="forma_pagamento">Forma de pagamento</label>
@@ -75,6 +87,7 @@ try {
     </div>
     </body>
 <script>
+
     $('#forma_pagamento').on('change', function(){
         var formaPagamento = $(this).val();
         if (formaPagamento == 'outro'){

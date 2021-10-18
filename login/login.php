@@ -1,10 +1,10 @@
 <?php
 
 include_once ("../conexao.php");
-if (isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']){
-    header("Location: /");
-    exit;
-}
+//if (isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']){
+//    header("Location: /");
+//    exit;
+//}
 
 include(__ROOT__ . '/documentacao.php');
 
@@ -163,7 +163,8 @@ include(__ROOT__ . '/documentacao.php');
                     iziToast.success({
                         message: data.mensagem,
                         onClosing: function () {
-                            window.location = '<?php echo asset("inicial/index.php"); ?>';                        }
+                            window.location = '<?php echo asset("inicial/index.php"); ?>';
+                        }
 
                     });
 

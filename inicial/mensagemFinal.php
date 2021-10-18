@@ -1,7 +1,4 @@
 <?php
-if(isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']==true){
-    $_SESSION['cliente_autorizado'] = false;
-}
 
 //unset( $_SESSION['cliente_autorizado'] );
 //session_destroy();

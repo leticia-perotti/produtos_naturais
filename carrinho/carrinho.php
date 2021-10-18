@@ -52,7 +52,7 @@ try {
             </button>
         </form>
 
-        <form action="finalizaCarrinho.php" method="post" class="jsonForm">
+
         <?php
         while ($linha= $query->fetch()):
             ?>
@@ -86,8 +86,13 @@ try {
         <?php
         endwhile;
         ?>
-            <button type="submit" class="btn btn-success">Finalizar compra</button>
-        </form>
+
+            <div class="alert alert-warning" role="alert">
+                Valor parcial do carrinho: R$ <span id="valorTotal"></span>
+            </div>
+
+            <a href="<?php echo asset("/carrinho/finalizaCarrinho.php")?>" class="btn btn-success">Finalizar compra</a>
+
 
 
 
@@ -106,6 +111,10 @@ try {
                iziToastExcluir($(this).data("row-id"));
             });
 
+           $(".adiciona").on("blur", function(e) {
+              $(this).parent().parent().find('.acionaAdiciona').trigger("click");
+           });
+
             $(".acionaAdiciona").on("click", function (e) {
                 bntAdicionar = $(this);
                 id = $(this).data("row-id");
@@ -113,6 +122,8 @@ try {
                 //console.log(quantidade)
                 adicionar(id, quantidade);
             });
+
+            atualizaValorTotal();
 
         });
 
@@ -124,6 +135,7 @@ try {
                 {id: id, quantidade: quantidade},
                 function (data) {
                     if (data.status == true) {
+                        atualizaValorTotal();
                         iziToast.success({
                             message: data.mensagem
                         });
@@ -148,6 +160,7 @@ try {
                             message: data.mensagem
                         });
                     } else {
+                        atualizaValorTotal();
                         iziToast.success({
                             message: data.mensagem
                         });
@@ -155,6 +168,15 @@ try {
                     }
                 },
                 "json"
+            );
+        }
+
+        function atualizaValorTotal() {
+            $.getJSON(
+                "valorCarrinho.php",
+                function(data){
+                    $("#valorTotal").text(data.valor_total);
+                },
             );
         }
 

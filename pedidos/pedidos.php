@@ -82,9 +82,9 @@ include(__ROOT__ . '/componentes/menu.php');
                     if($controle != $linha->id):
                     ?>
         <div class="card">
-            <div class="card-header" id="headingOne">
+            <div class="card-header" id="<?php echo $linha->id?>">
                 <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="<?php echo $linha->if?>">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#<?php echo $linha->id?>" aria-expanded="true" aria-controls="<?php echo $linha->id?>">
                         <h3><?php echo $linha->data; ?></h3>
 
                     </button>
@@ -121,7 +121,7 @@ include(__ROOT__ . '/componentes/menu.php');
                     endif;
                     if ($controle == $linha->id):
                         ?>
-            <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+            <div id="<?php echo $linha->id?>" class="collapse show" aria-labelledby="<?php echo $linha->id?>" data-parent="#<?php echo $linha->id?>">
                 <div class="card-body">
                     <div id="produto">
                         <img src="../fotos/camomila.jpg" id="imagem">
@@ -136,13 +136,11 @@ include(__ROOT__ . '/componentes/menu.php');
                         ?>
 
             </div>
-
-
 <?php
     endwhile;
     ?>
 
-    </div>
+
 
 </div>
 </div>

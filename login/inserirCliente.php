@@ -38,6 +38,8 @@ try {
     $inserir->bindParam(":nasc", $data);
     $inserir->execute();
 
+    $_SESSION['cliente_autorizado'] = true;
+
     if ($inserir->rowCount() == 1) {
         retornaOK("Valor inserido com sucesso");
     } else {

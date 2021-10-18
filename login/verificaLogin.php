@@ -24,8 +24,8 @@ if ($conferir->rowCount() == 1) {
     $adicionaCliente->execute();
 
     $_SESSION['cliente_autorizado'] = true;
-   // $_SESSION['cliente_id'] = $cliente;
-    //$_SESSION['cliente_nome'] = $achaID->nome;
+    $_SESSION['cliente_id'] = $cliente;
+    $_SESSION['cliente_nome'] = $achaID->nome;
 
     retornaOK("Autenticado com sucesso");
 } else {

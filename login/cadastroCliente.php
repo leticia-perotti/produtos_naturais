@@ -86,9 +86,18 @@ $foto =asset('/fotos/logo_mini.png');
     </div>
 
     <div class="form-group">
-        <label for="ufCliente">Unidade da Federação</label>
-        <input type="text" class="form-control" id="ufCliente" name="ufCliente" required>
-    </div>
+       <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Unidade da Federação</label>
+       <select class="form-control" name="ufCliente" id="ufCliente" required>
+          <option selected>Selecione</option>
+           <option value="PR">Paraná</option>
+           <option value="SC">Santa Catarina</option>
+           <option value="RS">Rio Grande do Sul</option>
+           <option value="SP">São Paulo</option>
+           <option value="MS">Mato Grosso do Sul</option>
+           <option value="MT">Mato Grosso</option>
+           <option value="outro">Outro</option>
+       </select>
+   </div>
 
     <div class="form-group">
         <label for="dataCliente">Data de nascimento</label>
@@ -141,7 +150,7 @@ $foto =asset('/fotos/logo_mini.png');
                     iziToast.success({
                         message: data.mensagem,
                         onClosing: function () {
-                            history.back();
+                            window.location = '<?php echo asset("inicial/index.php"); ?>';
                         }
 
                     });
