@@ -53,8 +53,8 @@ try {
 
             <div class="form-group">
                 <label for="hora_prevista">Hora prevista para a retirada</label>
-                <input type="time" class="form-control" min="09:00" max="18:30" value="<?php echo date('H:i:s', time() + 900);?>" name="hora_prevista" id="hora_prevista" required>
-                <small id="minimo" class="form-text text-muted">O valor é referente ao horário atual somados 15 minutos, o tempo de separar o pedido</small>
+                <input type="time" class="form-control" min="09:00" max="18:30" value="<?php echo date('H:i', time() + 900);?>" name="hora_prevista" id="hora_prevista" required>
+                <small id="minimo" class="form-text text-muted">O valor é referente ao horário atual somados 15 minutos, o tempo necessário para separar o pedido.</small>
             </div>
             <div class="form-group">
                 <label for="dia_previsto">Dia previsto para a retirada</label>

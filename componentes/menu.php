@@ -76,7 +76,17 @@ $carrinho = asset('/carrinho/carrinho.php')
     <?php if ((isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']!=true) || !isset($_SESSION['cliente_autorizado'])) :?>
         <a class="nav-link direita" id="link" href="<?php echo $login?>">Login</a>
     <?php else: ?>
-    <a class="nav-link" id="link" href="<?php echo $pedidos?>">Pedidos</a>
+        <a class="nav-link" id="link" href="<?php echo $pedidos?>">Pedidos</a>
+
+        <div class="direita nav-link" id="link">
+            Bem Vindo, <?php echo $_SESSION['cliente_nome']?>
+            <a class="navbar-text material-tooltip-main" id="link" onclick="abrirSair(this)">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                    <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                </svg>
+            </a>
+        </div>
+
     <?php endif;?>
 
     <!--<button type="button" class="btn btn-secondary direita" data-toggle="tooltip" data-placement="bottom" title="Carrinho">
@@ -134,6 +144,30 @@ $carrinho = asset('/carrinho/carrinho.php')
 
 <!-- Fim  do modal do carrinho-->
 
+<!-- Modal do sair -->
+
+<div class="modal fade" id="sair" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="carrinhoLabel">Sair</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Ao sair do site, os produtos do carrinho e suas informações serão perdidas</p>
+                <div class="modal-footer">
+                    <a href="<?php echo asset('componentes/sair.php')?>" type="button" class="btn btn-danger">Sair</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<!-- Fim  do modal do sair-->
+
 
 <script>
     atualizaCarrinho();
@@ -142,6 +176,11 @@ $carrinho = asset('/carrinho/carrinho.php')
     function abrirCarrinho(obj)
     {
         $("#carrinho").modal("show");
+    }
+
+    function abrirSair(obj)
+    {
+        $("#sair").modal("show");
     }
 
     $(function () {

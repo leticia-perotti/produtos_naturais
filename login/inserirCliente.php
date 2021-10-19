@@ -11,6 +11,7 @@ try {
     $cidade = $_POST['cidadeCliente'];
     $uf = $_POST['ufCliente'];
     $data = $_POST['dataCliente'];
+    $apelido = $_POST['apelido'];
 
     if (validaCPF($cpf)==false){
 //    if (!validaCPF($_POST['cpf'])){
@@ -26,9 +27,9 @@ try {
         retornaErro("CPF ou email já existentes");
     }
 
-    $inserir = $conexao->prepare('Insert into cliente (nome, telefone, email, cpf, cidade, uf, datanascimento) 
+    $inserir = $conexao->prepare('Insert into cliente (nome, telefone, email, cpf, cidade, uf, datanascimento, apelido_cliente) 
                                   values 
-                                  (:nome, :telefone, :email,:cpf, :cidade, :uf, :nasc)');
+                                  (:nome, :telefone, :email,:cpf, :cidade, :uf, :nasc, :apelido)');
     $inserir->bindParam(":nome", $nome);
     $inserir->bindParam(":telefone", $telefone);
     $inserir->bindParam(":email", $email);
@@ -36,9 +37,14 @@ try {
     $inserir->bindParam(":cidade", $cidade);
     $inserir->bindParam(":uf", $uf);
     $inserir->bindParam(":nasc", $data);
+    $inserir->bindParam(":apelido", $apelido);
     $inserir->execute();
 
+    $cliente = $conexao->lastInsertId();
+
     $_SESSION['cliente_autorizado'] = true;
+    $_SESSION['cliente_id'] = $cliente;
+    $_SESSION['cliente_nome'] = $apelido;
 
     if ($inserir->rowCount() == 1) {
         retornaOK("Valor inserido com sucesso");

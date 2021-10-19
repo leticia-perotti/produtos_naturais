@@ -65,6 +65,12 @@ $foto =asset('/fotos/logo_mini.png');
         <input type="text" class="form-control" name="nomeCliente" id="nomeCliente" placeholder="Nome Completo" required>
     </div>
 
+        <div class="form-group">
+            <label for="apelido">Apelido</label>
+            <input type="text" class="form-control" name="apelido" id="apelido" maxlength="10" placeholder="Apelido" required>
+            <small id="minimo" class="form-text text-muted">O apelido deve ter até 10 caracteres</small>
+        </div>
+
     <div class="form-group">
         <label for="telefoneCliente">Telefone Celular</label>
         <input type="text" class="form-control telefone" name="telefoneCliente" id="telefoneCliente">
