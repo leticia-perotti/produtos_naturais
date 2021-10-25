@@ -29,15 +29,6 @@ try {
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment.min.js" type="text/javascript"></script>
-
-    <script src="https://code.jquery.com/jquery-1.11.2.js"></script>
-    <script type="text/javascript">
-        jQuery(window).load(function($){
-            atualizaRelogio();
-        });
-    </script>
-
 </head>
     <body>
     <div class="container">

@@ -113,6 +113,12 @@ $foto = asset('/fotos/nc.png');
             font-size: smaller;
             text-decoration: none;
         }
+        .info{
+            padding: 3%;
+            padding-right: 10%;
+            background-color: #cdcdcd;
+            text-align: center;
+        }
 
     </style>
 
@@ -187,6 +193,7 @@ $foto = asset('/fotos/nc.png');
             <?php
             endwhile;
             ?>
+        </div>
 
 
 
@@ -200,38 +207,64 @@ $foto = asset('/fotos/nc.png');
         <h2> Feed do insta</h2>
     </div>
 
+
+</div><!-- /.container -->
+
+
     <hr class="featurette-divider">
 
-        <div class="row featurette">
-            <div class="col-md-7">
-                <h2 class="featurette-heading">Nossa localização, <span class="text-muted">venha visitar-nos!</span></h2>
+        <div class="row featurette info">
 
-                <p class="lead">Rua Prudente de Morais, 415<br>
-                    União da Vitória<br>
-                    Paraná, Brasil</p>
-                <p>
-                    <span class="text-muted">Horário de atendimento:</span><br>
-                     De segunda a sexta das: <br>
-                    9:00 até 12:00<br>
-                    13:30 até 18:30<br>
-                    Sábados:<br>
-                    9:00 até 12:30<br>
-                    Domingos e feriados:<br>
-                    Fechado.
-                </p>
-            </div>
-            <div class="col-md-5">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.1243164633541!2d-51.08966799326457!3d-26.235623878131165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6619f9f88af4b%3A0x3fe376a08446d25e!2sNatural%20Ch%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1621973878698!5m2!1spt-BR!2sbr" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-            </div>
+                <div class="col-md-7">
+                    <h2 class="featurette-heading">Nossa localização, <span class="text-muted">venha visitar-nos!</span></h2>
 
-            </div>
+                    <p class="lead">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                            <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                        </svg>Rua Prudente de Morais, 415<br>
+                        União da Vitória<br>
+                        Paraná, Brasil</p>
+                    <h6>
+                        Horário de atendimento:
+                        <span class="text-muted"><br>
+                         De segunda a sexta das: <br>
+                        9:00 até 12:00<br>
+                        13:30 até 18:30<br>
+                        Sábados:<br>
+                        9:00 até 12:30<br>
+                        Domingos e feriados:<br>
+                        Fechado.
+                        </span>
+                    </h6>
+                </div>
+                <div class="col-md-5">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.1243164633541!2d-51.08966799326457!3d-26.235623878131165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6619f9f88af4b%3A0x3fe376a08446d25e!2sNatural%20Ch%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1621973878698!5m2!1spt-BR!2sbr" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                </div>
+            <br>
+            <hr class="featurette-divider">
+
+            <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+            <footer class="text-muted">
+                <div class="container">
+                    <p class="float-right">
+                        <a href="#">Voltar ao topo
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
+                            </svg></a>
+                    </p>
+                    <p>Natural Chá 2021</p>
+
+                </div>
+            </footer>
+            <hr class="row">
+</body>
+
+
         </div>
 
-        <hr class="featurette-divider">
 
         <!-- /END THE FEATURETTES -->
 
-    </div><!-- /.container -->
 <!-- Modal de adicionar produto -->
 <style>
     .cabecalho {
@@ -339,19 +372,6 @@ $foto = asset('/fotos/nc.png');
 
 </main>
 
-
-<script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
-<footer class="text-muted">
-    <div class="container">
-        <p class="float-right">
-            <a href="#">Voltar ao topo</a>
-        </p>
-        <p>Natural Chá 2021</p>
-
-    </div>
-</footer>
-<hr class="row">
-</body>
 
 
     <script>

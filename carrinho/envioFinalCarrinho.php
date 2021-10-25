@@ -9,6 +9,15 @@ try{
     $forma_pagamento = $_POST['forma_pagamento'];
     $dia = $_POST['dia_previsto'];
 
+    $dataAtual = strtotime(time());
+    echo "atual" . $dataAtual;
+    $dataPrevista = strtotime($dia.$hora_prevista);
+    echo $dataPrevista;
+
+    if($dataAtual > $dataPrevista){
+        retornaErro("Data inválida");
+    }
+
     if( $forma_pagamento == 'outro'){
         $forma_pagamento = $_POST['outros_forma_pagamento'];
     }
