@@ -9,13 +9,11 @@ try{
     $forma_pagamento = $_POST['forma_pagamento'];
     $dia = $_POST['dia_previsto'];
 
-    $dataAtual = strtotime(time());
-    echo "atual" . $dataAtual;
-    $dataPrevista = strtotime($dia.$hora_prevista);
-    echo $dataPrevista;
+    $dataAtual = strtotime("15 minutes");
+    $dataPrevista = strtotime($dia. ' ' .$hora_prevista);
 
     if($dataAtual > $dataPrevista){
-        retornaErro("Data inválida");
+        retornaErro("Data/Hora devem ser maior que 15 minutos da atual");
     }
 
     if( $forma_pagamento == 'outro'){
