@@ -55,20 +55,24 @@ try {
             table{
                 align-items: center;
             }
+            input[type=number]::-webkit-inner-spin-button {
+                all: unset;
+                min-width: 21px;
+                min-height: 45px;
+                margin: 17px;
+                padding: 0px;
+                background-image:
+                        linear-gradient(to top, transparent 0px, transparent 16px, #fff 16px, #fff 26px, transparent 26px, transparent 35px, #000 35px,#000 36px,transparent 36px, transparent 40px),
+                        linear-gradient(to right, transparent 0px, transparent 10px, #000 10px, #000 11px, transparent 11px, transparent 21px);
+                transform: rotate(90deg) scale(0.8, 0.9);
+                cursor:pointer;
+            }
 
         </style>
     </head>
     <body>
     <div class="container">
         <br><br><br><br>
-        <form class="form-inline" id="search" action="" method="get">
-            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" name="pesquisa" aria-label="Search">
-            <button class="btn btn-outline-secondary my-2 my-sm-0" type="submit">
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
-                </svg>
-            </button>
-        </form>
 
         <h1> Carrinho</h1>
 
@@ -86,15 +90,15 @@ try {
                 <td id="dados_tabela">
                     <div class="card-body">
                         <h5 class="card-title titulo"><?php echo $linha->produto; ?></h5>
-                        <span class="card-text">R$ <?php echo $linha->valor; ?><b</span>
+                        <span class="card-text">R$ <?php echo formatar_valor($linha->valor); ?></span>
                     </div>
                 </td>
 
                 <td id="input_quantidade">
-                    <div class="col-md-3 mb-3">
+
                         <label for="validationDefault05">Quantidade</label>
                         <input type="number" class="form-control adiciona" id="quantidade" value="<?php echo $linha->quantidade; ?>" min="1" required>
-                    </div>
+
                 </td>
                 <td id="botao_tabela">
                     <button type="button" class="btn btn-secondary acionaAdiciona" data-row-id="<?php echo $linha->id ?>">
@@ -152,8 +156,8 @@ try {
             $(".acionaAdiciona").on("click", function (e) {
                 bntAdicionar = $(this);
                 id = $(this).data("row-id");
-                quantidade = bntAdicionar.parent().find(".adiciona").val();
-                //console.log(quantidade)
+                quantidade = bntAdicionar.parent().parent().find(".adiciona").val();
+                // console.log(quantidade)
                 adicionar(id, quantidade);
             });
 

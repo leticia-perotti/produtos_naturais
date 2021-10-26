@@ -1,8 +1,11 @@
 <?php
 
 //pc do lab
+//define('__ROOT__',  $_SERVER['DOCUMENT_ROOT']);
+//const __URL__ = 'http://localhost';
+
 define('__ROOT__',  $_SERVER['DOCUMENT_ROOT']);
-const __URL__ = 'http://localhost';
+const __URL__ = 'http://localhost:81';
 
 //pc da cpd
 //define('__ROOT__',  $_SERVER['DOCUMENT_ROOT']."/leticia/natural_cha_tcc/");

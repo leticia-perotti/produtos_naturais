@@ -15,7 +15,7 @@ try{
         $valorCarrinho = $valorCarrinho + $linhaCarrinho->valorTotalProduto;
     }
 
-    $ret['valor_total'] = $valorCarrinho;
+    $ret['valor_total'] = formatar_valor($valorCarrinho);
 
     echo json_encode($ret);
 

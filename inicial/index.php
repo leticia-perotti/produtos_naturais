@@ -46,8 +46,8 @@ $foto = asset('/fotos/nc.png');
 
 
         .box{
-            height:250px;
-            width:200px;
+            min-height:250px;
+            min-width:200px;
             background-color:#fff;
             margin-left:10px;
             margin-right:10px;
@@ -96,15 +96,15 @@ $foto = asset('/fotos/nc.png');
             opacity: 0.8;
         }
         #pdt{
-            height: 265px;
-            width:15%;
+            min-height: 265px;
+            min-width:15%;
             margin-left: 2.5%;
             margin-right:2.5%;
             margin-bottom:20px;
             margin-top:20px;
             font-family:"Arial";
             text-align:center;
-            display:inline-block;
+
             align-content: center;
             box-shadow: 3px 5px 3px 3px rgba(0, 0, 0, 0.3);
         }
@@ -133,35 +133,42 @@ $foto = asset('/fotos/nc.png');
 <div class="container">
 
     <!--  Bolinhas com as categorias -->
-
-    <div class="box">
-        <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
-        <h1 class="classes">Produtos Naturais</h1>
-        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">Ir para &raquo;</a></button></p>
-    </div>
-
-    <div class="box">
-        <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
-        <h1 class="classes">Chás</h1>
-        <p><button class="text-muted botao_animado_index"><A class="link_certo" href="<?php echo $produtos. "?categoria=chas"?>">Ir para &raquo;</A></button></p>
-    </div>
-
-    <div class="box">
-        <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
-        <h1 class="classes">Confeitaria</h1>
-        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=confeitaria"?>">Ir para &raquo;</a></button></p>
-    </div>
-
-    <div class="box">
-        <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
-        <h1 class="classes">Embalagens</h1>
-        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=embalagens"?>">Ir para &raquo;</a></button></p>
-    </div>
-
-    <div class="box">
-        <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
-        <h1 class="classes">Chocolates</h1>
-        <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></button></p>
+    <div class="d-flex align-items-start row row-cols-md-5  row-cols-sm-2">
+        <div class="col">
+            <div class="box">
+                <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
+                <h1 class="classes">Produtos Naturais</h1>
+                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">Ir para &raquo;</a></button></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
+                <h1 class="classes">Chás</h1>
+                <p><button class="text-muted botao_animado_index"><A class="link_certo" href="<?php echo $produtos. "?categoria=chas"?>">Ir para &raquo;</A></button></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
+                <h1 class="classes">Confeitaria</h1>
+                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=confeitaria"?>">Ir para &raquo;</a></button></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
+                <h1 class="classes">Embalagens</h1>
+                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=embalagens"?>">Ir para &raquo;</a></button></p>
+            </div>
+        </div>
+        <div class="col">
+            <div class="box">
+                <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
+                <h1 class="classes">Chocolates</h1>
+                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></button></p>
+            </div>
+        </div>
     </div>
     <!-- Fim das bolinhas com as categorias -->
 
@@ -172,27 +179,31 @@ $foto = asset('/fotos/nc.png');
         <div class="row featurette">
             <h2> Produtos sugeridos  <a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
 
-            <?php
-            $query = $conexao-> query('Select * from produto where ativo=1 order by id DESC limit 5');
-            while ($linha= $query->fetch()):
-                ?>
-                <div class="card" id="pdt">
-                    <img src="" class="img_pdt">
-                    <div class="card-body">
-                        <h5 class="card-title titulo"><?php echo $linha->nome; ?></h5>
-                        <span class="card-text">R$ <?php echo $linha->valor; ?><br><?php echo $linha->descricao; ?></span>
-                        <div class="d-grid gap-2">
-                            <button type="button" class="bnt clicar" data-toggle="modal" data-target="#vizualizar_produto" data-id="<?php echo $linha->id; ?>">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
-                                    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-                                </svg>
-                            </button>
+            <div class="d-flex align-items-start row row-cols-md-5  row-cols-sm-2">
+                <?php
+                $query = $conexao-> query('Select * from produto where ativo=1 order by id DESC limit 5');
+                while ($linha= $query->fetch()):
+                    ?>
+                <div class="col">
+                    <div class="card" id="pdt">
+                        <img src="" class="img_pdt">
+                        <div class="card-body">
+                            <h5 class="card-title titulo"><?php echo $linha->nome; ?></h5>
+                            <span class="card-text">R$ <?php echo $linha->valor; ?><br><?php echo $linha->descricao; ?></span>
+                            <div class="d-grid gap-2">
+                                <button type="button" class="bnt clicar" data-toggle="modal" data-target="#vizualizar_produto" data-id="<?php echo $linha->id; ?>">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+                                        <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+                                    </svg>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            <?php
-            endwhile;
-            ?>
+                <?php
+                endwhile;
+                ?>
+            </div>
         </div>
 
 
@@ -201,17 +212,16 @@ $foto = asset('/fotos/nc.png');
 
     <!-- Fim produtos sugeridos -->
 
-        <hr class="featurette-divider">
+        <hr >
 
-    <div class="row featurette">
+
         <h2> Feed do insta</h2>
-    </div>
 
 
+
+    <hr>
 </div><!-- /.container -->
 
-
-    <hr class="featurette-divider">
 
         <div class="row featurette info">
 
@@ -241,7 +251,7 @@ $foto = asset('/fotos/nc.png');
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.1243164633541!2d-51.08966799326457!3d-26.235623878131165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6619f9f88af4b%3A0x3fe376a08446d25e!2sNatural%20Ch%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1621973878698!5m2!1spt-BR!2sbr" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             <br>
-            <hr class="featurette-divider">
+            <hr>
 
             <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
             <footer class="text-muted">
@@ -256,7 +266,7 @@ $foto = asset('/fotos/nc.png');
 
                 </div>
             </footer>
-            <hr class="row">
+            <hr>
 </body>
 
 

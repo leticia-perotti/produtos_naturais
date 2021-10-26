@@ -70,8 +70,8 @@ $foto =asset('/fotos/logo_mini.png');
                 opacity: 0.8;
             }
             #box{
-                height: 320px;
-                width:190px;
+                min-height: 320px;
+                min-width:190px;
                 margin-left:10px;
                 margin-right:10px;
                 margin-bottom:5px;
@@ -103,6 +103,7 @@ $foto =asset('/fotos/logo_mini.png');
         </form>
 
     <h1> Produtos</h1>
+        <div class="d-flex align-items-start row row-cols-md-5  row-cols-sm-2">
 
 
 
@@ -115,7 +116,8 @@ $foto =asset('/fotos/logo_mini.png');
         }
         while ($linha= $query->fetch()):
         ?>
-            <div class="card" id="box">
+            <div class="col">
+                <div class="card" id="box">
                     <img src="" class="img_produto">
                     <div class="card-body">
                         <h5 class="card-title titulo"><?php echo $linha->nome; ?></h5>
@@ -129,14 +131,16 @@ $foto =asset('/fotos/logo_mini.png');
                         </div>
                     </div>
                 </div>
+            </div>
         <?php
         endwhile;
         ?>
+        </div>
 
 
     </div>
     </div>
-    <hr class="row">
+    <hr>
     <footer class="text-muted">
         <div class="container">
             <p class="float-right">
@@ -146,7 +150,7 @@ $foto =asset('/fotos/logo_mini.png');
 
         </div>
     </footer>
-    <hr class="row">
+    <hr>
 
             </div>
         </div>

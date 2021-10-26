@@ -3,6 +3,7 @@ include_once ("../conexao.php");
 
 include(__ROOT__ . '/documentacao.php');
 $foto =asset('/fotos/logo_mini.png');
+$inicial = asset('inicial/index.php')
 ?>
 <!doctype html>
 <html lang="en">
@@ -107,7 +108,7 @@ $foto =asset('/fotos/logo_mini.png');
 
     <div class="form-group">
         <label for="dataCliente">Data de nascimento</label>
-        <input type="date" class="form-control" id="dataCliente" name="dataCliente" required>
+        <input type="date" class="form-control" id="dataCliente" name="dataCliente" min="01/01/1900" required>
     </div>
 
         <button type="submit" class="btn btn-success">Cadastrar</button>
