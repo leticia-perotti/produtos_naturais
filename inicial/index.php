@@ -97,7 +97,7 @@ $foto = asset('/fotos/nc.png');
         }
         #pdt{
             min-height: 265px;
-            min-width:15%;
+            min-width:100px;
             margin-left: 2.5%;
             margin-right:2.5%;
             margin-bottom:20px;
@@ -136,37 +136,47 @@ $foto = asset('/fotos/nc.png');
     <div class="d-flex align-items-start row row-cols-md-5  row-cols-sm-2">
         <div class="col">
             <div class="box">
+                <a class="link_certo" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">
                 <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/produtos-naturais.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Produtos Naturais</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
                 <h1 class="classes">Produtos Naturais</h1>
-                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=produtos-naturais"?>">Ir para &raquo;</a></button></p>
+                <p><button class="text-muted botao_animado_index">Ir para &raquo;</button></p>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="box">
+                <A class="link_certo" href="<?php echo $produtos. "?categoria=chas"?>">
                 <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/cha.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Chás</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
                 <h1 class="classes">Chás</h1>
-                <p><button class="text-muted botao_animado_index"><A class="link_certo" href="<?php echo $produtos. "?categoria=chas"?>">Ir para &raquo;</A></button></p>
+                <p><button class="text-muted botao_animado_index">Ir para &raquo;</button></p>
+                </A>
             </div>
         </div>
         <div class="col">
             <div class="box">
+                <a class="link_certo" href="<?php echo $produtos. "?categoria=confeitaria"?>">
                 <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/confeitar.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Confeitaria</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
                 <h1 class="classes">Confeitaria</h1>
-                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=confeitaria"?>">Ir para &raquo;</a></button></p>
+                <p><button class="text-muted botao_animado_index">Ir para &raquo;</button></p>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="box">
+                <a class="link_certo" href="<?php echo $produtos. "?categoria=embalagens"?>">
                 <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/bolo-embalagem.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
                 <h1 class="classes">Embalagens</h1>
-                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=embalagens"?>">Ir para &raquo;</a></button></p>
+                <p><button class="text-muted botao_animado_index">Ir para &raquo;</button></p>
+                </a>
             </div>
         </div>
         <div class="col">
             <div class="box">
+                <a class="link_certo" href="<?php echo $produtos. "?categoria=chocolates"?>">
                 <img class="bd-placeholder-img rounded-circle" width="100" height="100" role="img" src="../fotos/chocolate.jpg"  preserveAspectRatio="xMidYMid slice" focusable="false"><title>Embalagens</title><rect width="50%" height="50%" fill="#777"/><text x="30%" y="30%" fill="#777" dy=".3em"></text></img>
                 <h1 class="classes">Chocolates</h1>
-                <p><button class="text-muted botao_animado_index"><a class="link_certo" href="<?php echo $produtos. "?categoria=chocolates"?>">Ir para &raquo;</a></button></p>
+                <p><button class="text-muted botao_animado_index">Ir para &raquo;</button></p>
+                </a>
             </div>
         </div>
     </div>
@@ -179,9 +189,9 @@ $foto = asset('/fotos/nc.png');
         <div class="row featurette">
             <h2> Produtos sugeridos  <a href="../listagem/listagem.php" class="text-muted link">Vizualizar mais produtos</a></h2>
 
-            <div class="d-flex align-items-start row row-cols-md-5  row-cols-sm-2">
+            <div class="d-flex align-items-start row row-cols-md-6  row-cols-sm-2">
                 <?php
-                $query = $conexao-> query('Select * from produto where ativo=1 order by id DESC limit 5');
+                $query = $conexao-> query('Select * from produto where ativo=1 order by id DESC limit 6');
                 while ($linha= $query->fetch()):
                     ?>
                 <div class="col">
@@ -248,7 +258,7 @@ $foto = asset('/fotos/nc.png');
                     </h6>
                 </div>
                 <div class="col-md-5">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.1243164633541!2d-51.08966799326457!3d-26.235623878131165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6619f9f88af4b%3A0x3fe376a08446d25e!2sNatural%20Ch%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1621973878698!5m2!1spt-BR!2sbr" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d710.1243164633541!2d-51.08966799326457!3d-26.235623878131165!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94e6619f9f88af4b%3A0x3fe376a08446d25e!2sNatural%20Ch%C3%A1!5e0!3m2!1spt-BR!2sbr!4v1621973878698!5m2!1spt-BR!2sbr" min-width="15%" min-height="15%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             <br>
             <hr>
