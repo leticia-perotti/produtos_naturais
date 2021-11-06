@@ -30,7 +30,7 @@ $foto = asset('/fotos/nc.png');
             width:150px;
             height:35px;
             background: burlywood;
-            opacity: 0.3;
+            opacity: 0.8;
             border-radius: 35px;
             border: none;
 
