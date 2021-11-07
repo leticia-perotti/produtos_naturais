@@ -225,7 +225,9 @@ $foto = asset('/fotos/nc.png');
         <hr >
 
 
-        <h2> Feed do insta</h2>
+        <h2> Siga-nos no instagram! @_natural_cha</h2>
+    <!-- LightWidget WIDGET -->
+    <script src="https://cdn.lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/9f17545927bc5b29832f439799ae66df.html" scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width:100%;border:0;overflow:hidden;"></iframe>
 
 
 
@@ -236,7 +238,7 @@ $foto = asset('/fotos/nc.png');
         <div class="row featurette info">
 
                 <div class="col-md-7">
-                    <h2 class="featurette-heading">Nossa localização, <span class="text-muted">venha visitar-nos!</span></h2>
+                    <h2 class="featurette-heading">Nossa localização, <span class="text-muted">Venha visitar-nos!</span></h2>
 
                     <p class="lead">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">

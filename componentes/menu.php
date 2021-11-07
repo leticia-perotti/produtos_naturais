@@ -66,7 +66,7 @@ $carrinho = asset('/carrinho/carrinho.php')
 
 ?>
 
-<nav id="menu_bonito" class="nav navbar navbar-expand-lg navbar-light bg-light">
+<nav class="nav navbar navbar-expand-lg navbar-light bg-light">
     <a class="nav-link active" href="<?php echo $index?>" id ="titulo_menu">
         <img src="<?php echo $foto?>" id="imagem_menu">
         Natural Chá</a>
