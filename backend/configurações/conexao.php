@@ -1,5 +1,6 @@
 <?php
-define("DIRETORIO_IMAGEM", __DIR__ . '/../imagens/');
+define("DIRETORIO_IMAGEM", __DIR__ . '/../../imagens/');
+
 try {
 
     //$conexao = new PDO(  'mysql:host=localhost;dbname=bd_natural', 'root', 'root' );

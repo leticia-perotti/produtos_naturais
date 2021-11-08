@@ -9,7 +9,7 @@ include(__ROOT__ . '/componentes/menu.php');
 if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
     $pesquisa = "%" . $_GET["pesquisa"] . "%";
 
-    $query = $conexao->prepare('Select * from produto where nome LIKE :pesquisa OR descricao LIKE  :pesquisa && ativo=1;');
+    $query = $conexao->prepare('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao, produto_foto.nome_foto from produto left join produto_foto on produto.id=produto_foto.produto_id where nome LIKE :pesquisa OR descricao LIKE  :pesquisa && ativo=1');
     $query->bindParam(":pesquisa", $pesquisa);
     $query->execute();
 
@@ -17,13 +17,13 @@ if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
 
         $categoria = "%" . $_GET["categoria"] . "%";
         $query = $conexao->prepare('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao from produto inner join categoria_produto_has_produto inner join categoria_produto
-                                              where (categoria_produto.nome LIKE :categoria) && (categoria_produto.id = categoria_produto_has_produto.categoria_produto_id
-                                              && categoria_produto_has_produto.produto_idproduto = produto.id) && produto.ativo=1;');
+                                              left join produto_foto on produto.id=produto_foto.produto_id where (categoria_produto.nome LIKE :categoria) && (categoria_produto.id = categoria_produto_has_produto.categoria_produto_id
+                                              && categoria_produto_has_produto.produto_idproduto = produto.id) && produto.ativo=1');
         $query->bindParam(":categoria", $categoria);
         $query->execute();
 
 }else {
-    $query = $conexao->query('Select * from produto where ativo=1');
+    $query = $conexao->query('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao, produto_foto.nome_foto from produto left join produto_foto on produto.id=produto_foto.produto_id where ativo=1');
 
 }
 
@@ -109,18 +109,15 @@ $foto =asset('/fotos/logo_mini.png');
         <?php
         if($query->rowCount()==0){
             echo "<br><br>
-               <div class='alert alert-warning' role='lert'>
+               <div class='alert alert-warning' role='alert'>
                Nenhum produto encontrado!
                </div>";
         }
         while ($linha= $query->fetch()):
-            $imagem= $conexao->prepare("Select * from produto_foto where produto_id=:id");
-            $imagem->bindValue(":id", $linha->id);
-            $imagem->execute();
         ?>
             <div class="col">
                 <div class="card" id="box">
-                    <img src="<?php echo $imagem->nome_foto; ?>" class="img_produto">
+                    <img src="<?php echo imagem($linha->nome_foto); ?>" class="img_produto">
                     <div class="card-body">
                         <h5 class="card-title titulo"><?php echo $linha->nome; ?></h5>
                         <span class="card-text">R$ <?php echo $linha->valor; ?><br><?php echo $linha->descricao; ?></span>

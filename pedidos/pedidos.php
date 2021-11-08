@@ -7,13 +7,12 @@ try{
 include(__ROOT__ . '/documentacao.php');
 include(__ROOT__ . '/componentes/menu.php');
 
-    $query = $conexao->query('Select produto.nome as nome, atendimento_produto.quantidade as quantidade, atendimento_produto.valorproduto as valor, DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data, atendimento.status as status, atendimento_idatendimento as id
-                                             from produto inner join atendimento_produto inner join atendimento
-                                             on produto.id = atendimento_produto.produto_idproduto && atendimento_produto.atendimento_idatendimento=atendimento.idatendimento 
-                                             where ( status = 2 || status = 3) order by data');
-
-
-
+    $queryAtendimento = $conexao->prepare('Select DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data_formatada, status, idatendimento as id
+                                       from atendimento
+                                       where cliente_idclientes=:cliente and ( status = 2 || status = 3)
+                                       order by data_formatada');
+    $queryAtendimento-> bindParam(":cliente", $_SESSION['cliente_id']);
+    $queryAtendimento->execute();
 ?>
 <!doctype html>
 <html lang="en">
@@ -64,28 +63,31 @@ include(__ROOT__ . '/componentes/menu.php');
 
 <body>
 <div class="container">
-    <br>
-    <br>
-    <br><br>
     <h1>Pedidos</h1>
     <hr>
     <div id="accordion">
-            <?php
-            $controle = null;
-            while ($linha= $query->fetch()):
-
-            ?>
-
-
-                    <?php
-
-                    if($controle != $linha->id):
+        <?php
+            while ($linha= $queryAtendimento->fetch()):
+                $queryProduto=$conexao->prepare("Select
+    atendimento_produto.valorproduto,
+    produto.nome As produto,
+    produto.id,
+    atendimento_produto.quantidade,
+    produto_foto.nome_foto
+From
+    atendimento_produto Inner Join
+    produto On atendimento_produto.produto_idproduto = produto.id Inner Join
+    produto_foto On produto_foto.produto_id = produto.id
+Where
+    atendimento_produto.idatendimento_produto = :atendimento");
+                $queryProduto->bindParam("atendimento", $linha->id);
+                $queryProduto->execute();
                     ?>
         <div class="card">
             <div class="card-header" id="<?php echo $linha->id?>">
                 <h5 class="mb-0">
                     <button class="btn btn-link" data-toggle="collapse" data-target="#<?php echo $linha->id?>" aria-expanded="true" aria-controls="<?php echo $linha->id?>">
-                        <h3><?php echo $linha->data; ?></h3>
+                        <h3><?php echo $linha->data_formatada; ?></h3>
 
                     </button>
 
@@ -116,26 +118,27 @@ include(__ROOT__ . '/componentes/menu.php');
                                         </h5>
             </div>
 
-                    <?php
-                    $controle = $linha->id;
-                    endif;
-                    if ($controle == $linha->id):
-                        ?>
+
             <div id="<?php echo $linha->id?>" class="collapse show" aria-labelledby="<?php echo $linha->id?>" data-parent="#<?php echo $linha->id?>">
                 <div class="card-body">
-                    <div id="produto">
-                        <img src="../fotos/camomila.jpg" id="imagem">
-                        <div id="texto"> <?php echo $linha->nome; ?> </div>
-                        <div id="qnt"> Quantidade: <?php echo $linha->quantidade; ?> </div><br>
-                        <div id="qnt"> Valor da unidade <?php echo $linha->valor; ?> </div>
-                    </div>
-                </div>
-                    <?php
-                        elseif($controle == null):$controle = $linha->id;
-                        endif;
+                    <?php while($linhaProduto = $queryProduto->fetchObject()):
+                        $queryImagem=$conexao->prepare("Select nome_foto as foto from produto_foto where produto_id=:id");
+                        $queryImagem->bindParam(":id", $linhaProduto->idProduto);
+                        $queryImagem->execute();
+                        $linhaFoto=$queryImagem->fetch();
                         ?>
-
+                    <div id="produto">
+                        <img src="<?php echo imagem($linhaFoto->foto); ?>" id="imagem">
+                        <div id="texto"> <?php echo $linhaProduto->produto; ?> </div>
+                        <div id="qnt"> Quantidade: <?php echo $linhaProduto->quantidade; ?> </div><br>
+                        <div id="qnt"> Valor da unidade <?php echo $linhaProduto->valor; ?> </div>
+                    </div>
+                    <?php
+                    endwhile;
+                    ?>
+                </div>
             </div>
+        </div>
 <?php
     endwhile;
     ?>

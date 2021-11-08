@@ -33,6 +33,11 @@ function asset($url){
     return __URL__ . $url;
 }
 
+function imagem($nome){
+    $nome = ($nome ? : 'sem-imagem.jpg');
+    return asset('/imagens/' . $nome);
+}
+
 function formatar_valor($numero)
 {
     return number_format($numero, 2, ',', '.');
