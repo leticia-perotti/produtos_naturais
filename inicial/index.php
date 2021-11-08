@@ -126,7 +126,6 @@ $foto = asset('/fotos/nc.png');
 
 </head>
 <body>
-<br>
 
 <img src="<?php echo $foto?>" class="d-block w-100" alt="...">
 

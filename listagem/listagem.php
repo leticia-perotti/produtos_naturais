@@ -114,10 +114,13 @@ $foto =asset('/fotos/logo_mini.png');
                </div>";
         }
         while ($linha= $query->fetch()):
+            $imagem= $conexao->prepare("Select * from produto_foto where produto_id=:id");
+            $imagem->bindValue(":id", $linha->id);
+            $imagem->execute();
         ?>
             <div class="col">
                 <div class="card" id="box">
-                    <img src="" class="img_produto">
+                    <img src="<?php echo $imagem->nome_foto; ?>" class="img_produto">
                     <div class="card-body">
                         <h5 class="card-title titulo"><?php echo $linha->nome; ?></h5>
                         <span class="card-text">R$ <?php echo $linha->valor; ?><br><?php echo $linha->descricao; ?></span>

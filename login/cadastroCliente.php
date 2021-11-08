@@ -50,7 +50,7 @@ $inicial = asset('inicial/index.php')
 <body>
 
 <nav class="navbar navbar-light bg-light">
-    <a class="navbar-brand" href="#">
+    <a class="navbar-brand" href = "<?php echo asset('/inicial/index.php')?>">
         <img src="<?php echo $foto?>" class="d-inline-block align-top">
         Natural Chá
     </a>
