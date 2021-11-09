@@ -26,6 +26,10 @@ function retornaErro($mensagem)
     exit();
 
 }
+function imagem($nome){
+    $nome = ($nome ? : 'sem-imagem.jpg');
+    return asset('/imagens/' . $nome);
+}
 
 function retornaOK($mensagem)
 {

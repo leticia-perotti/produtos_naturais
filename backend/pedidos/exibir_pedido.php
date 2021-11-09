@@ -10,14 +10,17 @@ try{
     if(!isset($_GET['id'])){
         die('Acesse através da listagem');
     }
-    $query = $conexao->prepare("SELECT * FROM atendimento_produto WHERE atendimento_idatendimento=:atendimento_idatendimento");
-    $query->bindValue(":atendimento_idatendimento", $_GET['id']);
-    $resultado = $query->execute();
+    $query = $conexao->prepare("Select atendimento_produto.quantidade as quantidade, produto.nome as produto, atendimento_produto.valorproduto as valor, atendimento_produto.atendimento_idatendimento as id,  produto_foto.nome_foto as foto from produto left join produto_foto on produto.id=produto_foto.produto_id
+                                   inner join atendimento_produto where
+                                   atendimento_produto.atendimento_idatendimento =:atendimento
+                                   && produto.id = atendimento_produto.produto_idproduto;");
+    $query->bindValue(":atendimento", $_GET['id']);
+    $query->execute();
 
     if($query->rowCount()==0){
         exit("Pedido nao encontrado ");
     }
-    $linha = $query->fetchObject();
+    //$linha = $query->fetchObject();
 
 }catch(PDOException $exception){
     echo $exception->getMessage();
@@ -41,9 +44,11 @@ while ($linha= $query->fetch()):
     <div class="alert alert-secondary" role="alert">
         <img src="" class="img_produto">
         <div class="card-body">
-            <h1 class="card-title titulo">Numero do pedido: <?php echo $linha->atendimento_idatendimento; ?></h1>
-            <span class="card-text">Valor do produto R$:  <?php echo $linha->valorproduto; ?></span><br>
+            <h1 class="card-title titulo">Numero do pedido: <?php echo $linha->produto; ?></h1>
+            <span class="card-text">Produto :  <?php echo $linha->produto; ?></span><br>
+            <span class="card-text">Valor do produto R$:  <?php echo $linha->valor; ?></span><br>
             <span class="card-title titulo">Qantidade: <?php echo $linha->quantidade; ?></span><br>
+            <img src="<?php echo imagem($linha->nome_foto); ?>" class="img_produto">
         </div>
 
     </div>

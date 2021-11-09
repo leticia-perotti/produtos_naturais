@@ -223,7 +223,7 @@ try {
                         iziToast.success({
                             message: data.mensagem
                         });
-                        btnExcluir.parent().remove();//oculta a linha
+                        btnExcluir.parent().parent().remove();//oculta a linha
                     }
                 },
                 "json"

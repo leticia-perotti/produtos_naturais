@@ -67,21 +67,29 @@ include(__ROOT__ . '/componentes/menu.php');
     <hr>
     <div id="accordion">
         <?php
+        if($queryAtendimento->rowCount()==0):
+            ?>
+            <div class='alert alert-warning' role='alert'>
+                Este usuário ainda não apresenta um pedido!
+            </div>
+        <?php
+        else:
             while ($linha= $queryAtendimento->fetch()):
                 $queryProduto=$conexao->prepare("Select
-    atendimento_produto.valorproduto,
-    produto.nome As produto,
-    produto.id,
-    atendimento_produto.quantidade,
-    produto_foto.nome_foto
-From
-    atendimento_produto Inner Join
-    produto On atendimento_produto.produto_idproduto = produto.id Inner Join
-    produto_foto On produto_foto.produto_id = produto.id
-Where
-    atendimento_produto.idatendimento_produto = :atendimento");
+                                                        atendimento_produto.valorproduto as valor,
+                                                        produto.nome As produto,
+                                                        produto.id as id,
+                                                        atendimento_produto.quantidade,
+                                                        produto_foto.nome_foto as foto
+                                                    From
+                                                        atendimento_produto Inner Join
+                                                        produto On atendimento_produto.produto_idproduto = produto.id Left Join
+                                                        produto_foto On produto_foto.produto_id = produto.id
+                                                    Where
+                                                        atendimento_produto.atendimento_idatendimento = :atendimento");
                 $queryProduto->bindParam("atendimento", $linha->id);
                 $queryProduto->execute();
+
                     ?>
         <div class="card">
             <div class="card-header" id="<?php echo $linha->id?>">
@@ -122,16 +130,12 @@ Where
             <div id="<?php echo $linha->id?>" class="collapse show" aria-labelledby="<?php echo $linha->id?>" data-parent="#<?php echo $linha->id?>">
                 <div class="card-body">
                     <?php while($linhaProduto = $queryProduto->fetchObject()):
-                        $queryImagem=$conexao->prepare("Select nome_foto as foto from produto_foto where produto_id=:id");
-                        $queryImagem->bindParam(":id", $linhaProduto->idProduto);
-                        $queryImagem->execute();
-                        $linhaFoto=$queryImagem->fetch();
                         ?>
                     <div id="produto">
-                        <img src="<?php echo imagem($linhaFoto->foto); ?>" id="imagem">
+                        <img src="<?php echo imagem($linhaProduto->foto); ?>" id="imagem">
                         <div id="texto"> <?php echo $linhaProduto->produto; ?> </div>
                         <div id="qnt"> Quantidade: <?php echo $linhaProduto->quantidade; ?> </div><br>
-                        <div id="qnt"> Valor da unidade <?php echo $linhaProduto->valor; ?> </div>
+                        <div id="qnt"> Valor da unidade <?php echo formatar_valor($linhaProduto->valor); ?> </div>
                     </div>
                     <?php
                     endwhile;
@@ -140,7 +144,9 @@ Where
             </div>
         </div>
 <?php
+
     endwhile;
+        endIf;
     ?>
 
 

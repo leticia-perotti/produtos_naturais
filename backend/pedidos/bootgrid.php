@@ -16,7 +16,7 @@ try{
 From
     atendimento Inner Join
     cliente On atendimento.cliente_idclientes = cliente.id
-WHERE status= 2, 1";
+WHERE status= 2";
 
     if($_POST['searchPhrase'] != '')
     {
