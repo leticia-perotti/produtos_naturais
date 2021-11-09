@@ -49,6 +49,7 @@ $foto =asset('/fotos/logo_mini.png');
             .img_produto{
                 width: 150px;
                 align-items: center;
+                margin: 2%;
             }
             .botao {
                 background: none;
@@ -70,7 +71,7 @@ $foto =asset('/fotos/logo_mini.png');
                 opacity: 0.8;
             }
             #box{
-                min-height: 320px;
+                min-height: 300px;
                 min-width:190px;
                 margin-left:10px;
                 margin-right:10px;

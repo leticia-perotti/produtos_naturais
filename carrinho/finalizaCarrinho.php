@@ -18,7 +18,7 @@ try {
     include(__ROOT__ . '/componentes/menu.php');
 
     $foto =asset('/fotos/logo_mini.png');
-    $dataMinima = time('Y-m-d');
+    $dataMinima = time();
 ?>
     <!doctype html>
     <html lang="en">
@@ -32,8 +32,6 @@ try {
 </head>
     <body>
     <div class="container">
-        <br><br><br><br>
-
         <h1> Finalizar compra</h1>
 
         <form method="post" action="envioFinalCarrinho.php" class="jsonForm">

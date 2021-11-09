@@ -119,6 +119,10 @@ $foto = asset('/fotos/nc.png');
             background-color: #cdcdcd;
             text-align: center;
         }
+        .img_produto{
+            width: 70%;
+            margin: 2%;
+        }
 
     </style>
 
@@ -190,13 +194,14 @@ $foto = asset('/fotos/nc.png');
 
             <div class="d-flex align-items-start row row-cols-md-6  row-cols-sm-2">
                 <?php
-                $query = $conexao-> query('Select * from produto where ativo=1 order by id DESC limit 6');
+                $query = $conexao-> query('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao, produto_foto.nome_foto from produto left join produto_foto on produto.id=produto_foto.produto_id where ativo=1 order by id DESC limit 6');
                 while ($linha= $query->fetch()):
                     ?>
                 <div class="col">
                     <div class="card" id="pdt">
                         <img src="" class="img_pdt">
                         <div class="card-body">
+                            <img src="<?php echo imagem($linha->nome_foto); ?>" class="img_produto">
                             <h5 class="card-title titulo"><?php echo $linha->nome; ?></h5>
                             <span class="card-text">R$ <?php echo $linha->valor; ?><br><?php echo $linha->descricao; ?></span>
                             <div class="d-grid gap-2">
@@ -452,6 +457,7 @@ $foto = asset('/fotos/nc.png');
                 modal.find('#qnt').attr('min', '1').attr('step', '0.1');
                 modal.find('#id_modal').val(data.id)
                 modal.find('#passa_valor').val(data.valor)
+                modal.find('#foto').src(data.foto)
             })
 
 

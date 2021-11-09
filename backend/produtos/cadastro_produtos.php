@@ -58,7 +58,7 @@ include("../configurações/menu.php");
 
         <div class="form-group">
             <label for="peso">Peso</label>
-            <input class="form-control" id="peso" type="number" name="peso" required >
+            <input class="form-control" id="peso" type="number" name="peso">
         </div>
 
         <div class="form-group">
@@ -68,7 +68,7 @@ include("../configurações/menu.php");
 
         <div class="form-group">
             <label for="valor_compra">Valor compra</label>
-            <input class="form-control" id="valor_compra" type="number" name="valor_compra">
+            <input class="form-control" id="valor_compra" type="number" name="valor_compra" required>
         </div>
 
         <div class="form-group">

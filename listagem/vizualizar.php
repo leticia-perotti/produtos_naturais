@@ -4,7 +4,7 @@
 try{
     require_once "../conexao.php";
 
-    $vizualizar= $conexao->prepare("SELECT id, nome, valor, descricao FROM produto where id=:id");
+    $vizualizar= $conexao->prepare("SELECT produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao, produto_foto.nome_foto as foto from produto left join produto_foto on produto.id=produto_foto.produto_id FROM produto where id=:id");
     $vizualizar-> bindValue(':id', $_GET['id']);
     $vizualizar-> execute();
 

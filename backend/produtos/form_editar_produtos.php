@@ -8,8 +8,13 @@ try{
         die('Acesse pela listagem');
     }
 
-    $query = $conexao->PREPARE("SELECT * FROM produto WHERE id=:id");
+    $query = $conexao->PREPARE("SELECT produto.id as idProduto, produto.nome as produto, produto.descricao as descricao, produto.peso as peso, produto.valor as valor, 
+                                          produto.quantidade as quantidade, produto.valor_compra as valorCompra,  produto.ativo as status, produto.margem as margem, produto.tipo_venda as tipo,
+                                          produto_foto.nome_foto as foto from produto left join produto_foto on produto.id=produto_foto.produto_id
+                                          where produto.id=:id
+                                          ");
     $query->bindValue(":id", $_GET['id']);
+
 
     $resultado = $query->execute();
 
@@ -41,12 +46,12 @@ include ("../configurações/menu.php");
 <form action="editar_produtos.php" method="post" class="jsonForm">
     <div class="form-group">
         <label for="id">Código</label>
-        <input class="form-control" id="id" type="text" name="id" readonly value="<?php echo $linhaproduto->id;?>">
+        <input class="form-control" id="id" type="text" name="id" readonly value="<?php echo $linhaproduto->idProduto;?>">
     </div>
 
     <div class="form-group">
         <label for="nome">Nome do Produto</label>
-        <input class="form-control" id="nome" type="text" name="nome" value="<?php echo $linhaproduto->nome;?>">
+        <input class="form-control" id="nome" type="text" name="nome" value="<?php echo $linhaproduto->produto;?>">
     </div>
 
     <div class="form-group">
@@ -71,12 +76,7 @@ include ("../configurações/menu.php");
 
     <div class="form-group">
         <label for="valor_compra">Valor da compra</label>
-        <input class="form-control" id="valor_compra" type="number" name="valor_compra" value="<?php echo $linhaproduto->valor_compra;?>">
-    </div>
-
-    <div class="form-group">
-        <label for="link_foto">Foto</label>
-        <input class="form-control" id="link_foto" type="file" name="link_foto" value="<?php echo $linhaproduto->link_foto;?>">
+        <input class="form-control" id="valor_compra" type="number" name="valor_compra" value="<?php echo $linhaproduto->valorCompra;?>">
     </div>
 
     <div class="form-group">
@@ -86,8 +86,33 @@ include ("../configurações/menu.php");
 
     <div class="form-group">
         <label for="tipo_venda">Tipo de venda</label>
-        <input class="form-control" id="tipo_venda" type="text" name="tipo_venda" value="<?php echo $linhaproduto->tipo_venda;?>" >
+        <input class="form-control" id="tipo_venda" type="text" name="tipo_venda" value="<?php echo $linhaproduto->tipo;?>" >
     </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input excluir_foto" type="radio" name="alterar" id="excluir_foto" value="excluir_foto">
+        <label class="form-check-label" for="excluir">Excluir imagem</label>
+    </div>
+    <div class="form-check form-check-inline">
+        <input class="form-check-input trocar_foto" type="radio" name="alterar" id="trocar_foto" value="trocar_foto">
+        <label class="form-check-label" for="trocar_foto">Editar imagem</label>
+    </div>
+
+    <div class="form-group">
+        <label for="foto"> </label>
+        <input type="file" class="form-control" id="link_foto" name="link_foto" disabled>
+    </div>
+    <center><img src="<?php echo imagem($linhaproduto->foto) ?>" id="imagem"></center>
+
+    <?php
+
+    if ($linhaproduto->foto && is_file(DIRETORIO_IMAGEM . $linhaproduto->foto)):
+        ?>
+
+        <center><img src="<?php echo imagem($linhaproduto->foto) ?>" id="imagem"></center>
+    <?php
+    endif;
+
+    ?>
 
 
 
@@ -97,6 +122,13 @@ include ("../configurações/menu.php");
 
 <script>
     $(document).ready(function (){
+        $("#trocar_foto").on("click", function (){
+            $("#link_foto").attr("disabled", !this.checked);
+        })
+    });
+    $("#excluir_foto").on("click", function (){
+        $("#link_foto").attr("disabled", this.checked);
+    });
         $('.jsonForm').ajaxForm({
             dataType: 'json',
             success: function (data) {

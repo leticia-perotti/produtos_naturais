@@ -6,8 +6,8 @@ try {
     include(__ROOT__ . '/documentacao.php');
     include(__ROOT__ . '/componentes/menu.php');
 
-    $query = $conexao->prepare('Select atendimento_produto.quantidade as quantidade, produto.nome as produto, atendimento_produto.valorproduto as valor, idatendimento_produto as id
-                                   from produto, atendimento_produto where
+    $query = $conexao->prepare('Select atendimento_produto.quantidade as quantidade, produto.nome as produto, atendimento_produto.valorproduto as valor, idatendimento_produto as id,  produto_foto.nome_foto from produto left join produto_foto on produto.id=produto_foto.produto_id
+                                   inner join atendimento_produto where
                                    atendimento_produto.atendimento_idatendimento =:atendimento
                                    && produto.id = atendimento_produto.produto_idproduto;');
     $query->bindParam(":atendimento", $_COOKIE['carrinho']);
@@ -94,7 +94,7 @@ try {
 
 
                 <div class="linha" id="imagem_tabela">
-                    <img src="<?php echo $foto?>" class="img_produto">
+                    <img src="<?php echo imagem($linha->nome_foto); ?>" class="img_produto">
                 </div>
                 <div class="linha" id="dados_tabela">
                     <div class="card-body">
