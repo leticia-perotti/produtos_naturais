@@ -1,6 +1,8 @@
 <?php
 define("DIRETORIO_IMAGEM", __DIR__ . '/../../imagens/');
 
+include_once ("../../conexao.php");
+/*
 try {
 
     //$conexao = new PDO(  'mysql:host=localhost;dbname=bd_natural', 'root', 'root' );
@@ -102,3 +104,4 @@ function validaCNPJ($cnpj)
 
     return $cnpj[13] == ($resto < 2 ? 0 : 11 - $resto);
 }
+*/

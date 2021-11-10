@@ -26,15 +26,7 @@ include(__ROOT__ . '/componentes/menu.php');
             width: 75px;
 
         }
-        #texto{
-            color: black;
-            display: inline-block;
-            font-size: x-large;
-        }
-        #qnt{
-            color: #434546;
-            display: inline-block;
-            font-size: small;
+        font-size: small;
         }
         #produto{
             padding: 10px;
@@ -43,6 +35,20 @@ include(__ROOT__ . '/componentes/menu.php');
             border-color: #adb5bd;
             border-radius: 10px;
             margin-top: 5px;
+        }
+        #imagem{
+            min-width: 15%;
+        }
+        #dados{
+            text-align: justify;
+            min-width: 30%;
+        }
+        #titulo{
+            text-align: justify;
+            min-width: 30%
+        }
+        .linha{
+            display: inline-block;
         }
     </style>
 
@@ -94,7 +100,7 @@ include(__ROOT__ . '/componentes/menu.php');
         <div class="card">
             <div class="card-header" id="<?php echo $linha->id?>">
                 <h5 class="mb-0">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#<?php echo $linha->id?>" aria-expanded="true" aria-controls="<?php echo $linha->id?>">
+                    <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#<?php echo $linha->id?>" aria-expanded="true" aria-controls="<?php echo $linha->id?>">
                         <h3><?php echo $linha->data_formatada; ?></h3>
 
                     </button>
@@ -123,20 +129,20 @@ include(__ROOT__ . '/componentes/menu.php');
                         <?php
                         endIf;
                         ?>
-                                        </h5>
+                </h5>
             </div>
 
-
-            <div id="<?php echo $linha->id?>" class="collapse show" aria-labelledby="<?php echo $linha->id?>" data-parent="#<?php echo $linha->id?>">
-                <div class="card-body">
+            <div id="<?php echo $linha->id?>" class="collapse show" aria-labelledby="<?php echo $linha->id?>" data-parent="#accordion">
+                <div class="card-body" class="linha">
                     <?php while($linhaProduto = $queryProduto->fetchObject()):
                         ?>
                     <div id="produto">
                         <img src="<?php echo imagem($linhaProduto->foto); ?>" id="imagem">
-                        <div id="texto"> <?php echo $linhaProduto->produto; ?> </div>
-                        <div id="qnt"> Quantidade: <?php echo $linhaProduto->quantidade; ?> </div><br>
-                        <div id="qnt"> Valor da unidade <?php echo formatar_valor($linhaProduto->valor); ?> </div>
+                        <div id="titulo" class="linha"> <?php echo $linhaProduto->produto; ?> </div>
+                        <div id="dados" class="linha"> Quantidade: <?php echo $linhaProduto->quantidade; ?> <br>
+                         Valor da unidade <?php echo formatar_valor($linhaProduto->valor); ?> </div>
                     </div>
+                    <br>
                     <?php
                     endwhile;
                     ?>

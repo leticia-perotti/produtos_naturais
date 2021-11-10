@@ -34,6 +34,12 @@ try{
 <head>
     <meta charset="UTF-8">
     <title>Form Editar Produto</title>
+    <style>
+        #imagem{
+            width: 20%;
+        }
+    </style>
+
 </head>
 <body>
 <?php
@@ -101,9 +107,10 @@ include ("../configurações/menu.php");
         <label for="foto"> </label>
         <input type="file" class="form-control" id="link_foto" name="link_foto" disabled>
     </div>
-    <center><img src="<?php echo imagem($linhaproduto->foto) ?>" id="imagem"></center>
 
-    <?php
+    <button type="submit" class="btn btn-primary">Editar produto</button>
+
+       <?php
 
     if ($linhaproduto->foto && is_file(DIRETORIO_IMAGEM . $linhaproduto->foto)):
         ?>
@@ -114,9 +121,6 @@ include ("../configurações/menu.php");
 
     ?>
 
-
-
-    <button type="submit" class="btn btn-primary">Editar produto</button>
 </form>
 </div>
 

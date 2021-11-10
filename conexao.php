@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+if (session_status()!=2) session_start();
 
 require_once ("configuracao.php");
 $conexao = new PDO('mysql:host=localhost; dbname=' . DBNAME, DBUSER, DBPASSWD);

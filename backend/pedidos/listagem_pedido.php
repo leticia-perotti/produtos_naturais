@@ -59,7 +59,7 @@ include ("../configurações/menu.php");
         });
 
     });
-    function excluir(id) {
+    function excluir2(id) {
         $.post(
             "retirar_pedido.php",
             {id: id},

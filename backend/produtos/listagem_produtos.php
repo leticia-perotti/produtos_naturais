@@ -22,10 +22,10 @@ include ("../configurações/menu.php");
                 <tr>
                     <th data-column-id="id">Código</th>
                     <th data-column-id="nome" data-order="desc" data-sortable="true">Nome </th>
-                    <th data-column-id="descricao" data-order="desc" data-sortable="true">descrição</th>
-                    <th data-column-id="valor" data-order="desc" data-sortable="true">valor</th>
-                    <th data-column-id="peso" data-order="desc" data-sortable="true">Peso</th>
-                    <th data-column-id="quantidade" data-order="desc" data-sortable="true">Quatidade</th>
+                    <th data-column-id="descricao" data-order="desc" data-sortable="true" data-visible="false">Descrição</th>
+                    <th data-column-id="valor" data-order="desc" data-sortable="true">Valor</th>
+                    <th data-column-id="peso" data-order="desc" data-sortable="true" data-visible="false">Peso</th>
+                    <th data-column-id="quantidade" data-order="desc" data-sortable="true" data-visible="false">Quatidade</th>
                     <th data-column-id="valor_compra" data-order="desc" data-sortable="true">Valor da compra</th>
                     <th data-column-id="margem" data-order="desc" data-sortable="true">Margem</th>
                     <th data-column-id="commands" data-formatter="commands" data-sortable="false"></th>
