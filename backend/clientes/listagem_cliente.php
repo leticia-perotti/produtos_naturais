@@ -49,14 +49,17 @@
             url: "bootgrid.php",
             formatters: {
                 "commands": function (column, row) {
-                    return "<button type=\"button\" class=\"btn btn-primary command-edit\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-edit\"></span></button> ";
+                    return "<button type=\"button\" class=\"btn btn-primary command-edit\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-edit\"></span></button>"  +
+                           "<button type=\"button\" class=\"btn btn-warning command-visualizar\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-eye\"></span></button> ";
                 }
             }
         }).on ("loaded.rs.jquery.bootgrid", function () {
             grid.find(".command-edit").on("click", function (e) {
                 document.location='form_editar_cliente.php?id=' + $(this).data("row-id");
             });
-
+            grid.find(".command-visualizar").on("click", function (e) {
+                document.location='exibir_cliente.php?id=' + $(this).data("row-id");
+            });
         });
 
     });

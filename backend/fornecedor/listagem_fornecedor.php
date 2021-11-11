@@ -46,13 +46,18 @@ include ("../configurações/menu.php");
                 "commands": function(column, row)
                 {
                     return "<button type=\"button\" class=\"btn btn-primary command-edit\" data-row-id=\"" + row.id   + "\"><span class=\"fas fa-edit\"></span></button> " +
-                        "<button type=\"button\" class=\"btn btn-danger command-delete\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-trash\"></span></button>";
+                        "<button type=\"button\" class=\"btn btn-danger command-delete\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-trash\"></span></button> " +
+                        "<button type=\"button\" class=\"btn btn-warning command-exibir\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-eye\"></span></button>";
                 }
             }
         }).on ("loaded.rs.jquery.bootgrid", function () {
             grid.find(".command-edit").on("click", function (e) {
                 
                 document.location='form_editar_fornecedor.php?id=' + $(this).data("row-id");
+            });
+            grid.find(".command-exibir").on("click", function (e) {
+
+                document.location='exibir_fornecedor.php?id=' + $(this).data("row-id");
             }).end().find(".command-delete").on("click", function (e)
             {
                 iziToastExcluir($(this).data("row-id"));

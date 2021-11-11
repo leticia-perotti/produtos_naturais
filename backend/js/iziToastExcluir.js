@@ -9,7 +9,7 @@ function iziToastExcluir(id){
         id: 'question',
         zindex: 999,
         title: ' ',
-        message: 'Deseja realmente excluir?',
+        message: 'Deseja excluir?',
         position: 'center',
         buttons: [
             ['<button><b>SIM</b></button>', function (instance, toast) {
@@ -39,7 +39,7 @@ function iziToastExcluir2(id){
         id: 'question',
         zindex: 999,
         title: ' ',
-        message: 'Deseja marcar o pedido como retirado?',
+        message: 'Deseja exluir?',
         position: 'center',
         buttons: [
             ['<button><b>SIM</b></button>', function (instance, toast) {

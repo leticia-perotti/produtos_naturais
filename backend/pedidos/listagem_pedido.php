@@ -10,14 +10,16 @@ include ("../configurações/menu.php");
 <link href="../js/jquery.bootgrid.css" rel="stylesheet" />
 
 <div class="container">
+    <br>
+    <h1>Listagem pedidos pendentes</h1>
     <div class="row">
         <div class="col-12">
             <table id="grid-data" class="table table-condensed table-hover table striped">
                 <thead>
                 <tr>
                     <th data-column-id="id">ID</th>
-                    <th data-column-id="cliente_idclientes" data-order="desc" data-sortable="true">Cliente</th>
-                    <th data-column-id="data_carrinho" data-order="desc" data-sortable="true">Data</th>
+                    <th data-column-id="cliente" data-order="desc" data-sortable="true">Cliente</th>
+                    <th data-column-id="data" data-order="desc" data-sortable="true">Data</th>
                     <th data-column-id="commands" data-formatter="commands" data-sortable="false"></th>
 
                 </tr>

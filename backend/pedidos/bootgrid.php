@@ -9,10 +9,11 @@ try{
     $inicio = ($pagina - 1) * $quantidade;
 
     $sql="Select
-    atendimento.data_carrinho,
+DATE_FORMAT(atendimento.data_carrinho, '%d/%m/%Y') as data,
+
     atendimento.cliente_idclientes,
     atendimento.idatendimento AS id,
-    cliente.nome
+    cliente.nome as cliente
 From
     atendimento Inner Join
     cliente On atendimento.cliente_idclientes = cliente.id

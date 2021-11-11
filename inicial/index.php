@@ -272,17 +272,21 @@ $foto = asset('/fotos/nc.png');
             <script src="/docs/5.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
             <footer class="text-muted">
                 <div class="container">
+                    <a class="float-left" href="<?php echo asset('/backend/');?>">Ir para o web sistema</a>
                     <p class="float-right">
                         <a href="#">Voltar ao topo
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-up" viewBox="0 0 16 16">
                                 <path fill-rule="evenodd" d="M8 15a.5.5 0 0 0 .5-.5V2.707l3.146 3.147a.5.5 0 0 0 .708-.708l-4-4a.5.5 0 0 0-.708 0l-4 4a.5.5 0 1 0 .708.708L7.5 2.707V14.5a.5.5 0 0 0 .5.5z"/>
                             </svg></a>
+
                     </p>
                     <p>Natural Chá 2021</p>
 
+
                 </div>
+
             </footer>
-            <hr>
+
 </body>
 
 

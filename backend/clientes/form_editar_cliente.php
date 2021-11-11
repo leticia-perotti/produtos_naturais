@@ -80,7 +80,7 @@ include ("../configurações/menu.php");
             <input class="form-control" id="datanascimento" type="date" name="datanascimento" value="<?php echo $linhacliente->datanascimento;?>">
         </div>
 
-        <button type="submit" class="btn btn-primary">Cadastrar Cliente</button>
+        <button type="submit" class="btn btn-primary">Editar Cliente</button>
     </form>
 </div>
 

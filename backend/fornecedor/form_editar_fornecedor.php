@@ -56,15 +56,15 @@ include ("../configurações/menu.php");
 
     <div class="form-group">
         <label for="valor">Endereço</label>
-        <input class="form-control" id="valor" type="number" name="endereco" value="<?php echo $linhafornecedor->endereco;?>">
+        <input class="form-control" id="valor" type="text" name="endereco" value="<?php echo $linhafornecedor->endereco;?>">
     </div>
 
     <div class="form-group">
         <label for="transportadora">Transportadora</label>
-        <input class="form-control" id="transportadora" type="number" name="transportadora" value="<?php echo $linhafornecedor->transportadora;?>">
+        <input class="form-control" id="transportadora" type="text" name="transportadora" value="<?php echo $linhafornecedor->transportadora;?>">
     </div>
 
-    <button type="submit" class="btn btn-primary">Cadastrar fornecedor</button>
+    <button type="submit" class="btn btn-primary">Editar fornecedor</button>
 </form>
 </div>
 

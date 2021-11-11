@@ -95,6 +95,7 @@ include("../configurações/menu.php");
         </div>
 
         <div class="form-group">
+            <label>Imagem</label>
              <input class="form-control" id="link_foto" type="file" name="link_foto" required >
         </div>
 
