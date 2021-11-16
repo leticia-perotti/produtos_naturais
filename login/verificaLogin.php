@@ -15,7 +15,7 @@ $conferir->execute();
 
 if ($conferir->rowCount() == 1) {
     $achaID= $conferir->fetchObject();
-    $cliente = $achaID-> id;
+    $cliente = $achaID->id;
 
     $adicionaCliente = $conexao-> prepare('Update atendimento set cliente_idclientes=:cliente
                                                     where idatendimento=:id ');

@@ -19,7 +19,7 @@ try {
         $query->bindValue(':nome',$_POST['nome']);
         $query->bindValue(':descricao',$_POST['descricao']);
         $query->bindValue(':valor',$_POST['valor']);
-        $query->bindValue(':peso',($_POST['quantidade']?:0);
+        $query->bindValue(':peso',($_POST['quantidade']?:0));
         $query->bindValue(':quantidade',($_POST['quantidade']?:0) );
         $query->bindValue(':valor_compra',$_POST['valor_compra']);
         $query->bindValue(':margem',$_POST['margem']);
