@@ -217,6 +217,7 @@ $foto =asset('/fotos/logo_mini.png');
                     <div class="modal-body container">
 
                         <img src="/imagens/sem-imagem.jpg" title="foto" id="imagem_modal">
+                        <br>
                         <div class="form-group row" id="lado_descricao">
                             <label class="col-sm-2 col-form-label">Valor: </label>
                             <br>

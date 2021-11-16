@@ -350,7 +350,8 @@ $foto = asset('/fotos/nc.png');
             <form action="adicionar.php" method="post" class="jsonForm">
                 <div class="modal-body container">
 
-                    <<img src="/imagens/sem-imagem.jpg" title="foto" id="imagem_modal">
+                    <img src="/imagens/sem-imagem.jpg" title="foto" id="imagem_modal">
+                    <br>
                     <div class="form-group row" id="lado_descricao">
                         <label class="col-sm-2 col-form-label">Valor: </label>
                         <br>
@@ -461,7 +462,7 @@ $foto = asset('/fotos/nc.png');
                 modal.find('#qnt').attr('min', '1').attr('step', '0.1');
                 modal.find('#id_modal').val(data.id)
                 modal.find('#passa_valor').val(data.valor)
-                modal.find('#foto').src(data.foto)
+                modal.find('#imagem_modal').attr('src', data.foto)
             })
 
 
