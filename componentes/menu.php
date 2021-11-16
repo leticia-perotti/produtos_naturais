@@ -69,7 +69,8 @@ $carrinho = asset('/carrinho/carrinho.php')
 <nav class="nav navbar navbar-expand-lg navbar-light bg-light">
     <a class="nav-link active" href="<?php echo $index?>" id ="titulo_menu">
         <img src="<?php echo $foto?>" id="imagem_menu">
-        Natural Chá</a>
+        Natural Chá
+    </a>
     <a class="nav-link" id="link" href="<?php echo $listagem?>">Produtos</a>
 
     <?php if ((isset($_SESSION['cliente_autorizado']) && $_SESSION['cliente_autorizado']!=true) || !isset($_SESSION['cliente_autorizado'])) :?>

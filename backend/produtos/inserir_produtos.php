@@ -15,30 +15,16 @@ try {
         retornaErro('Nome do produto já existente');
     }
 
-    if($_POST['peso'] != NULL){
-        $query = $conexao->prepare("INSERT INTO produto (nome,descricao,valor,peso,valor_compra,margem,tipo_venda) VALUES(:nome,:descricao,:valor,:peso,:valor_compra,:margem,:tipo_venda)");
+        $query = $conexao->prepare("INSERT INTO produto (nome,descricao,valor,peso,quantidade,valor_compra,margem,tipo_venda) VALUES(:nome,:descricao,:valor,:peso,:quantidade,:valor_compra,:margem,:tipo_venda)");
         $query->bindValue(':nome',$_POST['nome']);
         $query->bindValue(':descricao',$_POST['descricao']);
         $query->bindValue(':valor',$_POST['valor']);
-        $query->bindValue(':peso',$_POST['peso']);
-
+        $query->bindValue(':peso',($_POST['quantidade']?:0);
+        $query->bindValue(':quantidade',($_POST['quantidade']?:0) );
         $query->bindValue(':valor_compra',$_POST['valor_compra']);
         $query->bindValue(':margem',$_POST['margem']);
         $query->bindValue(':tipo_venda',$_POST['tipo_venda']);
         $query->execute();
-    }else{
-        $query = $conexao->prepare("INSERT INTO produto (nome,descricao,valor,quantidade,valor_compra,margem,tipo_venda) VALUES(:nome,:descricao,:valor,:quantidade,:valor_compra,:margem,:tipo_venda)");
-        $query->bindValue(':nome',$_POST['nome']);
-        $query->bindValue(':descricao',$_POST['descricao']);
-        $query->bindValue(':valor',$_POST['valor']);
-
-        $query->bindValue(':quantidade',$_POST['quantidade']);
-        $query->bindValue(':valor_compra',$_POST['valor_compra']);
-        $query->bindValue(':margem',$_POST['margem']);
-        $query->bindValue(':tipo_venda',$_POST['tipo_venda']);
-        $query->execute();
-
-    }
 
 
     $ultimoproduto=$conexao->lastInsertId();

@@ -32,5 +32,6 @@ try {
 
 
 } catch (Exception $exception ) {
-    retornaErro( $exception->getMessage() );
+    //retornaErro( $exception->getMessage() );
+    retornaErro("Ocorreu algum erro!");
 }

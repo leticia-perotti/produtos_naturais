@@ -30,7 +30,7 @@ CREATE TABLE `atendimento` (
   PRIMARY KEY (`idatendimento`),
   KEY `fk_atendimento_cliente_idx` (`cliente_idclientes`),
   CONSTRAINT `fk_atendimento_cliente` FOREIGN KEY (`cliente_idclientes`) REFERENCES `cliente` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `atendimento` (
 
 LOCK TABLES `atendimento` WRITE;
 /*!40000 ALTER TABLE `atendimento` DISABLE KEYS */;
-INSERT INTO `atendimento` VALUES (3,1,'2021-09-27',2),(4,1,'2021-09-29',3),(5,NULL,'2021-09-29',1),(6,NULL,'2021-09-29',1),(7,1,'2021-09-30',2),(8,1,'2021-09-30',2),(9,1,'2021-10-04',2),(10,NULL,'2021-10-04',1),(11,11,'2021-10-18',1);
+INSERT INTO `atendimento` VALUES (12,12,'2021-10-26',1),(13,NULL,'2021-10-26',1),(14,NULL,'2021-10-26',1),(15,12,'2021-11-09',3),(16,13,'2021-11-16',2),(17,NULL,'2021-11-16',1);
 /*!40000 ALTER TABLE `atendimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `atendimento_produto` (
   KEY `fk_atendimento_produto_produto1_idx` (`produto_idproduto`),
   CONSTRAINT `fk_atendimento_produto_atendimento1` FOREIGN KEY (`atendimento_idatendimento`) REFERENCES `atendimento` (`idatendimento`),
   CONSTRAINT `fk_atendimento_produto_produto1` FOREIGN KEY (`produto_idproduto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=45 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `atendimento_produto` (
 
 LOCK TABLES `atendimento_produto` WRITE;
 /*!40000 ALTER TABLE `atendimento_produto` DISABLE KEYS */;
-INSERT INTO `atendimento_produto` VALUES (13,952,3,1,'1.00'),(14,18,3,3,'1.00'),(16,19,4,2,'1.00'),(17,1,4,3,'1.00'),(22,1,5,1,'1.00'),(23,4,5,2,'1.00'),(24,1,5,3,'1.00'),(25,1,6,1,'1.00'),(26,1,6,2,'1.00'),(27,9,7,3,'1.00'),(30,19,8,2,'1.00'),(31,1,9,1,'1.00'),(35,4,10,2,'1.00'),(37,1,10,3,'1.00'),(40,4,10,1,'1.00'),(41,20,11,5,'1.00'),(43,8,11,4,'1.00');
+INSERT INTO `atendimento_produto` VALUES (45,1,12,19,'1.00'),(46,15,12,18,'1.00'),(47,8,13,24,'1.00'),(48,7,14,25,'1.00'),(49,1,14,23,'1.00'),(50,2,15,25,'1.00'),(52,5,16,17,'1.00'),(54,1,17,18,'1.00'),(55,1,17,23,'1.00');
 /*!40000 ALTER TABLE `atendimento_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +85,7 @@ CREATE TABLE `categoria_produto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `categoria_produto` (
 
 LOCK TABLES `categoria_produto` WRITE;
 /*!40000 ALTER TABLE `categoria_produto` DISABLE KEYS */;
-INSERT INTO `categoria_produto` VALUES (1,'produtos-naturais'),(2,'frutas'),(3,'chocolate');
+INSERT INTO `categoria_produto` VALUES (1,'Oleoginosas');
 /*!40000 ALTER TABLE `categoria_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +122,7 @@ CREATE TABLE `categoria_produto_has_produto` (
 
 LOCK TABLES `categoria_produto_has_produto` WRITE;
 /*!40000 ALTER TABLE `categoria_produto_has_produto` DISABLE KEYS */;
-INSERT INTO `categoria_produto_has_produto` VALUES (1,1),(3,16);
+INSERT INTO `categoria_produto_has_produto` VALUES (1,27),(1,28),(1,29),(1,30),(1,31),(1,32),(1,33),(1,34),(1,35);
 /*!40000 ALTER TABLE `categoria_produto_has_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -142,8 +142,9 @@ CREATE TABLE `cliente` (
   `cidade` varchar(45) NOT NULL,
   `uf` varchar(5) NOT NULL,
   `datanascimento` date DEFAULT NULL,
+  `apelido_cliente` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -152,7 +153,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (1,'leticia','19999999','leticia@gmail','111.111.111-11','UniaÃ£o da VitÃ³ria','PR','2004-06-25'),(4,'1','1','1@1','111.111.111-11','1','1','0001-01-01'),(6,'aaa','a','a@a','222.222.222-22','UniaÃ£o da VitÃ³ria','PR','0204-06-25'),(8,'r','r','r@s','111.111.111-11','s','s','5200-08-05'),(10,'sss','(33) 3333-33333','leticia@eu','119.891.789-01','uv','MT','0555-05-08'),(11,'Adelmo','(42) 9999-99999','adelmo@gmail','047.885.470-66','dd','outro','0033-03-31');
+INSERT INTO `cliente` VALUES (12,'Cliente','(33) 3333-33333','iiii@iiii','119.891.789-01','dwad','PR','2000-02-22','aaa'),(13,'Adelmo','(52) 8514-24721','adelmo@gmail','381.896.440-84','Uniao','PR','1900-11-11','adelmo'),(14,'novo','(58) 5555-55555','novo@ey','100.977.720-38','eee','SC','9999-04-04','novo');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -166,13 +167,12 @@ DROP TABLE IF EXISTS `compra`;
 CREATE TABLE `compra` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `data` date NOT NULL,
-  `fornecedor` varchar(45) NOT NULL,
   `nota` varchar(45) NOT NULL,
   `fornecedor_idfornecedor` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_compras_fornecedor1_idx` (`fornecedor_idfornecedor`),
   CONSTRAINT `fk_compras_fornecedor1` FOREIGN KEY (`fornecedor_idfornecedor`) REFERENCES `fornecedor` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,6 +181,7 @@ CREATE TABLE `compra` (
 
 LOCK TABLES `compra` WRITE;
 /*!40000 ALTER TABLE `compra` DISABLE KEYS */;
+INSERT INTO `compra` VALUES (1,'2021-11-16','1050505205',1),(2,'2021-11-16','1141',1);
 /*!40000 ALTER TABLE `compra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -194,13 +195,15 @@ DROP TABLE IF EXISTS `compra_has_produto`;
 CREATE TABLE `compra_has_produto` (
   `compra_idcompras` int(11) NOT NULL,
   `produto_idproduto` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `preco` decimal(8,2) NOT NULL,
   PRIMARY KEY (`compra_idcompras`,`produto_idproduto`),
+  UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `fk_compra_has_produto_produto1_idx` (`produto_idproduto`),
   KEY `fk_compra_has_produto_compra1_idx` (`compra_idcompras`),
   CONSTRAINT `fk_compra_has_produto_compra1` FOREIGN KEY (`compra_idcompras`) REFERENCES `compra` (`id`),
   CONSTRAINT `fk_compra_has_produto_produto1` FOREIGN KEY (`produto_idproduto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -209,6 +212,7 @@ CREATE TABLE `compra_has_produto` (
 
 LOCK TABLES `compra_has_produto` WRITE;
 /*!40000 ALTER TABLE `compra_has_produto` DISABLE KEYS */;
+INSERT INTO `compra_has_produto` VALUES (1,17,1,5555.00),(1,18,4,1.00),(1,19,3,150.00),(2,21,5,1.02),(2,27,9,15.00),(2,28,10,15.00);
 /*!40000 ALTER TABLE `compra_has_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -227,10 +231,11 @@ CREATE TABLE `controla_retirada` (
   `meio_pagamento` varchar(45) NOT NULL,
   `atendimento_id` int(11) NOT NULL,
   `observacao` text,
+  `dia_retirada` date NOT NULL,
   PRIMARY KEY (`id`),
   KEY `atendimento_idx` (`atendimento_id`),
   CONSTRAINT `atendimento` FOREIGN KEY (`atendimento_id`) REFERENCES `atendimento` (`idatendimento`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -239,7 +244,7 @@ CREATE TABLE `controla_retirada` (
 
 LOCK TABLES `controla_retirada` WRITE;
 /*!40000 ALTER TABLE `controla_retirada` DISABLE KEYS */;
-INSERT INTO `controla_retirada` VALUES (1,'22:22:00',NULL,'acs','dinheiro',3,'ccsa'),(2,'22:22:00',NULL,'acs','dinheiro',3,'ccsa'),(3,'08:08:00',NULL,'acs','dinheiro',3,'ccsa'),(4,'22:02:00',NULL,'acs','dinheiro',3,'ccsa'),(5,'22:02:00',NULL,'acs','dinheiro',3,'ccsa'),(6,'22:02:00',NULL,'acs','dinheiro',3,'ccsa'),(7,'23:33:00',NULL,'acs','dinheiro',3,'ccsa'),(8,'11:01:00',NULL,'gsed','cartao_credito',4,'hjg'),(9,'09:30:00',NULL,'Caio','cartao_debito',7,'O caio Ã© rico'),(10,'22:02:00',NULL,'hjsdv','dinheiro',8,'edddx'),(11,'22:02:00',NULL,'2222','cartao_credito',9,'');
+INSERT INTO `controla_retirada` VALUES (1,'17:08:00','14:33:04','fff','dinheiro',15,'','2021-11-09'),(2,'15:59:00',NULL,'eu mesmo','cartao_credito',16,'','2021-11-16');
 /*!40000 ALTER TABLE `controla_retirada` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -277,12 +282,12 @@ DROP TABLE IF EXISTS `fornecedor`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `fornecedor` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `cnpj` int(11) NOT NULL,
+  `cnpj` varchar(20) NOT NULL,
   `nome` varchar(45) NOT NULL,
   `endereco` varchar(45) NOT NULL,
   `transportadora` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -291,6 +296,7 @@ CREATE TABLE `fornecedor` (
 
 LOCK TABLES `fornecedor` WRITE;
 /*!40000 ALTER TABLE `fornecedor` DISABLE KEYS */;
+INSERT INTO `fornecedor` VALUES (1,'20.469.088/0001-00','fornecedor','endereÃ§o','transportadora');
 /*!40000 ALTER TABLE `fornecedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -303,17 +309,17 @@ DROP TABLE IF EXISTS `produto`;
 /*!50503 SET character_set_client = utf8mb4 */;
 CREATE TABLE `produto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `nome` varchar(45) NOT NULL,
-  `descricao` text NOT NULL,
+  `nome` varchar(45) CHARACTER SET latin1 NOT NULL,
+  `descricao` text CHARACTER SET latin1 NOT NULL,
   `peso` decimal(8,3) DEFAULT NULL,
   `valor` decimal(8,2) NOT NULL,
   `quantidade` int(11) DEFAULT NULL,
   `valor_compra` decimal(8,2) NOT NULL,
   `margem` decimal(8,2) NOT NULL,
   `ativo` tinyint(1) DEFAULT NULL,
-  `tipo_venda` varchar(45) NOT NULL,
+  `tipo_venda` varchar(45) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -322,7 +328,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (1,'a','a',1.000,1.50,1,1.00,1.00,1,'1'),(2,'b','b',1.000,1.00,1,1.00,1.00,1,'1'),(3,'c','c',1.000,1.00,1,1.00,1.00,1,'1'),(4,'d','d',1.000,1.00,1,1.00,1.00,1,'1'),(5,'e','e',1.000,1.00,1,1.00,1.00,1,'1'),(6,'f','f',1.000,1.00,1,1.00,1.00,1,'1'),(7,'g','g',1.000,1.00,1,1.00,1.00,1,'1'),(8,'h','h',1.000,1.00,1,1.00,1.00,1,'1'),(9,'i','i',1.000,1.00,1,1.00,1.00,1,'1'),(10,'j','j',1.000,1.00,1,1.00,1.00,1,'1'),(11,'k','k',1.000,1.00,1,1.00,1.00,1,'1'),(16,'frutas','oituosd',-2.000,-1.00,-1,-1.00,-1.00,NULL,'a granel');
+INSERT INTO `produto` VALUES (17,'castanah do para castanah do para','castanah do para',1.000,1.00,1,1.00,1.00,1,'1'),(18,'b','aaa',1.000,1.00,1,1.00,1.00,1,'1'),(19,'c','aaa',1.000,1.00,1,1.00,1.00,1,'1'),(20,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(21,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(22,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(23,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(24,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(25,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(26,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(27,'Castanha do ParÃ¡','a cada 100 g',2.022,2.02,NULL,2.02,2.02,2,'a granel'),(28,'Oleoginosas','a cada 100 g',6.000,6.00,0,6.00,6.00,NULL,'a granel'),(29,'1','1',1.000,1.00,NULL,1.00,1.00,NULL,'1'),(30,'2','2',2.000,2.00,NULL,2.00,2.00,NULL,'2'),(31,'3','3',3.000,3.00,NULL,3.00,3.00,NULL,'3'),(32,'4','4',4.000,4.00,0,4.00,4.00,NULL,'4'),(33,'5','5',5.000,5.00,0,5.00,5.00,NULL,'5'),(34,'6','6',6.000,6.00,NULL,6.00,6.00,NULL,'6'),(35,'7','7',7.000,7.00,0,7.00,7.00,NULL,'7');
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -340,7 +346,7 @@ CREATE TABLE `produto_foto` (
   PRIMARY KEY (`id`),
   KEY `FK__produto` (`produto_id`),
   CONSTRAINT `FK__produto` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -349,7 +355,7 @@ CREATE TABLE `produto_foto` (
 
 LOCK TABLES `produto_foto` WRITE;
 /*!40000 ALTER TABLE `produto_foto` DISABLE KEYS */;
-INSERT INTO `produto_foto` VALUES (1,16,'produto-616dca5cddbb2.jpg');
+INSERT INTO `produto_foto` VALUES (1,22,'produto-616dca5cddbb2.jpg'),(3,27,'produto-6193e4d926b8b.jpg'),(5,29,'produto-61940102bb11b.jpg'),(6,30,'produto-61940143df593.jpg'),(7,31,'produto-61940386052f6.jpg'),(8,32,'produto-619403d35216f.jpg'),(12,33,'produto-619406fd47e2b.jpg'),(13,34,'produto-619407ed6cc05.jpg'),(15,35,'produto-619408db16dce.jpg'),(16,28,'produto-61940918d9716.jpg');
 /*!40000 ALTER TABLE `produto_foto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -390,7 +396,7 @@ CREATE TABLE `vendedores` (
   `senha` varchar(45) NOT NULL,
   `usuario` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -399,7 +405,7 @@ CREATE TABLE `vendedores` (
 
 LOCK TABLES `vendedores` WRITE;
 /*!40000 ALTER TABLE `vendedores` DISABLE KEYS */;
-INSERT INTO `vendedores` VALUES (1,'leiticia','e205888b17f2f470c1ef12d55acef94e5b52289d','leticia');
+INSERT INTO `vendedores` VALUES (2,'leiticia@leticia','e205888b17f2f470c1ef12d55acef94e5b52289d','leticia'),(3,'user@user','40bd001563085fc35165329ea1ff5c5ecbdbbeef','User'),(4,'admin@admin','d033e22ae348aeb5660fc2140aec35850c4da997','Admin');
 /*!40000 ALTER TABLE `vendedores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -412,4 +418,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-10-18 16:40:52
+-- Dump completed on 2021-11-16 16:41:12

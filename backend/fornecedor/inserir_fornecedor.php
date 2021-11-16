@@ -4,6 +4,10 @@ try {
 
     include "../configurações/conexao.php";
 
+    if (validaCNPJ($_POST['cnpj'])==false){
+        retornaErro("CNPJ invalido");
+    }
+
     $query = $conexao->prepare("SELECT * FROM fornecedor WHERE cnpj=:cnpj");
     $query->bindValue(':cnpj',$_POST['cnpj']);
     $query->execute();

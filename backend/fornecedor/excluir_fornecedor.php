@@ -6,7 +6,7 @@ try {
     if (!isset($_POST['id'])) {
         die('Acesse através da listagem');
     }
-    $query = $conexao->prepare("SELECT * FROM fornecedor WHERE idproduto=:id");
+    $query = $conexao->prepare("SELECT * FROM compra WHERE fornecedor=:id");
     $query->bindValue(':id',$_POST['id']);
     $query->execute();
     if ($query->rowCount() >= 1) {

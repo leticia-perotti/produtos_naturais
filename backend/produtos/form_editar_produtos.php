@@ -40,6 +40,7 @@ try{
         }
     </style>
 
+
 </head>
 <body>
 <?php
@@ -49,7 +50,7 @@ include ("../configurações/menu.php");
 ?>
 <div class="container">
 <h1> Editar - Produto</h1>
-<form action="editar_produtos.php" method="post" class="jsonForm">
+<form action="editar_produtos.php" method="post" class="jsonForm" enctype="multipart/form-data">
     <div class="form-group">
         <label for="id">Código</label>
         <input class="form-control" id="id" type="text" name="id" readonly value="<?php echo $linhaproduto->idProduto;?>">
@@ -96,7 +97,7 @@ include ("../configurações/menu.php");
     </div>
     <div class="form-check form-check-inline">
         <input class="form-check-input excluir_foto" type="radio" name="alterar" id="excluir_foto" value="excluir_foto">
-        <label class="form-check-label" for="excluir">Excluir imagem</label>
+        <label class="form-check-label" for="excluir_foto">Excluir imagem</label>
     </div>
     <div class="form-check form-check-inline">
         <input class="form-check-input trocar_foto" type="radio" name="alterar" id="trocar_foto" value="trocar_foto">
@@ -105,7 +106,7 @@ include ("../configurações/menu.php");
 
     <div class="form-group">
         <label for="foto"> </label>
-        <input type="file" class="form-control" id="link_foto" name="link_foto" disabled>
+        <input type="file" class="form-control" id="link_foto" name="link_foto" disabled required>
     </div>
 
     <button type="submit" class="btn btn-primary">Editar produto</button>
@@ -129,10 +130,9 @@ include ("../configurações/menu.php");
         $("#trocar_foto").on("click", function (){
             $("#link_foto").attr("disabled", !this.checked);
         })
-    });
-    $("#excluir_foto").on("click", function (){
-        $("#link_foto").attr("disabled", this.checked);
-    });
+        $("#excluir_foto").on("click", function (){
+            $("#link_foto").attr("disabled", this.checked);
+        });
         $('.jsonForm').ajaxForm({
             dataType: 'json',
             success: function (data) {

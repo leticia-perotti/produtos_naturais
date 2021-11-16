@@ -48,32 +48,32 @@ include("../configurações/menu.php");
 
         <div class="form-group">
             <label for="descricao">Descrição</label>
-            <input class="form-control" id="descricao" type="text" name="descricao" >
+            <input class="form-control" id="descricao" type="text" name="descricao" required>
         </div>
 
         <div class="form-group">
             <label for="valor">Valor</label>
-            <input class="form-control" id="valor" type="number" name="valor" required >
+            <input class="form-control" id="valor" type="number" min="0" step="0,01" name="valor" required >
         </div>
 
         <div class="form-group">
             <label for="peso">Peso</label>
-            <input class="form-control" id="peso" type="number" name="peso">
+            <input class="form-control" id="peso" min="0" step="0,001" type="number" name="peso">
         </div>
 
         <div class="form-group">
             <label for="quantidade">Quantidade</label>
-            <input class="form-control" id="quantidade" type="number" min="1" name="quantidade">
+            <input class="form-control" id="quantidade" type="number" min="1" step="1" name="quantidade">
         </div>
 
         <div class="form-group">
             <label for="valor_compra">Valor compra</label>
-            <input class="form-control" id="valor_compra" type="number" name="valor_compra" required>
+            <input class="form-control" id="valor_compra" type="number" min="0" step="0,01" name="valor_compra" required>
         </div>
 
         <div class="form-group">
             <label for="margem">Margem</label>
-            <input class="form-control" id="margem" type="number" name="margem" required >
+            <input class="form-control" id="margem" type="number" min="0" name="margem" required >
         </div>
 
         <div class="form-group">

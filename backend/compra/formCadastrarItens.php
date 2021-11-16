@@ -66,16 +66,6 @@ try {
             </div>
 
 
-            <ul class="nav nav-pills nav-justified" id="myTab" role="tablist">
-
-                <li class="nav-item">
-                    <a class="nav-link" id="produtos-tab" data-toggle="tab" href="#produtos" role="tab" aria-controls="produtos" aria-selected="true">Produtos</a>
-                </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-
-                <div class="tab-pane fade" id="produtos" role="tabpanel" aria-labelledby="produtos-tab">
-
 
                     <button type="button" class="btn btn-warning" data-toggle="modal" data-target="#adicionar_produto">
                         Adicionar produto
@@ -90,8 +80,6 @@ try {
                             Finalizar
                         </a>
 
-        </div>
-    </div>
 </div>
 
 <script src="../js/jquery.bootgrid.js"></script>
@@ -158,6 +146,7 @@ try {
                     iziToast.error({
                         message: data.mensagem
                     });
+                    grid_produto.bootgrid("reload");
                 }
                 $("#adicionarItem").modal('hide');
             },

@@ -49,7 +49,7 @@
             url: "bootgrid.php",
             formatters: {
                 "commands": function (column, row) {
-                    return "<button type=\"button\" class=\"btn btn-primary command-edit\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-edit\"></span></button>"  +
+                    return "<button type=\"button\" class=\"btn btn-primary command-edit\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-edit\"></span></button> "  +
                            "<button type=\"button\" class=\"btn btn-warning command-visualizar\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-eye\"></span></button> ";
                 }
             }

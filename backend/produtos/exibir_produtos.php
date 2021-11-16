@@ -11,7 +11,7 @@ try{
                                           produto_foto.nome_foto as foto from produto left join produto_foto on produto.id=produto_foto.produto_id
                                           where produto.id=:id");
     $query->bindValue(":id", $_GET['id']);
-    $resultado = $query->execute();
+    $query->execute();
 
     if($query->rowCount()==0){
         exit("Objeto não encontrado");
@@ -52,15 +52,16 @@ try{
 <div class="container">
     <h1>Exibir dados do produto</h1>
     <br>
-    <?php if ($linha->status = 1):
-        ?>
-        <div class="alert alert-success" role="alert">
-            Produto ativo
-        </div>
-    <?php else:
+    <?php if ($linha->status == 2):
         ?>
         <div class="alert alert-warning" role="alert">
             Produto inativo
+        </div>
+
+    <?php elseif($linha->status == 1):
+        ?>
+        <div class="alert alert-success" role="alert">
+            Produto ativo
         </div>
     <?php
     endif;

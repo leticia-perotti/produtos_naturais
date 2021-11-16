@@ -350,7 +350,7 @@ $foto = asset('/fotos/nc.png');
             <form action="adicionar.php" method="post" class="jsonForm">
                 <div class="modal-body container">
 
-                    <img src="../fotos/camomila.jpg" title="Camomila" id="imagem_modal">
+                    <<img src="/imagens/sem-imagem.jpg" title="foto" id="imagem_modal">
                     <div class="form-group row" id="lado_descricao">
                         <label class="col-sm-2 col-form-label">Valor: </label>
                         <br>
