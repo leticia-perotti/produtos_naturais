@@ -68,12 +68,12 @@ include ("../configurações/menu.php");
 
     <div class="form-group">
         <label for="valor">Valor</label>
-        <input class="form-control" id="valor" type="number" name="valor" value="<?php echo $linhaproduto->valor;?>">
+        <input class="form-control" id="valor" type="number" name="valor" step="0.01" value="<?php echo $linhaproduto->valor;?>">
     </div>
 
     <div class="form-group">
         <label for="peso">Peso</label>
-        <input class="form-control" id="peso" type="number" name="peso" value="<?php echo $linhaproduto->peso;?>">
+        <input class="form-control" id="peso" type="number" name="peso" step="0.001"  value="<?php echo $linhaproduto->peso;?>">
     </div>
 
     <div class="form-group">
@@ -83,12 +83,12 @@ include ("../configurações/menu.php");
 
     <div class="form-group">
         <label for="valor_compra">Valor da compra</label>
-        <input class="form-control" id="valor_compra" type="number" name="valor_compra" value="<?php echo $linhaproduto->valorCompra;?>">
+        <input class="form-control" id="valor_compra" type="number" step="0.01" name="valor_compra" value="<?php echo $linhaproduto->valorCompra;?>">
     </div>
 
     <div class="form-group">
         <label for="margem">Margem</label>
-        <input class="form-control" id="margem" type="number" name="margem" value="<?php echo $linhaproduto->margem;?>">
+        <input class="form-control" id="margem" type="number" name="margem" step="0.01" value="<?php echo $linhaproduto->margem;?>">
     </div>
 
     <div class="form-group">
