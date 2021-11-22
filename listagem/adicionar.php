@@ -14,10 +14,11 @@ if (isset($_COOKIE['carrinho']) && $_COOKIE['carrinho']!=''){
     $codigoDoCarrinho = $_COOKIE['carrinho'];
 }else{
     $status = 1;
-    $criaCarrinho = $conexao->prepare('Insert into atendimento (data_carrinho, status) 
+    $criaCarrinho = $conexao->prepare('Insert into atendimento (data_carrinho, status, cliente_idclientes) 
                                   values 
-                                  (NOW(), :status)');
+                                  (NOW(), :status, :cliente_idclientes)');
     $criaCarrinho->bindParam(":status", $status);
+    $criaCarrinho->bindValue(":cliente_idclientes", (isset($_SESSION['cliente_id'])?$_SESSION['cliente_id']:NULL) );
     $criaCarrinho->execute();
 
     $codigoDoCarrinho = $conexao->lastInsertId();

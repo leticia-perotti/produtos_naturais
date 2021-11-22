@@ -54,14 +54,14 @@ include ("../configurações/menu.php");
                 document.location='exibir_pedido.php?id=' + $(this).data("row-id");
             }).end().find(".command-delete").on("click", function (e)
             {
-                iziToastExcluir($(this).data("row-id"));
+                iziToastExcluir2($(this).data("row-id"));
 
             });
 
         });
 
     });
-    function excluir(id) {
+    function excluir2(id) {
         $.post(
             "retirar_pedido.php",
             {id: id},

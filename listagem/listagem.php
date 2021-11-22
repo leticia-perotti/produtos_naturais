@@ -16,7 +16,7 @@ if (isset($_GET["pesquisa"]) && $_GET["pesquisa"]!=''){
 }else if(isset($_GET["categoria"]) !=''){
 
         $categoria = "%" . $_GET["categoria"] . "%";
-        $query = $conexao->prepare('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao from produto inner join categoria_produto_has_produto inner join categoria_produto
+        $query = $conexao->prepare('Select produto.id as id, produto.nome as nome, produto.valor as valor, produto.descricao as descricao,  produto_foto.nome_foto from produto inner join categoria_produto_has_produto inner join categoria_produto
                                               left join produto_foto on produto.id=produto_foto.produto_id where (categoria_produto.nome LIKE :categoria) && (categoria_produto.id = categoria_produto_has_produto.categoria_produto_id
                                               && categoria_produto_has_produto.produto_idproduto = produto.id) && produto.ativo=1');
         $query->bindParam(":categoria", $categoria);
@@ -72,7 +72,7 @@ $foto =asset('/fotos/logo_mini.png');
             }
             #box{
                 min-height: 300px;
-                min-width:190px;
+                width:100%;
                 margin-left:10px;
                 margin-right:10px;
                 margin-bottom:5px;
@@ -103,7 +103,7 @@ $foto =asset('/fotos/logo_mini.png');
         </form>
 
     <h1> Produtos</h1>
-        <div class="d-flex align-items-start row row-cols-md-5  row-cols-sm-2">
+        <div class="d-flex align-items-start row row-cols-xl-5 row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
 
 
 

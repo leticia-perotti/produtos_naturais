@@ -67,9 +67,6 @@ try {
                 transform: rotate(90deg) scale(0.8, 0.9);
                 cursor:pointer;
             }
-            .linha{
-                display: inline-block;
-            }
             button{
                 margin: 2%;
             }
@@ -79,37 +76,46 @@ try {
                 align-content: center;
             }
 
+            .listagem-carrinho .linha {
+                position: relative;
+                padding: .75rem 1.25rem;
+                margin-bottom: 1rem;
+                border: 1px solid transparent;
+                border-radius: .25rem;
+                color: #383d41;
+                background-color: #e2e3e5;
+                border-color: #d6d8db;
+            }
+
 
         </style>
     </head>
     <body>
-    <div class="container">
+    <div class="container listagem-carrinho">
 
         <h1> Carrinho</h1>
 
     <?php
     while ($linha= $query->fetch()):
         ?>
-            <div class="alert alert-secondary" role="alert">
+            <div class="row linha">
 
 
-                <div class="linha" id="imagem_tabela">
-                    <img src="<?php echo imagem($linha->nome_foto); ?>" class="img_produto">
+                <div class="col-md-2 col-sm-4 col-12" id1="imagem_tabela">
+                    <img src="<?php echo imagem($linha->nome_foto); ?>" class="img-fluid">
                 </div>
-                <div class="linha" id="dados_tabela">
-                    <div class="card-body">
+                <div class="col-md-6 col-sm-8 col-12" id1="dados_tabela">
                         <h5 class="card-title titulo"><?php echo $linha->produto; ?></h5>
                         <span class="card-text">R$ <?php echo formatar_valor($linha->valor); ?></span>
-                    </div>
                 </div>
 
-                <div class="linha" id="input_quantidade">
+                <div class="col-md-2 col-10" id1="input_quantidade">
 
                         <label for="validationDefault05">Quantidade</label>
                         <input type="number" class="form-control adiciona" id="quantidade" value="<?php echo $linha->quantidade; ?>" min="1" required>
 
                 </div>
-                <div class="linha" id="botao_tabela">
+                <div class="col-md-2 col-2" id1="botao_tabela">
                     <button type="button" class="btn btn-secondary acionaAdiciona" data-row-id="<?php echo $linha->id ?>">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-plus" viewBox="0 0 16 16">
                             <path fill-rule="evenodd" d="M8 7.5a.5.5 0 0 1 .5.5v1.5H10a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0v-1.5H6a.5.5 0 0 1 0-1h1.5V8a.5.5 0 0 1 .5-.5z"/>
@@ -126,7 +132,6 @@ try {
                     </button>
                 </div>
         </div>
-
 
 
     <?php

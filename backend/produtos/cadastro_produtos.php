@@ -116,8 +116,8 @@ include("../configurações/menu.php");
                     iziToast.success({
                         message: data.mensagem,
                         onClosing: function(){
-                            document.location="listagem_produto.php";
-                            history.back();
+                            document.location="listagem_produtos.php";
+
                         }
                     });
                     $('.jsonForm').trigger('reset');

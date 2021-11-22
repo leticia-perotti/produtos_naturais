@@ -30,7 +30,7 @@ CREATE TABLE `atendimento` (
   PRIMARY KEY (`idatendimento`),
   KEY `fk_atendimento_cliente_idx` (`cliente_idclientes`),
   CONSTRAINT `fk_atendimento_cliente` FOREIGN KEY (`cliente_idclientes`) REFERENCES `cliente` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -39,7 +39,7 @@ CREATE TABLE `atendimento` (
 
 LOCK TABLES `atendimento` WRITE;
 /*!40000 ALTER TABLE `atendimento` DISABLE KEYS */;
-INSERT INTO `atendimento` VALUES (12,12,'2021-10-26',1),(13,NULL,'2021-10-26',1),(14,NULL,'2021-10-26',1),(15,12,'2021-11-09',3),(16,13,'2021-11-16',2),(17,NULL,'2021-11-16',1);
+INSERT INTO `atendimento` VALUES (22,16,'2021-11-22',2),(23,17,'2021-11-22',3);
 /*!40000 ALTER TABLE `atendimento` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -61,7 +61,7 @@ CREATE TABLE `atendimento_produto` (
   KEY `fk_atendimento_produto_produto1_idx` (`produto_idproduto`),
   CONSTRAINT `fk_atendimento_produto_atendimento1` FOREIGN KEY (`atendimento_idatendimento`) REFERENCES `atendimento` (`idatendimento`),
   CONSTRAINT `fk_atendimento_produto_produto1` FOREIGN KEY (`produto_idproduto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=66 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -70,7 +70,7 @@ CREATE TABLE `atendimento_produto` (
 
 LOCK TABLES `atendimento_produto` WRITE;
 /*!40000 ALTER TABLE `atendimento_produto` DISABLE KEYS */;
-INSERT INTO `atendimento_produto` VALUES (45,1,12,19,'1.00'),(46,15,12,18,'1.00'),(47,8,13,24,'1.00'),(48,7,14,25,'1.00'),(49,1,14,23,'1.00'),(50,2,15,25,'1.00'),(52,5,16,17,'1.00'),(54,1,17,18,'1.00'),(55,1,17,23,'1.00');
+INSERT INTO `atendimento_produto` VALUES (61,3,22,42,'2.00'),(62,1,22,39,'1.00'),(63,1,22,46,'13.00'),(64,1,23,37,'3.80'),(65,1,23,40,'6.80');
 /*!40000 ALTER TABLE `atendimento_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -85,7 +85,7 @@ CREATE TABLE `categoria_produto` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `nome` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -94,7 +94,7 @@ CREATE TABLE `categoria_produto` (
 
 LOCK TABLES `categoria_produto` WRITE;
 /*!40000 ALTER TABLE `categoria_produto` DISABLE KEYS */;
-INSERT INTO `categoria_produto` VALUES (1,'Oleoginosas');
+INSERT INTO `categoria_produto` VALUES (2,'produtos-naturais'),(3,'chas'),(4,'confeitaria'),(5,'embalagens'),(6,'chocolates');
 /*!40000 ALTER TABLE `categoria_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -122,7 +122,7 @@ CREATE TABLE `categoria_produto_has_produto` (
 
 LOCK TABLES `categoria_produto_has_produto` WRITE;
 /*!40000 ALTER TABLE `categoria_produto_has_produto` DISABLE KEYS */;
-INSERT INTO `categoria_produto_has_produto` VALUES (1,27),(1,28),(1,29),(1,30),(1,31),(1,32),(1,33),(1,34),(1,35);
+INSERT INTO `categoria_produto_has_produto` VALUES (3,36),(6,37),(4,38),(5,39),(2,40),(2,41),(2,42),(2,43),(2,46);
 /*!40000 ALTER TABLE `categoria_produto_has_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -144,7 +144,7 @@ CREATE TABLE `cliente` (
   `datanascimento` date DEFAULT NULL,
   `apelido_cliente` varchar(10) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -153,7 +153,7 @@ CREATE TABLE `cliente` (
 
 LOCK TABLES `cliente` WRITE;
 /*!40000 ALTER TABLE `cliente` DISABLE KEYS */;
-INSERT INTO `cliente` VALUES (12,'Cliente','(33) 3333-33333','iiii@iiii','119.891.789-01','dwad','PR','2000-02-22','aaa'),(13,'Adelmo','(52) 8514-24721','adelmo@gmail','381.896.440-84','Uniao','PR','1900-11-11','adelmo'),(14,'novo','(58) 5555-55555','novo@ey','100.977.720-38','eee','SC','9999-04-04','novo');
+INSERT INTO `cliente` VALUES (15,'Maria FÃ¡tima','(42) 9865-29987','mariafatima@gmail.com','786.906.300-23','UniÃ£o da VitÃ³ria','PR','2000-02-05','Maria'),(16,'ClÃ¡udio Emanuel','(42) 9988-56232','claudio@gmail.com','112.395.510-70','Porto UniÃ£o','SC','1998-10-09','Claudio'),(17,'Sara','(42) 5986-2322','sara@gmail.com','042.596.740-99','UniÃ£o da VitÃ³ria','PR','1980-09-08','Sara');
 /*!40000 ALTER TABLE `cliente` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -172,7 +172,7 @@ CREATE TABLE `compra` (
   PRIMARY KEY (`id`),
   KEY `fk_compras_fornecedor1_idx` (`fornecedor_idfornecedor`),
   CONSTRAINT `fk_compras_fornecedor1` FOREIGN KEY (`fornecedor_idfornecedor`) REFERENCES `fornecedor` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -181,7 +181,7 @@ CREATE TABLE `compra` (
 
 LOCK TABLES `compra` WRITE;
 /*!40000 ALTER TABLE `compra` DISABLE KEYS */;
-INSERT INTO `compra` VALUES (1,'2021-11-16','1050505205',1),(2,'2021-11-16','1141',1);
+INSERT INTO `compra` VALUES (6,'2021-11-22','985256254620',3),(7,'2021-11-22','95821852187',4);
 /*!40000 ALTER TABLE `compra` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -203,7 +203,7 @@ CREATE TABLE `compra_has_produto` (
   KEY `fk_compra_has_produto_compra1_idx` (`compra_idcompras`),
   CONSTRAINT `fk_compra_has_produto_compra1` FOREIGN KEY (`compra_idcompras`) REFERENCES `compra` (`id`),
   CONSTRAINT `fk_compra_has_produto_produto1` FOREIGN KEY (`produto_idproduto`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -212,7 +212,7 @@ CREATE TABLE `compra_has_produto` (
 
 LOCK TABLES `compra_has_produto` WRITE;
 /*!40000 ALTER TABLE `compra_has_produto` DISABLE KEYS */;
-INSERT INTO `compra_has_produto` VALUES (1,17,1,5555.00),(1,18,4,1.00),(1,19,3,150.00),(2,21,5,1.02),(2,27,9,15.00),(2,28,10,15.00);
+INSERT INTO `compra_has_produto` VALUES (6,40,12,4.50),(6,43,13,2.10),(7,38,14,9.50);
 /*!40000 ALTER TABLE `compra_has_produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -235,7 +235,7 @@ CREATE TABLE `controla_retirada` (
   PRIMARY KEY (`id`),
   KEY `atendimento_idx` (`atendimento_id`),
   CONSTRAINT `atendimento` FOREIGN KEY (`atendimento_id`) REFERENCES `atendimento` (`idatendimento`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,7 +244,7 @@ CREATE TABLE `controla_retirada` (
 
 LOCK TABLES `controla_retirada` WRITE;
 /*!40000 ALTER TABLE `controla_retirada` DISABLE KEYS */;
-INSERT INTO `controla_retirada` VALUES (1,'17:08:00','14:33:04','fff','dinheiro',15,'','2021-11-09'),(2,'15:59:00',NULL,'eu mesmo','cartao_credito',16,'','2021-11-16');
+INSERT INTO `controla_retirada` VALUES (3,'17:55:00',NULL,'ClÃ¡udio','dinheiro',22,'','2021-11-22'),(4,'18:30:00','16:39:37','Cezar','dinheiro',23,'Ã‰ um motoboy da empresa \"Motoboy SA\"','2021-11-22');
 /*!40000 ALTER TABLE `controla_retirada` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -287,7 +287,7 @@ CREATE TABLE `fornecedor` (
   `endereco` varchar(45) NOT NULL,
   `transportadora` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -296,7 +296,7 @@ CREATE TABLE `fornecedor` (
 
 LOCK TABLES `fornecedor` WRITE;
 /*!40000 ALTER TABLE `fornecedor` DISABLE KEYS */;
-INSERT INTO `fornecedor` VALUES (1,'20.469.088/0001-00','fornecedor','endereÃ§o','transportadora');
+INSERT INTO `fornecedor` VALUES (3,'46.735.570/0001-20','Ceral Mais','Rua GetÃºlio Vargas, 254','Transporte SA'),(4,'21.832.953/0001-96','La confeitaria','Avenida 7 de setembro, 85','Trans rÃ¡pido'),(5,'63.824.958/0001-17','ImpÃ©rio das embalagens','Rua 15 de novembro, 985','Fretes e transportes EIRELI');
 /*!40000 ALTER TABLE `fornecedor` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -316,10 +316,10 @@ CREATE TABLE `produto` (
   `quantidade` int(11) DEFAULT NULL,
   `valor_compra` decimal(8,2) NOT NULL,
   `margem` decimal(8,2) NOT NULL,
-  `ativo` tinyint(1) DEFAULT NULL,
+  `ativo` tinyint(1) DEFAULT '1',
   `tipo_venda` varchar(45) CHARACTER SET latin1 NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=36 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=47 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -328,7 +328,7 @@ CREATE TABLE `produto` (
 
 LOCK TABLES `produto` WRITE;
 /*!40000 ALTER TABLE `produto` DISABLE KEYS */;
-INSERT INTO `produto` VALUES (17,'castanah do para castanah do para','castanah do para',1.000,1.00,1,1.00,1.00,1,'1'),(18,'b','aaa',1.000,1.00,1,1.00,1.00,1,'1'),(19,'c','aaa',1.000,1.00,1,1.00,1.00,1,'1'),(20,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(21,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(22,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(23,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(24,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(25,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(26,'a','q',1.000,1.00,1,1.00,1.00,1,'1'),(27,'Castanha do ParÃ¡','a cada 100 g',2.022,2.02,NULL,2.02,2.02,2,'a granel'),(28,'Oleoginosas','a cada 100 g',6.000,6.00,0,6.00,6.00,NULL,'a granel'),(29,'1','1',1.000,1.00,NULL,1.00,1.00,NULL,'1'),(30,'2','2',2.000,2.00,NULL,2.00,2.00,NULL,'2'),(31,'3','3',3.000,3.00,NULL,3.00,3.00,NULL,'3'),(32,'4','4',4.000,4.00,0,4.00,4.00,NULL,'4'),(33,'5','5',5.000,5.00,0,5.00,5.00,NULL,'5'),(34,'6','6',6.000,6.00,NULL,6.00,6.00,NULL,'6'),(35,'7','7',7.000,7.00,0,7.00,7.00,NULL,'7');
+INSERT INTO `produto` VALUES (36,'ChÃ¡ de morango','Sabor morango - Mate leÃ£o',100.000,5.00,100,3.50,1.50,1,'untaria'),(37,'Cacau em pÃ³','A cada 100g',5.000,3.80,5,3.00,0.80,1,'agranel'),(38,'Fuet','unidade',1000.000,15.00,1000,10.00,5.00,1,'unitÃ¡ria'),(39,'P32 alta','unidade',300.000,1.00,300,0.50,0.50,1,'unitÃ¡ria'),(40,'Castanha do ParÃ¡','A cada 100g',200.000,6.80,200,3.00,3.80,1,'agranel'),(41,'Quinoa em flocos','A cada 100g',2000.000,3.00,2000,1.50,1.50,1,'agranel'),(42,'Uva passa preta','A cada 100g',300.000,2.00,300,1.00,1.00,1,'agranel'),(43,'Frutas cristalizadas','A cada 100g',2000.000,1.50,2000,0.08,0.75,1,'agranel'),(46,'Granola','unidade',200.000,13.00,200,9.00,4.00,1,'unitÃ¡ria');
 /*!40000 ALTER TABLE `produto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -346,7 +346,7 @@ CREATE TABLE `produto_foto` (
   PRIMARY KEY (`id`),
   KEY `FK__produto` (`produto_id`),
   CONSTRAINT `FK__produto` FOREIGN KEY (`produto_id`) REFERENCES `produto` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -355,7 +355,7 @@ CREATE TABLE `produto_foto` (
 
 LOCK TABLES `produto_foto` WRITE;
 /*!40000 ALTER TABLE `produto_foto` DISABLE KEYS */;
-INSERT INTO `produto_foto` VALUES (1,22,'produto-616dca5cddbb2.jpg'),(3,27,'produto-6193e4d926b8b.jpg'),(5,29,'produto-61940102bb11b.jpg'),(6,30,'produto-61940143df593.jpg'),(7,31,'produto-61940386052f6.jpg'),(8,32,'produto-619403d35216f.jpg'),(12,33,'produto-619406fd47e2b.jpg'),(13,34,'produto-619407ed6cc05.jpg'),(15,35,'produto-619408db16dce.jpg'),(16,28,'produto-61940918d9716.jpg');
+INSERT INTO `produto_foto` VALUES (20,36,'produto-619be9e63d0a8.jpg'),(21,37,'produto-619bea6325e20.jpg'),(22,38,'produto-619bead26b105.jpg'),(23,39,'produto-619beb2ecebe3.jpg'),(24,40,'produto-619beb9119fc7.jpg'),(25,41,'produto-619bebfa56c83.jpg'),(26,42,'produto-619bec7e8be5d.jpg'),(27,43,'produto-619bed08527ed.jpg'),(28,46,'produto-619bedf6adf57.jpg');
 /*!40000 ALTER TABLE `produto_foto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -405,7 +405,7 @@ CREATE TABLE `vendedores` (
 
 LOCK TABLES `vendedores` WRITE;
 /*!40000 ALTER TABLE `vendedores` DISABLE KEYS */;
-INSERT INTO `vendedores` VALUES (2,'leiticia@leticia','e205888b17f2f470c1ef12d55acef94e5b52289d','leticia'),(3,'user@user','40bd001563085fc35165329ea1ff5c5ecbdbbeef','User'),(4,'admin@admin','d033e22ae348aeb5660fc2140aec35850c4da997','Admin');
+INSERT INTO `vendedores` VALUES (3,'user@user','40bd001563085fc35165329ea1ff5c5ecbdbbeef','User'),(4,'admin@admin','d033e22ae348aeb5660fc2140aec35850c4da997','Admin');
 /*!40000 ALTER TABLE `vendedores` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -418,4 +418,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-11-16 16:41:12
+-- Dump completed on 2021-11-22 16:43:52

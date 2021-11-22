@@ -7,17 +7,6 @@ try {
 
     $conexao->beginTransaction();
 
-    $query=$conexao->prepare("UPDATE produto SET nome=:nome,descricao=:descricao,valor=:valor,peso=:peso,quantidade=:quantidade,valor_compra=:valor_compra,margem=:margem, tipo_venda=:tipo_venda WHERE id=:id");
-    $query->bindParam(':id',$_POST['id']);
-    $query->bindParam(':nome',$_POST['nome']);
-    $query->bindParam(':descricao',$_POST['descricao']);
-    $query->bindParam(':valor',$_POST['valor']);
-    $query->bindParam(':peso',$_POST['peso']);
-    $query->bindParam(':quantidade',$_POST['quantidade']);
-    $query->bindParam(':valor_compra',$_POST['valor_compra']);
-    $query->bindParam(':margem',$_POST['margem']);
-    $query->bindParam(':tipo_venda',$_POST['tipo_venda']);
-    $query->execute();
 
     //$conexao->commit();
 
@@ -39,24 +28,24 @@ try {
                 if (!unlink($localizacao_imagem)) {
                     throw new Exception('Erro ao apagar foto');
                 } else {
-                    retornaOK("Foto exluida com sucesso");
+                    $algoAlterado =true;
                 }
             }else{
                 retornaErro("Nenhuma foto para ser excluída");
             }
 
-        }elseif (isset($_POST['alterar']) && $_POST['alterar'] == 'trocar_foto'){
-            $buscar= $conexao->prepare("Select nome_foto from produto_foto where produto_id=:id");
+        }elseif (isset($_POST['alterar']) && $_POST['alterar'] == 'trocar_foto') {
+            $buscar = $conexao->prepare("Select nome_foto from produto_foto where produto_id=:id");
             $buscar->bindValue(":id", $_POST['id']);
             $buscar->execute();
 
-            if($buscar->rowCount()!=0){
-                $linhaExcluir=$buscar->fetchObject();
+            if ($buscar->rowCount() != 0) {
+                $linhaExcluir = $buscar->fetchObject();
 
                 $localizacao_imagem = DIRETORIO_IMAGEM . $linhaExcluir->nome_foto;
 
                 //if($buscar->rowCount()!=0){
-                $excluir=$conexao->prepare("Delete from produto_foto where produto_id=:id ");
+                $excluir = $conexao->prepare("Delete from produto_foto where produto_id=:id ");
                 $excluir->bindValue(":id", $_POST['id']);
                 $excluir->execute();
 
@@ -83,18 +72,39 @@ try {
                 $queryFoto->bindParam(':produto_id', $_POST['id']);
                 $queryFoto->bindParam(':nome_foto', $nome);
                 $queryFoto->execute();
+
+                if($queryFoto->rowCount()==1){
+                    $algoAlterado =true;
+                }
+
             }
+        }
+
+
+            $query=$conexao->prepare("UPDATE produto SET nome=:nome,descricao=:descricao,valor=:valor,peso=:peso,quantidade=:quantidade,valor_compra=:valor_compra,margem=:margem, tipo_venda=:tipo_venda WHERE id=:id");
+            $query->bindParam(':id',$_POST['id']);
+            $query->bindParam(':nome',$_POST['nome']);
+            $query->bindParam(':descricao',$_POST['descricao']);
+            $query->bindParam(':valor',$_POST['valor']);
+            $query->bindParam(':peso',$_POST['peso']);
+            $query->bindParam(':quantidade',$_POST['quantidade']);
+            $query->bindParam(':valor_compra',$_POST['valor_compra']);
+            $query->bindParam(':margem',$_POST['margem']);
+            $query->bindParam(':tipo_venda',$_POST['tipo_venda']);
+            $query->execute();
 
             $conexao->commit();
 
-            if($queryFoto->rowCount()!=0){
-                retornaOK("Foto alterada com sucesso");
-            }else{
-                retornaErro("Erro ao alterar foto");
+            if($query->rowCount()==1){
+                $algoAlterado =true;
             }
-        }else{
-            retornaOK("");
-        }
+
+            if($algoAlterado ==true){
+                retornaOK("Alterado com sucesso!");
+            }else{
+                retornaOK("Nenhum dado alterado");
+            }
+
 
 
 

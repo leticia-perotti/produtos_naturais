@@ -86,9 +86,10 @@ try {
 <script src="../js/jquery.bootgrid.fa.js"></script>
 
 <script>
-
     var grid_produto, grid_servico;
     $(document).ready(function(){
+
+
 
         $("#id_servico").on('change', function () {
             valor = $(this).find(':selected').data('valor');

@@ -10,12 +10,13 @@ try{
     if(!isset($_GET['id'])){
         die('Acesse através da listagem');
     }
-    $queryAtendimento = $conexao->prepare('Select DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data_formatada, status, idatendimento as id, cliente.nome as cliente
+    $queryAtendimento = $conexao->prepare('Select DATE_FORMAT(atendimento.data_carrinho, "%d/%m/%Y") as data_formatada, status, idatendimento as id, cliente.nome as cliente, cliente.id as idCliente
                                        from atendimento inner join cliente on atendimento.cliente_idclientes = cliente.id
                                        where idatendimento =:atendimento and ( status = 2 || status = 3)
                                        ');
     $queryAtendimento-> bindParam(":atendimento", $_GET['id']);
     $queryAtendimento->execute();
+
 
 
     if($queryAtendimento->rowCount()==0){
@@ -81,6 +82,12 @@ try{
         $queryDados->execute();
         $linhaDados = $queryDados->fetchObject();
 
+        $queryCliente = $conexao->prepare("Select nome, cpf, email, telefone, DATE_FORMAT(datanascimento, '%d/%m/%Y') as data from cliente where id=:id");
+        $queryCliente->bindParam(":id", $linha->idCliente);
+        $queryCliente->execute();
+
+        $linhaCliente = $queryCliente->fetchObject();
+
 
         ?>
         <div class="card">
@@ -122,6 +129,17 @@ try{
                         <span>Quem retirará :<?php echo $linhaDados->quem_retira; ?></span><br>
                         <span>Forma de pagamento :<?php echo $linhaDados->meio_pagamento; ?></span><br>
                         <span>Observação :<?php echo $linhaDados->observacao; ?></span><br>
+                    </div>
+                </div>
+
+                <div class="alert alert-info" role="alert">
+                    <h4>Dados gerais do cliente</h4>
+                    <div id="dados" class="linha">
+                        <span>Nome do cliente :<?php echo $linhaCliente->nome; ?></span><br>
+                        <span>Telefone :<?php echo $linhaCliente->telefone; ?></span><br>
+                        <span>Email :<?php echo $linhaCliente->email; ?></span><br>
+                        <span>CPF :<?php echo $linhaCliente->cpf; ?></span><br>
+                        <span>Data de nascimento :<?php echo $linhaCliente->data; ?></span><br>
                     </div>
                 </div>
 

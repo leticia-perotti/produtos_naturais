@@ -20,7 +20,7 @@ include ("../configurações/menu.php");
                 <thead>
                 <h1>Listagem - Produtos</h1>
                 <tr>
-                    <th data-column-id="id">Código</th>
+                    <th data-column-id="id" data-visible="false">Código</th>
                     <th data-column-id="nome" data-order="desc" data-sortable="true">Nome </th>
                     <th data-column-id="descricao" data-order="desc" data-sortable="true" data-visible="false">Descrição</th>
                     <th data-column-id="valor" data-order="desc" data-sortable="true">Valor</th>
@@ -51,6 +51,7 @@ include ("../configurações/menu.php");
                 {
                     return "<button type=\"button\" class=\"btn btn-warning command-exibir\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-eye\"></span></button> "+
                     "<button type=\"button\" class=\"btn btn-primary command-edit\" data-row-id=\"" + row.id   + "\"><span class=\"fas fa-edit\"></span></button> " +
+                        "<button type=\"button\" class=\"btn btn-success command-ver\" data-row-id=\"" + row.id   + "\"><span class=\"fas fa-history\"></span></button> " +
                         "<button type=\"button\" class=\"btn btn-danger command-delete\" data-row-id=\"" + row.id + "\"><span class=\"fas fa-trash\"></span></button> ";
                 }
             }
@@ -66,6 +67,10 @@ include ("../configurações/menu.php");
             grid.find(".command-exibir").on("click", function (e) {
 
                 document.location='exibir_produtos.php?id=' + $(this).data("row-id");
+            });
+            grid.find(".command-ver").on("click", function (e) {
+
+                document.location='historico_produtos.php?id=' + $(this).data("row-id");
             });
 
         });
