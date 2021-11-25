@@ -1,0 +1,4 @@
+Usuário: Admin
+Senha: Admin
+
+*produtos com acento importados direto do banco de dados apresentarão erro na hora de exbição

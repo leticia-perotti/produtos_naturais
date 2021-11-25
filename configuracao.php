@@ -18,5 +18,5 @@ const __URL__ = 'http://localhost:81';
 //const DBNAME = 'bdnatural';
 const DBNAME = 'bd_natural';
 const DBUSER = 'root';
-//const DBPASSWD = 'root';
-const DBPASSWD = '';
+const DBPASSWD = 'root';
+//const DBPASSWD = '';
